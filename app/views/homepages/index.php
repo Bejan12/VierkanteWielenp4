@@ -11,7 +11,7 @@
             <h3><?php echo $data['title']; ?></h3>
 
             <a href="<?= URLROOT; ?>/smartphones/index">idashboard it even ja?martphones</a> |
-            <a href="<?= URLROOT; ?>/sneakers/index">dit is de navbar</a> | 
+            <a href="<?= URLROOT; ?>/sneakers/index">dashboard knoppen is de navbar</a> | 
             <a href="<?= URLROOT; ?>/horloges/index">Duurstloges</a> | 
             <a href="<?= URLROOT; ?>/zangeressen/index">Riik verander dit even </a> | 
 
