@@ -1,4 +1,5 @@
 <?php
+require_once APPROOT . '/helpers/auth.php';
 
 class Accounts extends BaseController
 {
@@ -64,5 +65,25 @@ class Accounts extends BaseController
         $_SESSION['logout_success'] = "Je bent succesvol uitgelogd!";
         header('Location: ' . URLROOT . '/accounts/login');
         exit;
+    }
+
+    public function overzicht()
+    {
+        checkLogin();
+
+        // Alleen voor beheerders
+        if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'Beheerder') {
+            $_SESSION['error_message'] = "Pagina niet beschikbaar voor onbevoegden";
+            header('Location: ' . URLROOT . '/homepages/index');
+            exit;
+        }
+
+        $users = $this->accountsModel->getAllUsersWithEmail();
+
+        $data = [
+            'users' => $users
+        ];
+
+        $this->view('accounts/overzicht', $data);
     }
 }

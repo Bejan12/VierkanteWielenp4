@@ -98,8 +98,8 @@
 
   <!-- Hoofdknoppen -->
   <div class="btn-container">
-    <button class="btn btn-default" onclick="goToAccounts()">Overzicht Accounts</button>
-    <button class="btn btn-default" onclick="goToAutos()">Overzicht Auto's</button>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/accounts/overzicht">Overzicht Accounts</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/auto/overzicht">Overzicht Auto's</a>
   </div>
 
   <script>

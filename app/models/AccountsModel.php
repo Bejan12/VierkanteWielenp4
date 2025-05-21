@@ -33,4 +33,14 @@ class AccountsModel
         $result = $this->db->single();
         return $result ? $result->Naam : null;
     }
+
+    public function getAllUsersWithEmail()
+    {
+        $sql = "SELECT g.Gebruikersnaam, g.Wachtwoord, c.Email 
+                FROM gebruiker g
+                LEFT JOIN contact c ON c.GebruikerId = g.Id
+                WHERE g.IsActief = 1";
+        $this->db->query($sql);
+        return $this->db->resultSet();
+    }
 }
