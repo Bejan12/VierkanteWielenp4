@@ -1,24 +1,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 <div class="user-overview-page">
-    <h2>Gebruikersoverzicht</h2>
+    <h2>Auto's overzicht</h2>
 
-    <?php if (!empty($data['users'])): ?>
+    <?php if (!empty($data['autos'])): ?>
         <table class="custom-table">
             <thead>
                 <tr>
-                    <th>E-mail</th>
-                    <th>Gebruikersnaam</th>
-                    <th>Wachtwoord</th>
+                    <th>Merk</th>
+                    <th>Type</th>
+                    <th>Kenteken</th>
+                    <th>Brandstof</th>
                     <th class="centered-header">Acties</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($data['users'] as $user): ?>
+                <?php foreach ($data['autos'] as $auto): ?>
                     <tr>
-                        <td><?= htmlspecialchars($user->Email ?? ''); ?></td>
-                        <td><?= htmlspecialchars($user->Gebruikersnaam); ?></td>
-                        <td><?= str_repeat('*', strlen($user->Wachtwoord)); ?></td>
+                        <td><?= htmlspecialchars($auto->Merk); ?></td>
+                        <td><?= htmlspecialchars($auto->Type); ?></td>
+                        <td><?= htmlspecialchars($auto->Kenteken); ?></td>
+                        <td><?= htmlspecialchars($auto->Brandstof); ?></td>
                         <td class="centered-cell">
                             <div class="icon-wrapper">
                                 <i class="bi bi-pencil-square action-icon edit-icon" title="Wijzig"></i>
@@ -31,8 +33,8 @@
         </table>
     <?php else: ?>
         <div class="no-users-message">
-            <p>Er zijn nog geen accounts beschikbaar.</p>
-    
+            <p>Er zijn nog geen auto's beschikbaar.</p>
+            
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
@@ -49,7 +51,7 @@
             function animate(timestamp) {
                 if (!start) start = timestamp;
                 let progress = timestamp - start;
-                let percentage = Math.max(100 - progress / 50, 0); // 5000ms = 100%
+                let percentage = Math.max(100 - progress / 50, 0);
                 progressFill.style.width = percentage + '%';
 
                 if (progress < 5000) {
@@ -74,13 +76,12 @@
         padding: 60px 40px;
         max-width: 1200px;
         margin: 0 auto;
-        min-height: 300px; /* Zorgt dat de pagina niet te klein wordt */
+        min-height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
     }
-
     .user-overview-page h2 {
         font-size: 2rem;
         margin-bottom: 30px;
@@ -89,77 +90,61 @@
         text-shadow: 1px 1px 3px #000;
         width: 100%;
     }
-
     .custom-table {
         width: 100%;
         border-collapse: collapse;
         background-color: #2b2b3d;
-
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
-
     .custom-table th,
     .custom-table td {
         padding: 16px 20px;
         text-align: left;
     }
-
     .custom-table thead {
         background: linear-gradient(145deg, #0182E2, #005fa3);
         color: #fff;
     }
-
     .custom-table tbody tr {
         border-bottom: 1px solid #444;
     }
-
     .custom-table tbody tr:hover {
         background-color: #3a3a5c;
     }
-
     .custom-table td {
         color: #e0e0e0;
         font-size: 1rem;
     }
-
     .centered-header {
         text-align: center;
     }
-
     .centered-cell {
         text-align: center;
     }
-
     .icon-wrapper {
         display: inline-flex;
         justify-content: flex-start;
         gap: 12px;
         width: 100%;
     }
-
     .action-icon {
         font-size: 1.2rem;
         cursor: pointer;
         transition: color 0.2s ease;
     }
-
     .edit-icon {
         color: #4da6ff;
     }
-
     .edit-icon:hover {
         color: #80cfff;
     }
-
     .delete-icon {
         color: #ff4d4d;
     }
-
     .delete-icon:hover {
         color: #ff7f7f;
     }
-
     .no-users-message {
         margin-top: 100px;
         background: #2b2b3d;
@@ -171,11 +156,9 @@
         text-align: center;
         max-width: 600px;
     }
-
     .no-users-message p {
         margin: 12px 0;
     }
-
     .progress-bar {
         width: 100%;
         height: 8px;
@@ -187,7 +170,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-
     .progress-fill {
         height: 100%;
         background: linear-gradient(90deg, #0182E2, #005fa3);
