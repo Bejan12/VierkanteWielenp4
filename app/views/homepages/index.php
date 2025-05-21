@@ -1,6 +1,12 @@
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
 
-<?php if (!empty($_SESSION['login_success']) || !empty($_SESSION['error_message'])): ?>
+<?php
+// Verzamel meldingen zonder direct te unsetten
+$loginSuccess = $_SESSION['login_success'] ?? '';
+$errorMessage = $_SESSION['error_message'] ?? '';
+?>
+
+<?php if (!empty($loginSuccess) || !empty($errorMessage)): ?>
     <style>
         .custom-alert-success,
         .custom-alert-error {
@@ -64,23 +70,27 @@
     </style>
 <?php endif; ?>
 
-<?php if (!empty($_SESSION['login_success'])): ?>
+<?php if (!empty($loginSuccess)): ?>
     <div id="loginSuccess" class="custom-alert-success">
-        <?= $_SESSION['login_success']; unset($_SESSION['login_success']); ?>
+        <?= $loginSuccess; ?>
         <div class="progress-bar"></div>
     </div>
 <?php endif; ?>
 
-<?php if (!empty($_SESSION['error_message'])): ?>
+<?php if (!empty($errorMessage)): ?>
     <div id="errorMessage" class="custom-alert-error">
-        <?= $_SESSION['error_message']; unset($_SESSION['error_message']); ?>
+        <?= $errorMessage; ?>
         <div class="progress-bar"></div>
     </div>
 <?php endif; ?>
 
-<?php if (!empty($_SESSION['login_success']) || !empty($_SESSION['error_message'])): ?>
+<?php
+// Meldingen pas na het tonen verwijderen
+unset($_SESSION['login_success'], $_SESSION['error_message']);
+?>
+
+<?php if (!empty($loginSuccess) || !empty($errorMessage)): ?>
     <script>
-        // Verberg beide alerts automatisch na 3 seconden
         setTimeout(function () {
             const success = document.getElementById('loginSuccess');
             const error = document.getElementById('errorMessage');
