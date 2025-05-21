@@ -1,13 +1,13 @@
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
 
-<?php if (!empty($_SESSION['login_success'])): ?>
+<?php if (!empty($_SESSION['login_success']) || !empty($_SESSION['error_message'])): ?>
     <style>
-        .custom-alert-success {
+        .custom-alert-success,
+        .custom-alert-error {
             position: fixed;
             top: 30px;
-            left: 40%;
+            left: 35%;
             transform: translateX(-50%) translateY(-20px);
-            background-color: #0182E2;
             color: #fff;
             padding: 25px 50px 20px 50px;
             border-radius: 16px;
@@ -20,6 +20,14 @@
             min-width: 400px;
             max-width: 90vw;
             text-align: center;
+        }
+
+        .custom-alert-success {
+            background-color: #0182E2;
+        }
+
+        .custom-alert-error {
+            background-color: #e74c3c;
         }
 
         .progress-bar {
@@ -54,25 +62,38 @@
             }
         }
     </style>
+<?php endif; ?>
 
+<?php if (!empty($_SESSION['login_success'])): ?>
     <div id="loginSuccess" class="custom-alert-success">
         <?= $_SESSION['login_success']; unset($_SESSION['login_success']); ?>
         <div class="progress-bar"></div>
     </div>
+<?php endif; ?>
 
+<?php if (!empty($_SESSION['error_message'])): ?>
+    <div id="errorMessage" class="custom-alert-error">
+        <?= $_SESSION['error_message']; unset($_SESSION['error_message']); ?>
+        <div class="progress-bar"></div>
+    </div>
+<?php endif; ?>
+
+<?php if (!empty($_SESSION['login_success']) || !empty($_SESSION['error_message'])): ?>
     <script>
-        // Laat melding 3 seconden staan, dan fade-out en verwijderen
+        // Verberg beide alerts automatisch na 3 seconden
         setTimeout(function () {
-            const el = document.getElementById('loginSuccess');
-            if (el) {
-                el.style.animation = 'fadeOutAlert 0.5s ease-in forwards';
-                setTimeout(() => el.remove(), 500);
-            }
+            const success = document.getElementById('loginSuccess');
+            const error = document.getElementById('errorMessage');
+            [success, error].forEach(el => {
+                if (el) {
+                    el.style.animation = 'fadeOutAlert 0.5s ease-in forwards';
+                    setTimeout(() => el.remove(), 500);
+                }
+            });
         }, 3000);
     </script>
 <?php endif; ?>
 
 <!-- Je bestaande content -->
-
 
 <?php require_once APPROOT . '/views/includes/footer.php'; ?>

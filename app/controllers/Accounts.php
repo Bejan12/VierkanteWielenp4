@@ -34,15 +34,16 @@ class Accounts extends BaseController
                 $_SESSION['username'] = $user->Gebruikersnaam;
                 $_SESSION['login_success'] = "Login succesvol!";
 
-                // Haal de rol op
+                // Haal de rol op via het model
                 $role = $this->accountsModel->getUserRole($user->Id);
+                $_SESSION['rol'] = $role ? $role : 'Onbekend';
 
                 if ($role === 'Beheerder') {
                     header('Location: ' . URLROOT . '/dashboard/index');
                 } else {
                     header('Location: ' . URLROOT . '/homepages/index');
                 }
-                exit;
+                exit;   
             } else {
                 $error = "Ongeldige inloggegevens";
             }

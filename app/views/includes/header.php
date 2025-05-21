@@ -12,6 +12,17 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?= URLROOT; ?>/public/css/style.css">
     <link rel="shortcut icon" href="<?= URLROOT; ?>/public/img/favicon.ico" type="image/x-icon">
+
+    <style>
+      .dropdown-menu.dropdown-menu-end {
+        min-width: 220px; /* Vergroot de breedte van de dropdown */
+      }
+      .dropdown-item-text.fw-bold.text-primary {
+        white-space: normal;
+        display: block;
+        text-align: left;
+      }
+    </style>
   </head>
 <body>
 
@@ -55,6 +66,15 @@
             <i class="bi bi-person-circle fs-4 text-primary"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li>
+              <span class="dropdown-item-text fw-bold text-primary">
+                <?= isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Gast'; ?>
+                <?php if (isset($_SESSION['rol'])): ?>
+                  | <?= htmlspecialchars($_SESSION['rol']); ?>
+                <?php endif; ?>
+              </span>
+            </li>
+            <li><hr class="dropdown-divider"></li>
             <li>
               <a class="dropdown-item text-danger" href="<?= URLROOT; ?>/accounts/logout">
                 <i class="bi bi-box-arrow-right me-2"></i>Uitloggen
