@@ -100,6 +100,8 @@
   <div class="btn-container">
     <a class="btn btn-default" href="<?= URLROOT; ?>/accounts/overzicht">Overzicht Accounts</a>
     <a class="btn btn-default" href="<?= URLROOT; ?>/auto/overzicht">Overzicht Auto's</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/leerlingen/index">Overzicht Leerlingen</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/instructeurs/index">Overzicht Instructeurs</a>
   </div>
 
   <script>

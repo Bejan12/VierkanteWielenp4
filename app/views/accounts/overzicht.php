@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+<!-- Toegevoegd: terug-pijl linksboven -->
+<a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow">
+
+    <!-- Gebruik een Bootstrap icoon pijltje -->
+    <i class="bi bi-arrow-left"></i>
+</a>
+
 <div class="user-overview-page">
     <h2>Gebruikersoverzicht</h2>
 
@@ -29,6 +36,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        
     <?php else: ?>
         <div class="no-users-message">
             <p>Er zijn nog geen accounts beschikbaar.</p>
@@ -62,6 +70,21 @@
 </div>
 
 <style>
+    /* Toegevoegd: styling voor het pijltje */
+    .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 48px;
+        color: #ccc; /* lichtgrijs */
+        text-decoration: none;
+        z-index: 1100;
+        transition: color 0.3s ease;
+    }
+    .back-arrow:hover {
+        color: #fff; /* wit bij hover */
+    }
+
     body {
         background-color: #1e1e2f;
         color: #f0f0f0;

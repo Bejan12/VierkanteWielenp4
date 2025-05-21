@@ -1,5 +1,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+<!-- Terug-pijl linksboven -->
+<a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow">
+    <i class="bi bi-arrow-left"></i>
+</a>
+
 <div class="user-overview-page">
     <h2>Auto's overzicht</h2>
 
@@ -31,6 +36,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <a href="<?= URLROOT; ?>/dashboard/index" class="btn btn-secondary" style="margin-top: 24px;">Terug naar dashboard</a>
     <?php else: ?>
         <div class="no-users-message">
             <p>Er zijn nog geen auto's beschikbaar.</p>
@@ -64,6 +70,21 @@
 </div>
 
 <style>
+    /* Styling terug-pijl */
+    .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 48px;
+        color: #ccc;
+        text-decoration: none;
+        z-index: 1100;
+        transition: color 0.3s ease;
+    }
+    .back-arrow:hover {
+        color: #fff;
+    }
+
     body {
         background-color: #1e1e2f;
         color: #f0f0f0;
