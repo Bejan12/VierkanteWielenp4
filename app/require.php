@@ -1,4 +1,5 @@
 <?php
+    session_start(); // <-- Toegevoegd
     /**
      * We includen hier alle libraries die we nodig hebben
      * voor het mvc-framework
