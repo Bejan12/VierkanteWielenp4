@@ -102,6 +102,9 @@
     <a class="btn btn-default" href="<?= URLROOT; ?>/auto/overzicht">Overzicht Auto's</a>
     <a class="btn btn-default" href="<?= URLROOT; ?>/leerlingen/index">Overzicht Leerlingen</a>
     <a class="btn btn-default" href="<?= URLROOT; ?>/instructeurs/index">Overzicht Instructeurs</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/melding/overzicht">Overzicht Meldingen</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/factuur/overzicht">Overzicht Facturen</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/betaling/overzicht">Overzicht Betalingen</a>
   </div>
 
   <script>

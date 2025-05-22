@@ -1,0 +1,43 @@
+[2025-05-22 10:10] Nick: Dashboard knoppen en navigatie getest.
+[2025-05-22 10:11] Nick: Styling en PDF download functionaliteit gecontroleerd.
+[2025-05-22 09:23:04] Nick: Bind param :id => 5 (type 2)
+[2025-05-22 09:23:04] Nick: single() opgehaald.
+[2025-05-22 09:23:11] Nick: Bind param :id => 5 (type 2)
+[2025-05-22 09:23:11] Nick: single() opgehaald.
+[2025-05-22 09:23:52] Nick: Bind param :id => 5 (type 2)
+[2025-05-22 09:23:52] Nick: single() opgehaald.
+[2025-05-22 09:23:54] Nick: Bind param :id => 4 (type 2)
+[2025-05-22 09:23:54] Nick: single() opgehaald.
+[2025-05-22 09:25:15] Nick: Bind param :id => 5 (type 2)
+[2025-05-22 09:25:15] Nick: single() opgehaald.
+[2025-05-22 09:25:17] Nick: Bind param :factuurId => 5 (type 2)
+[2025-05-22 09:25:26] Nick: Bind param :id => 1 (type 2)
+[2025-05-22 09:25:26] Nick: single() opgehaald.
+[2025-05-22 09:25:33] Nick: Bind param :id => 1 (type 2)
+[2025-05-22 09:25:33] Nick: single() opgehaald.
+[2025-05-22 09:25:36] Nick: Bind param :factuurId => 1 (type 2)
+[2025-05-22 09:28:11] Nick: Bind param :factuurId => 1 (type 2)
+[2025-05-22 09:28:11] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:12] Nick: Bind param :factuurId => 1 (type 2)
+[2025-05-22 09:28:12] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:36] Nick: Bind param :datum => 2002-02-02 (type 2)
+[2025-05-22 09:28:36] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:43] Nick: Bind param :datum => 2002-02-02 (type 2)
+[2025-05-22 09:28:43] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:49] Nick: Bind param :id => 5 (type 2)
+[2025-05-22 09:28:49] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:49] Nick: single() opgehaald. Resultaat: false
+[2025-05-22 09:28:49] Nick: Statement executed in single().
+[2025-05-22 09:28:51] Nick: Bind param :factuurId => 5 (type 2)
+[2025-05-22 09:28:51] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:56] Nick: Bind param :id => 4 (type 2)
+[2025-05-22 09:28:56] Nick: BindValue uitgevoerd in bind().
+[2025-05-22 09:28:56] Nick: single() opgehaald. Resultaat: (object) array(
+   'id' => 4,
+   'datum' => '2024-04-10',
+   'totaal' => '568.70',
+   'klant_naam' => 'Lisa Peters',
+)
+[2025-05-22 09:28:56] Nick: Statement executed in single().
+[2025-05-22 09:28:59] Nick: Bind param :factuurId => 4 (type 2)
+[2025-05-22 09:28:59] Nick: BindValue uitgevoerd in bind().

@@ -71,6 +71,14 @@ class Accounts extends BaseController
     {
         checkLogin();
 
+        // Log het openen van het overzicht
+        $username = $_SESSION['username'] ?? 'onbekend';
+        file_put_contents(
+            __DIR__ . '/../../accounts.log',
+            "[" . date('Y-m-d H:i:s') . "] Accountoverzicht geopend door: $username\n",
+            FILE_APPEND
+        );
+
         // Alleen voor beheerders
         if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'Beheerder') {
             $_SESSION['error_message'] = "Pagina niet beschikbaar voor onbevoegden";

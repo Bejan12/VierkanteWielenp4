@@ -49,13 +49,13 @@
           <a class="nav-link" href="<?= URLROOT; ?>/home/index">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= URLROOT; ?>/smartphones/index">Smartphones</a>
+          <a class="nav-link" href="<?= URLROOT; ?>/smartphones/index">Pakketten</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= URLROOT; ?>/sneakers/index">Sneakers</a>
+          <a class="nav-link" href="<?= URLROOT; ?>/sneakers/index">Instructeurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= URLROOT; ?>/horloges/index">Horloges</a>
+          <a class="nav-link" href="<?= URLROOT; ?>/horloges/index">Over ons</a>
         </li>
       </ul>
 
