@@ -1,0 +1,6 @@
+[2025-05-22 10:00] Project VierkanteWielenp4: Setup en debugging afgerond.
+[2025-05-22 10:01] Controllers en models hernoemd en opgeschoond voor Factuur, Betaling, Melding.
+[2025-05-22 10:02] Navigatie en styling views bijgewerkt.
+[2025-05-22 10:03] PDF functionaliteit en detailweergave factuur toegevoegd.
+[2025-05-22 10:04] Alle routes en knoppen werken correct.
+[2025-05-22 10:05] Project is nu foutloos en volledig werkend volgens MVC.
