@@ -1,1567 +1,182 @@
-[2025-05-22 10:10] Nick: Dashboard knoppen en navigatie getest.
-[2025-05-22 10:11] Nick: Styling en PDF download functionaliteit gecontroleerd.
-[2025-05-22 09:23:04] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:23:04] Nick: single() opgehaald.
-[2025-05-22 09:23:11] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:23:11] Nick: single() opgehaald.
-[2025-05-22 09:23:52] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:23:52] Nick: single() opgehaald.
-[2025-05-22 09:23:54] Nick: Bind param :id => 4 (type 2)
-[2025-05-22 09:23:54] Nick: single() opgehaald.
-[2025-05-22 09:25:15] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:25:15] Nick: single() opgehaald.
-[2025-05-22 09:25:17] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:25:26] Nick: Bind param :id => 1 (type 2)
-[2025-05-22 09:25:26] Nick: single() opgehaald.
-[2025-05-22 09:25:33] Nick: Bind param :id => 1 (type 2)
-[2025-05-22 09:25:33] Nick: single() opgehaald.
-[2025-05-22 09:25:36] Nick: Bind param :factuurId => 1 (type 2)
-[2025-05-22 09:28:11] Nick: Bind param :factuurId => 1 (type 2)
-[2025-05-22 09:28:11] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:12] Nick: Bind param :factuurId => 1 (type 2)
-[2025-05-22 09:28:12] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:36] Nick: Bind param :datum => 2002-02-02 (type 2)
-[2025-05-22 09:28:36] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:43] Nick: Bind param :datum => 2002-02-02 (type 2)
-[2025-05-22 09:28:43] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:49] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:28:49] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:49] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:28:49] Nick: Statement executed in single().
-[2025-05-22 09:28:51] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:28:51] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:56] Nick: Bind param :id => 4 (type 2)
-[2025-05-22 09:28:56] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:28:56] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 4,
-   'datum' => '2024-04-10',
-   'totaal' => '568.70',
-   'klant_naam' => 'Lisa Peters',
+[2025-06-19 10:25:21] Nick: Bind param :beschrijving => asd (type 2)
+[2025-06-19 10:25:21] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:25:21] Nick: Bind param :datum => 2006-04-01 (type 2)
+[2025-06-19 10:25:21] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:25:21] Nick: single() opgehaald. Resultaat: false
+[2025-06-19 10:25:21] Nick: Statement executed in single().
+[2025-06-19 10:25:21] Nick: Bind param :beschrijving => asd (type 2)
+[2025-06-19 10:25:21] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:25:21] Nick: Bind param :datum => 2006-04-01 (type 2)
+[2025-06-19 10:25:21] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:25:21] Nick: Bind param :actief => 1 (type 1)
+[2025-06-19 10:25:21] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:27:52] Nick: Bind param :inschrijvingId => 7 (type 2)
+[2025-06-19 10:27:52] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:27:52] Nick: single() opgehaald. Resultaat: false
+[2025-06-19 10:27:52] Nick: Statement executed in single().
+[2025-06-19 10:27:52] Nick: single() opgehaald. Resultaat: (object) array(
+   'Factuurnummer' => 'F2024004',
 )
-[2025-05-22 09:28:56] Nick: Statement executed in single().
-[2025-05-22 09:28:59] Nick: Bind param :factuurId => 4 (type 2)
-[2025-05-22 09:28:59] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:38:45] Nick: Bind param :factuurId => 4 (type 2)
-[2025-05-22 09:38:45] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:38:48] Nick: Bind param :id => 4 (type 2)
-[2025-05-22 09:38:48] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:38:48] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 4,
-   'datum' => '2024-04-10',
-   'totaal' => '568.70',
-   'klant_naam' => 'Lisa Peters',
+[2025-06-19 10:27:52] Nick: Statement executed in single().
+[2025-06-19 10:27:52] Nick: Bind param :factuurnummer => F2025001 (type 2)
+[2025-06-19 10:27:52] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:27:52] Nick: Bind param :datum => 2006-04-01 (type 2)
+[2025-06-19 10:27:52] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:27:52] Nick: Bind param :bedrag => 20 (type 2)
+[2025-06-19 10:27:52] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:27:52] Nick: Bind param :status => Open (type 2)
+[2025-06-19 10:27:52] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:27:52] Nick: Bind param :inschrijvingId => 7 (type 2)
+[2025-06-19 10:27:52] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:28:04] Nick: Bind param :id => 5 (type 2)
+[2025-06-19 10:28:04] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:28:04] Nick: single() opgehaald. Resultaat: (object) array(
+   'id' => 5,
+   'nummer' => 'F2025001',
+   'datum' => '2006-04-01',
+   'totaal' => '20.00',
+   'klant_naam' => 'bejan bejan',
 )
-[2025-05-22 09:38:48] Nick: Statement executed in single().
-[2025-05-22 09:39:38] Nick: Bind param :datum => 0033-02-11 (type 2)
-[2025-05-22 09:39:38] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:42:01] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:42:01] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:42:01] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:42:01] Nick: Statement executed in single().
-[2025-05-22 09:42:12] Nick: Bind param :id => 4 (type 2)
-[2025-05-22 09:42:12] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:42:12] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 4,
-   'datum' => '2024-04-10',
-   'totaal' => '568.70',
-   'klant_naam' => 'Lisa Peters',
+[2025-06-19 10:28:04] Nick: Statement executed in single().
+[2025-06-19 10:28:09] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:28:09] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:28:09] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-05-22 09:42:12] Nick: Statement executed in single().
-[2025-05-22 09:50:20] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:50:20] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:50:20] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:50:20] Nick: Statement executed in single().
-[2025-05-22 09:50:31] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:50:31] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:51:40] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:51:40] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:54:58] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:54:58] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:55:04] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:55:04] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:55:41] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:55:41] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:55:46] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:55:46] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:55:55] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:55:55] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:06] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 09:56:06] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:14] Nick: Bind param :datum => 2202-02-02 (type 2)
-[2025-05-22 09:56:14] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:21] Nick: Bind param :datum => 2024-01-03 (type 2)
-[2025-05-22 09:56:21] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:28] Nick: Bind param :datum => 2024-03-01 (type 2)
-[2025-05-22 09:56:28] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:31] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:56:31] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:31] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:56:31] Nick: Statement executed in single().
-[2025-05-22 09:56:36] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:56:36] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:56:36] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:56:36] Nick: Statement executed in single().
-[2025-05-22 09:58:18] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:58:18] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:58:18] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:58:18] Nick: Statement executed in single().
-[2025-05-22 09:58:19] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:58:19] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:58:19] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:58:19] Nick: Statement executed in single().
-[2025-05-22 09:58:22] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:58:22] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:58:22] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:58:22] Nick: Statement executed in single().
-[2025-05-22 09:58:24] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:58:24] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:58:24] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:58:24] Nick: Statement executed in single().
-[2025-05-22 09:58:24] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:58:24] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:58:24] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:58:24] Nick: Statement executed in single().
-[2025-05-22 09:58:24] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:58:24] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:58:24] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:58:24] Nick: Statement executed in single().
-[2025-05-22 09:59:20] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:59:20] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:59:20] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:59:20] Nick: Statement executed in single().
-[2025-05-22 09:59:55] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:59:55] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:59:55] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:59:55] Nick: Statement executed in single().
-[2025-05-22 09:59:58] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 09:59:58] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 09:59:58] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 09:59:58] Nick: Statement executed in single().
-[2025-05-22 10:32:58] Nick: Bind param :username => tombakker (type 2)
-[2025-05-22 10:32:58] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:32:58] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-05-16 10:15:47',
+[2025-06-19 10:28:09] Nick: Statement executed in single().
+[2025-06-19 10:28:13] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:28:13] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:28:13] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-05-22 10:32:58] Nick: Statement executed in single().
-[2025-05-22 10:32:58] Nick: Bind param :id => 3 (type 1)
-[2025-05-22 10:32:58] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:32:58] Nick: Bind param :userId => 3 (type 1)
-[2025-05-22 10:32:58] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:32:58] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
+[2025-06-19 10:28:13] Nick: Statement executed in single().
+[2025-06-19 10:28:13] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:28:13] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:28:13] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-05-22 10:32:58] Nick: Statement executed in single().
-[2025-05-22 10:43:24] Nick: Bind param :username => tombakker (type 2)
-[2025-05-22 10:43:24] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:43:24] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-05-22 12:32:58',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-05-22 12:32:58',
+[2025-06-19 10:28:13] Nick: Statement executed in single().
+[2025-06-19 10:28:13] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:28:13] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:28:13] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-05-22 10:43:24] Nick: Statement executed in single().
-[2025-05-22 10:43:24] Nick: Bind param :id => 3 (type 1)
-[2025-05-22 10:43:24] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:43:24] Nick: Bind param :userId => 3 (type 1)
-[2025-05-22 10:43:24] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:43:24] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
+[2025-06-19 10:28:13] Nick: Statement executed in single().
+[2025-06-19 10:29:18] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:29:18] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:29:18] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-05-22 10:43:24] Nick: Statement executed in single().
-[2025-05-22 10:48:46] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 10:48:46] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:48:46] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 10:48:46] Nick: Statement executed in single().
-[2025-05-22 10:48:49] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 10:48:49] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:49:09] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 10:49:09] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:49:09] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 10:49:09] Nick: Statement executed in single().
-[2025-05-22 10:49:22] Nick: Bind param :factuurId => 2 (type 2)
-[2025-05-22 10:49:22] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:53:43] Nick: Bind param :factuurId => 2 (type 2)
-[2025-05-22 10:53:43] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:53:45] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 10:53:45] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:53:45] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 10:53:45] Nick: Statement executed in single().
-[2025-05-22 10:53:46] Nick: Bind param :factuurId => 5 (type 2)
-[2025-05-22 10:53:46] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:53:48] Nick: Bind param :id => 5 (type 2)
-[2025-05-22 10:53:48] Nick: BindValue uitgevoerd in bind().
-[2025-05-22 10:53:48] Nick: single() opgehaald. Resultaat: false
-[2025-05-22 10:53:48] Nick: Statement executed in single().
-[2025-06-01 17:53:08] Nick: Bind param :username => 123 (type 2)
-[2025-06-01 17:53:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:08] Nick: single() opgehaald. Resultaat: false
-[2025-06-01 17:53:08] Nick: Statement executed in single().
-[2025-06-01 17:53:11] Nick: Bind param :username => tombakker (type 2)
-[2025-06-01 17:53:11] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:11] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-05-22 12:43:24',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-05-22 12:43:24',
+[2025-06-19 10:29:18] Nick: Statement executed in single().
+[2025-06-19 10:29:29] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:29:29] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:29:29] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-06-01 17:53:11] Nick: Statement executed in single().
-[2025-06-01 17:53:11] Nick: Bind param :id => 3 (type 1)
-[2025-06-01 17:53:11] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:11] Nick: Bind param :userId => 3 (type 1)
-[2025-06-01 17:53:11] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:11] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
+[2025-06-19 10:29:29] Nick: Statement executed in single().
+[2025-06-19 10:30:11] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:30:11] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:30:11] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
 )
-[2025-06-01 17:53:11] Nick: Statement executed in single().
-[2025-06-01 17:53:24] Nick: Bind param :username => janjansen (type 2)
-[2025-06-01 17:53:24] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:24] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:30:11] Nick: Statement executed in single().
+[2025-06-19 10:34:41] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:34:41] Nick: single() opgehaald. Resultaat: (object) array(
+   'aantal' => 0,
+)
+[2025-06-19 10:34:41] Nick: Statement executed in single().
+[2025-06-19 10:34:41] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:34:41] Nick: Bind param :datum => 1999-04-01 (type 2)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:34:41] Nick: Bind param :bedrag => 20 (type 2)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:34:41] Nick: Bind param :status => Betaald (type 2)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:34:41] Nick: Bind param :actief => 1 (type 1)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:34:41] Nick: Bind param :factuurId => 5 (type 2)
+[2025-06-19 10:34:41] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:22] Nick: Bind param :inschrijvingId => 1 (type 2)
+[2025-06-19 10:35:22] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:22] Nick: single() opgehaald. Resultaat: (object) array(
    'Id' => 1,
-   'Voornaam' => 'Jan',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Jansen',
-   'Geboortedatum' => '2000-01-15',
-   'Gebruikersnaam' => 'janjansen',
-   'Wachtwoord' => 'test123',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-05-16 10:15:47',
 )
-[2025-06-01 17:53:24] Nick: Statement executed in single().
-[2025-06-01 17:53:24] Nick: Bind param :id => 1 (type 1)
-[2025-06-01 17:53:24] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:24] Nick: Bind param :userId => 1 (type 1)
-[2025-06-01 17:53:24] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:24] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-01 17:53:24] Nick: Statement executed in single().
-[2025-06-01 17:53:41] Nick: Bind param :username => tombakker (type 2)
-[2025-06-01 17:53:41] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:41] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:11',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:11',
-)
-[2025-06-01 17:53:41] Nick: Statement executed in single().
-[2025-06-01 17:53:41] Nick: Bind param :id => 3 (type 1)
-[2025-06-01 17:53:41] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:41] Nick: Bind param :userId => 3 (type 1)
-[2025-06-01 17:53:41] Nick: BindValue uitgevoerd in bind().
-[2025-06-01 17:53:41] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-01 17:53:41] Nick: Statement executed in single().
-[2025-06-18 08:37:24] Nick: Bind param :username => janjansen (type 2)
-[2025-06-18 08:37:24] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 08:37:24] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 1,
-   'Voornaam' => 'Jan',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Jansen',
-   'Geboortedatum' => '2000-01-15',
-   'Gebruikersnaam' => 'janjansen',
-   'Wachtwoord' => 'test123',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:24',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:24',
-)
-[2025-06-18 08:37:24] Nick: Statement executed in single().
-[2025-06-18 08:37:24] Nick: Bind param :id => 1 (type 1)
-[2025-06-18 08:37:24] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 08:37:24] Nick: Bind param :userId => 1 (type 1)
-[2025-06-18 08:37:24] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 08:37:24] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-18 08:37:24] Nick: Statement executed in single().
-[2025-06-18 20:18:40] Nick: Bind param :username => janjansen (type 2)
-[2025-06-18 20:18:40] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 20:18:40] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 1,
-   'Voornaam' => 'Jan',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Jansen',
-   'Geboortedatum' => '2000-01-15',
-   'Gebruikersnaam' => 'janjansen',
-   'Wachtwoord' => 'test123',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-18 10:37:24',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-18 10:37:24',
-)
-[2025-06-18 20:18:40] Nick: Statement executed in single().
-[2025-06-18 20:18:40] Nick: Bind param :id => 1 (type 1)
-[2025-06-18 20:18:40] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 20:18:40] Nick: Bind param :userId => 1 (type 1)
-[2025-06-18 20:18:40] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 20:18:40] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-18 20:18:40] Nick: Statement executed in single().
-[2025-06-18 21:35:48] Nick: Bind param :gebruikersnaam => djani (type 2)
-[2025-06-18 21:35:48] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:48] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:35:48] Nick: Statement executed in single().
-[2025-06-18 21:35:49] Nick: Bind param :voornaam => Bejan (type 2)
-[2025-06-18 21:35:49] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:49] Nick: Bind param :tussenvoegsel =>  (type 2)
-[2025-06-18 21:35:49] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:49] Nick: Bind param :achternaam => afkar (type 2)
-[2025-06-18 21:35:49] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:49] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-18 21:35:49] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:49] Nick: Bind param :gebruikersnaam => djani (type 2)
-[2025-06-18 21:35:49] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:49] Nick: Bind param :wachtwoord => $2y$10$TQHklH0YJLIr20P8GUEqBezLcLEiWL3dNANxQA3WzerLF.RNV7wQ6 (type 2)
-[2025-06-18 21:35:49] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:56] Nick: Bind param :username => djani (type 2)
-[2025-06-18 21:35:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:35:56] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 7,
-   'Voornaam' => 'Bejan',
-   'Tussenvoegsel' => '',
-   'Achternaam' => 'afkar',
-   'Geboortedatum' => '2006-04-01',
-   'Gebruikersnaam' => 'djani',
-   'Wachtwoord' => '$2y$10$TQHklH0YJLIr20P8GUEqBezLcLEiWL3dNANxQA3WzerLF.RNV7wQ6',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:35:49',
-   'DatumGewijzigd' => '2025-06-18 23:35:49',
-)
-[2025-06-18 21:35:56] Nick: Statement executed in single().
-[2025-06-18 21:36:15] Nick: Bind param :username => djani (type 2)
-[2025-06-18 21:36:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:36:15] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 7,
-   'Voornaam' => 'Bejan',
-   'Tussenvoegsel' => '',
-   'Achternaam' => 'afkar',
-   'Geboortedatum' => '2006-04-01',
-   'Gebruikersnaam' => 'djani',
-   'Wachtwoord' => '123123',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:35:49',
-   'DatumGewijzigd' => '2025-06-18 23:36:11',
-)
-[2025-06-18 21:36:15] Nick: Statement executed in single().
-[2025-06-18 21:36:15] Nick: Bind param :id => 7 (type 1)
-[2025-06-18 21:36:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:36:15] Nick: Bind param :userId => 7 (type 1)
-[2025-06-18 21:36:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:36:15] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:36:15] Nick: Statement executed in single().
-[2025-06-18 21:39:28] Nick: Bind param :gebruikersnaam => djani (type 2)
-[2025-06-18 21:39:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:28] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 7,
-)
-[2025-06-18 21:39:28] Nick: Statement executed in single().
-[2025-06-18 21:39:38] Nick: Bind param :gebruikersnaam => djani1 (type 2)
-[2025-06-18 21:39:38] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:38] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:39:38] Nick: Statement executed in single().
-[2025-06-18 21:39:39] Nick: Bind param :voornaam => djani (type 2)
-[2025-06-18 21:39:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:39] Nick: Bind param :tussenvoegsel => djani (type 2)
-[2025-06-18 21:39:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:39] Nick: Bind param :achternaam => djani (type 2)
-[2025-06-18 21:39:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:39] Nick: Bind param :geboortedatum => 2006-05-01 (type 2)
-[2025-06-18 21:39:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:39] Nick: Bind param :gebruikersnaam => djani1 (type 2)
-[2025-06-18 21:39:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:39:39] Nick: Bind param :wachtwoord => $2y$10$B6Xl7wlbkIpQqJ0KF33VeuhRLicmM3y3zo./URp393BJTrpHBhITu (type 2)
-[2025-06-18 21:39:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:40:58] Nick: Bind param :gebruikersnaam => djani1 (type 2)
-[2025-06-18 21:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:40:58] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 8,
-)
-[2025-06-18 21:40:58] Nick: Statement executed in single().
-[2025-06-18 21:41:04] Nick: Bind param :gebruikersnaam => djani1 (type 2)
-[2025-06-18 21:41:04] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:04] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 8,
-)
-[2025-06-18 21:41:04] Nick: Statement executed in single().
-[2025-06-18 21:41:20] Nick: Bind param :gebruikersnaam => djani12 (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:20] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:41:20] Nick: Statement executed in single().
-[2025-06-18 21:41:20] Nick: Bind param :voornaam => djani (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:20] Nick: Bind param :tussenvoegsel => djani (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:20] Nick: Bind param :achternaam => djani (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:20] Nick: Bind param :geboortedatum => 2006-05-01 (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:20] Nick: Bind param :gebruikersnaam => djani12 (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:20] Nick: Bind param :wachtwoord => $2y$10$w6brM3daCK56dMTOtlrqROBE2A4JvzxDbYUP2g2x37KOo1qHJ.ab6 (type 2)
-[2025-06-18 21:41:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:39] Nick: Bind param :gebruikersnaam => djani12 (type 2)
-[2025-06-18 21:41:39] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:39] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 9,
-)
-[2025-06-18 21:41:39] Nick: Statement executed in single().
-[2025-06-18 21:41:45] Nick: Bind param :gebruikersnaam => djani123 (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:41:45] Nick: Statement executed in single().
-[2025-06-18 21:41:45] Nick: Bind param :voornaam => djani (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: Bind param :tussenvoegsel => djani (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: Bind param :achternaam => djani (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: Bind param :geboortedatum => 2006-05-01 (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: Bind param :gebruikersnaam => djani123 (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: Bind param :wachtwoord => $2y$10$QLX87PwOh0w5vjyY.T4NG.RYKC1jokyVTO9qBu4Hwu/IGIebCAYdS (type 2)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:45] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 10,
-)
-[2025-06-18 21:41:45] Nick: Statement executed in single().
-[2025-06-18 21:41:45] Nick: Bind param :gebruikerid => 10 (type 1)
-[2025-06-18 21:41:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:51] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 21:41:51] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:41:51] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => '$2y$10$QLX87PwOh0w5vjyY.T4NG.RYKC1jokyVTO9qBu4Hwu/IGIebCAYdS',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:41:45',
-)
-[2025-06-18 21:41:51] Nick: Statement executed in single().
-[2025-06-18 21:42:02] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 21:42:02] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:42:02] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => '$2y$10$QLX87PwOh0w5vjyY.T4NG.RYKC1jokyVTO9qBu4Hwu/IGIebCAYdS',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:41:45',
-)
-[2025-06-18 21:42:02] Nick: Statement executed in single().
-[2025-06-18 21:42:06] Nick: Bind param :username => djani1 (type 2)
-[2025-06-18 21:42:06] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:42:06] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 8,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani1',
-   'Wachtwoord' => '$2y$10$B6Xl7wlbkIpQqJ0KF33VeuhRLicmM3y3zo./URp393BJTrpHBhITu',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:39:39',
-   'DatumGewijzigd' => '2025-06-18 23:39:39',
-)
-[2025-06-18 21:42:06] Nick: Statement executed in single().
-[2025-06-18 21:42:10] Nick: Bind param :username => djani12 (type 2)
-[2025-06-18 21:42:10] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:42:10] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 9,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani12',
-   'Wachtwoord' => '$2y$10$w6brM3daCK56dMTOtlrqROBE2A4JvzxDbYUP2g2x37KOo1qHJ.ab6',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:20',
-   'DatumGewijzigd' => '2025-06-18 23:41:20',
-)
-[2025-06-18 21:42:10] Nick: Statement executed in single().
-[2025-06-18 21:43:16] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 21:43:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:43:16] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => NULL,
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:43:08',
-)
-[2025-06-18 21:43:16] Nick: Statement executed in single().
-[2025-06-18 21:43:45] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 21:43:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:43:45] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => NULL,
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:43:08',
-)
-[2025-06-18 21:43:45] Nick: Statement executed in single().
-[2025-06-18 21:44:15] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 21:44:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:15] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => NULL,
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:43:08',
-)
-[2025-06-18 21:44:15] Nick: Statement executed in single().
-[2025-06-18 21:44:19] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 21:44:19] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:19] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => NULL,
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:43:08',
-)
-[2025-06-18 21:44:19] Nick: Statement executed in single().
-[2025-06-18 21:44:45] Nick: Bind param :gebruikersnaam => djaantje (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:44:45] Nick: Statement executed in single().
-[2025-06-18 21:44:45] Nick: Bind param :voornaam => bejan (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: Bind param :tussenvoegsel => bejan (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: Bind param :achternaam => bejan (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: Bind param :geboortedatum => 2007-05-01 (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: Bind param :gebruikersnaam => djaantje (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: Bind param :wachtwoord => $2y$10$dyHIaTfEJ3w7duxip5nId.OeIVNRPPnpzrtzGNn3QgIQqQA.cUi0. (type 2)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:44:45] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 11,
-)
-[2025-06-18 21:44:45] Nick: Statement executed in single().
-[2025-06-18 21:44:45] Nick: Bind param :gebruikerid => 11 (type 1)
-[2025-06-18 21:44:45] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:45:19] Nick: Bind param :username => djaantje (type 2)
-[2025-06-18 21:45:19] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:45:19] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 11,
-   'Voornaam' => 'bejan',
-   'Tussenvoegsel' => 'bejan',
-   'Achternaam' => 'bejan',
-   'Geboortedatum' => '2007-05-01',
-   'Gebruikersnaam' => 'djaantje',
-   'Wachtwoord' => '$2y$10$dyHIaTfEJ3w7duxip5nId.OeIVNRPPnpzrtzGNn3QgIQqQA.cUi0.',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:44:45',
-   'DatumGewijzigd' => '2025-06-18 23:44:45',
-)
-[2025-06-18 21:45:19] Nick: Statement executed in single().
-[2025-06-18 21:45:19] Nick: Bind param :id => 11 (type 1)
-[2025-06-18 21:45:19] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:45:19] Nick: Bind param :userId => 11 (type 1)
-[2025-06-18 21:45:19] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:45:19] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-18 21:45:19] Nick: Statement executed in single().
-[2025-06-18 21:48:25] Nick: Bind param :username => tombakker (type 2)
-[2025-06-18 21:48:25] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:48:25] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:41',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:41',
-)
-[2025-06-18 21:48:25] Nick: Statement executed in single().
-[2025-06-18 21:59:01] Nick: Bind param :gebruikersnaam => nicky2006 (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:59:01] Nick: Statement executed in single().
-[2025-06-18 21:59:01] Nick: Bind param :voornaam => nick (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: Bind param :tussenvoegsel => van (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: Bind param :achternaam => beusichem (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: Bind param :gebruikersnaam => nicky2006 (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: Bind param :wachtwoord => $2y$10$1tHAElEKI.FoMhc1Jx2s1.dypmWzPiGIqpyqp0SpTJv.J1U/Q9hzS (type 2)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:01] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 12,
-)
-[2025-06-18 21:59:01] Nick: Statement executed in single().
-[2025-06-18 21:59:01] Nick: Bind param :gebruikerid => 12 (type 1)
-[2025-06-18 21:59:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:37] Nick: Bind param :gebruikersnaam => nicky2006 (type 2)
-[2025-06-18 21:59:37] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:37] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 12,
-)
-[2025-06-18 21:59:37] Nick: Statement executed in single().
-[2025-06-18 21:59:46] Nick: Bind param :gebruikersnaam => nicky2003 (type 2)
-[2025-06-18 21:59:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:46] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 21:59:46] Nick: Statement executed in single().
-[2025-06-18 21:59:46] Nick: Bind param :voornaam => nick (type 2)
-[2025-06-18 21:59:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:46] Nick: Bind param :tussenvoegsel => van (type 2)
-[2025-06-18 21:59:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:46] Nick: Bind param :achternaam => beusichem (type 2)
-[2025-06-18 21:59:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:46] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-18 21:59:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:46] Nick: Bind param :gebruikersnaam => nicky2003 (type 2)
-[2025-06-18 21:59:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:47] Nick: Bind param :wachtwoord => $2y$10$eNQl0xORPQLWiqAd7Px59umgPK7RC3mZm46SEZbZU837UrkiJzK72 (type 2)
-[2025-06-18 21:59:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 21:59:47] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 13,
-)
-[2025-06-18 21:59:47] Nick: Statement executed in single().
-[2025-06-18 21:59:47] Nick: Bind param :gebruikerid => 13 (type 1)
-[2025-06-18 21:59:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: Bind param :gebruikersnaam => mazin (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 22:01:15] Nick: Statement executed in single().
-[2025-06-18 22:01:15] Nick: Bind param :voornaam => mazin (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: Bind param :tussenvoegsel =>  (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: Bind param :achternaam => jamil (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: Bind param :gebruikersnaam => mazin (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: Bind param :wachtwoord => $2y$10$wBmVXJMVPCcCdXPC015Hd.BughZlSFWPhN5hLj1tHERD9WyQPiIOS (type 2)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:01:15] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 14,
-)
-[2025-06-18 22:01:15] Nick: Statement executed in single().
-[2025-06-18 22:01:15] Nick: Bind param :gebruikerid => 14 (type 1)
-[2025-06-18 22:01:15] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:01] Nick: Bind param :gebruikersnaam => mazin (type 2)
-[2025-06-18 22:02:01] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:01] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 14,
-)
-[2025-06-18 22:02:01] Nick: Statement executed in single().
-[2025-06-18 22:02:07] Nick: Bind param :gebruikersnaam => mazin3 (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 22:02:07] Nick: Statement executed in single().
-[2025-06-18 22:02:07] Nick: Bind param :voornaam => mazin (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: Bind param :tussenvoegsel =>  (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: Bind param :achternaam => jamil (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: Bind param :gebruikersnaam => mazin3 (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: Bind param :wachtwoord => $2y$10$1Hf1umVj/TFM9J.owqk/MORTJvFvW2LLH0JevFP/fb7yufLoKK9Mm (type 2)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:02:07] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 15,
-)
-[2025-06-18 22:02:07] Nick: Statement executed in single().
-[2025-06-18 22:02:07] Nick: Bind param :gebruikerid => 15 (type 1)
-[2025-06-18 22:02:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: Bind param :gebruikersnaam => arjan123 (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: single() opgehaald. Resultaat: false
-[2025-06-18 22:04:16] Nick: Statement executed in single().
-[2025-06-18 22:04:16] Nick: Bind param :voornaam => arjan (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: Bind param :tussenvoegsel => de (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: Bind param :achternaam => ruijter (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: Bind param :geboortedatum => 2006-05-01 (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: Bind param :gebruikersnaam => arjan123 (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: Bind param :wachtwoord => $2y$10$O/5twJeL9RZb38I7mroiFuYjaIxhk2TicioxVsKYvzvEnYb6Lfy/G (type 2)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:16] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 16,
-)
-[2025-06-18 22:04:16] Nick: Statement executed in single().
-[2025-06-18 22:04:16] Nick: Bind param :gebruikerid => 16 (type 1)
-[2025-06-18 22:04:16] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:32] Nick: Bind param :username => arjan123 (type 2)
-[2025-06-18 22:04:32] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:32] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 16,
-   'Voornaam' => 'arjan',
-   'Tussenvoegsel' => 'de',
-   'Achternaam' => 'ruijter',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'arjan123',
-   'Wachtwoord' => '$2y$10$O/5twJeL9RZb38I7mroiFuYjaIxhk2TicioxVsKYvzvEnYb6Lfy/G',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 00:04:16',
-   'DatumGewijzigd' => '2025-06-19 00:04:16',
-)
-[2025-06-18 22:04:32] Nick: Statement executed in single().
-[2025-06-18 22:04:36] Nick: Bind param :username => arjan123 (type 2)
-[2025-06-18 22:04:36] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:36] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 16,
-   'Voornaam' => 'arjan',
-   'Tussenvoegsel' => 'de',
-   'Achternaam' => 'ruijter',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'arjan123',
-   'Wachtwoord' => '$2y$10$O/5twJeL9RZb38I7mroiFuYjaIxhk2TicioxVsKYvzvEnYb6Lfy/G',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 00:04:16',
-   'DatumGewijzigd' => '2025-06-19 00:04:16',
-)
-[2025-06-18 22:04:36] Nick: Statement executed in single().
-[2025-06-18 22:04:36] Nick: Bind param :id => 16 (type 1)
-[2025-06-18 22:04:36] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:36] Nick: Bind param :userId => 16 (type 1)
-[2025-06-18 22:04:36] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:04:36] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-18 22:04:36] Nick: Statement executed in single().
-[2025-06-18 22:05:46] Nick: Bind param :username => tombakker (type 2)
-[2025-06-18 22:05:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:05:46] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:41',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:41',
-)
-[2025-06-18 22:05:46] Nick: Statement executed in single().
-[2025-06-18 22:05:59] Nick: Bind param :username => tombakker (type 2)
-[2025-06-18 22:05:59] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:05:59] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:41',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:41',
-)
-[2025-06-18 22:05:59] Nick: Statement executed in single().
-[2025-06-18 22:06:05] Nick: Bind param :username => djani123 (type 2)
-[2025-06-18 22:06:05] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:06:05] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 10,
-   'Voornaam' => 'djani',
-   'Tussenvoegsel' => 'djani',
-   'Achternaam' => 'djani',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'djani123',
-   'Wachtwoord' => NULL,
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:41:45',
-   'DatumGewijzigd' => '2025-06-18 23:43:08',
-)
-[2025-06-18 22:06:05] Nick: Statement executed in single().
-[2025-06-18 22:06:17] Nick: Bind param :username => janjansen (type 2)
-[2025-06-18 22:06:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:06:17] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 1,
-   'Voornaam' => 'Jan',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Jansen',
-   'Geboortedatum' => '2000-01-15',
-   'Gebruikersnaam' => 'janjansen',
-   'Wachtwoord' => 'test123',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-18 22:18:40',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-18 22:18:40',
-)
-[2025-06-18 22:06:17] Nick: Statement executed in single().
-[2025-06-18 22:06:26] Nick: Bind param :username => janjansen (type 2)
-[2025-06-18 22:06:26] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:06:26] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 1,
-   'Voornaam' => 'Jan',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Jansen',
-   'Geboortedatum' => '2000-01-15',
-   'Gebruikersnaam' => 'janjansen',
-   'Wachtwoord' => 'test123',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-18 22:18:40',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-18 22:18:40',
-)
-[2025-06-18 22:06:26] Nick: Statement executed in single().
-[2025-06-18 22:06:40] Nick: Bind param :username => tombakker (type 2)
-[2025-06-18 22:06:40] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:06:40] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:41',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:41',
-)
-[2025-06-18 22:06:40] Nick: Statement executed in single().
-[2025-06-18 22:06:46] Nick: Bind param :username => tombakker (type 2)
-[2025-06-18 22:06:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:06:46] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:41',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:41',
-)
-[2025-06-18 22:06:46] Nick: Statement executed in single().
-[2025-06-18 22:07:38] Nick: Bind param :username => tombakker (type 2)
-[2025-06-18 22:07:38] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:38] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-01 19:53:41',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-01 19:53:41',
-)
-[2025-06-18 22:07:38] Nick: Statement executed in single().
-[2025-06-18 22:07:38] Nick: Bind param :id => 3 (type 1)
-[2025-06-18 22:07:38] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:38] Nick: Bind param :userId => 3 (type 1)
-[2025-06-18 22:07:38] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:38] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-18 22:07:38] Nick: Statement executed in single().
-[2025-06-18 22:07:47] Nick: Bind param :username => arjan123 (type 2)
-[2025-06-18 22:07:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:47] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 16,
-   'Voornaam' => 'arjan',
-   'Tussenvoegsel' => 'de',
-   'Achternaam' => 'ruijter',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'arjan123',
-   'Wachtwoord' => '$2y$10$O/5twJeL9RZb38I7mroiFuYjaIxhk2TicioxVsKYvzvEnYb6Lfy/G',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 00:04:36',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 00:04:16',
-   'DatumGewijzigd' => '2025-06-19 00:04:36',
-)
-[2025-06-18 22:07:47] Nick: Statement executed in single().
-[2025-06-18 22:07:51] Nick: Bind param :username => arjan123 (type 2)
-[2025-06-18 22:07:51] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:51] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 16,
-   'Voornaam' => 'arjan',
-   'Tussenvoegsel' => 'de',
-   'Achternaam' => 'ruijter',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'arjan123',
-   'Wachtwoord' => '$2y$10$O/5twJeL9RZb38I7mroiFuYjaIxhk2TicioxVsKYvzvEnYb6Lfy/G',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 00:04:36',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 00:04:16',
-   'DatumGewijzigd' => '2025-06-19 00:04:36',
-)
-[2025-06-18 22:07:51] Nick: Statement executed in single().
-[2025-06-18 22:07:56] Nick: Bind param :username => arjan123 (type 2)
-[2025-06-18 22:07:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:56] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 16,
-   'Voornaam' => 'arjan',
-   'Tussenvoegsel' => 'de',
-   'Achternaam' => 'ruijter',
-   'Geboortedatum' => '2006-05-01',
-   'Gebruikersnaam' => 'arjan123',
-   'Wachtwoord' => '$2y$10$O/5twJeL9RZb38I7mroiFuYjaIxhk2TicioxVsKYvzvEnYb6Lfy/G',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 00:04:36',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 00:04:16',
-   'DatumGewijzigd' => '2025-06-19 00:04:36',
-)
-[2025-06-18 22:07:56] Nick: Statement executed in single().
-[2025-06-18 22:07:56] Nick: Bind param :id => 16 (type 1)
-[2025-06-18 22:07:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:56] Nick: Bind param :userId => 16 (type 1)
-[2025-06-18 22:07:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-18 22:07:56] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-18 22:07:56] Nick: Statement executed in single().
-[2025-06-19 08:03:44] Nick: Bind param :username => djaantje (type 2)
-[2025-06-19 08:03:44] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:03:44] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 11,
-   'Voornaam' => 'bejan',
-   'Tussenvoegsel' => 'bejan',
-   'Achternaam' => 'bejan',
-   'Geboortedatum' => '2007-05-01',
-   'Gebruikersnaam' => 'djaantje',
-   'Wachtwoord' => '$2y$10$dyHIaTfEJ3w7duxip5nId.OeIVNRPPnpzrtzGNn3QgIQqQA.cUi0.',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-18 23:45:19',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-18 23:44:45',
-   'DatumGewijzigd' => '2025-06-18 23:45:19',
-)
-[2025-06-19 08:03:44] Nick: Statement executed in single().
-[2025-06-19 08:04:46] Nick: Bind param :gebruikersnaam => nickyboy (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 08:04:46] Nick: Statement executed in single().
-[2025-06-19 08:04:46] Nick: Bind param :voornaam => nick (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: Bind param :tussenvoegsel => nick (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: Bind param :achternaam => nicky (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: Bind param :geboortedatum => 2006-06-06 (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: Bind param :gebruikersnaam => nickyboy (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: Bind param :wachtwoord => $2y$10$9uvmjQOin.Ygp7x3ubmtSeKeIGqjUSvCw6vsupN/8Q8gDMLAbFln6 (type 2)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:46] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 17,
-)
-[2025-06-19 08:04:46] Nick: Statement executed in single().
-[2025-06-19 08:04:46] Nick: Bind param :gebruikerid => 17 (type 1)
-[2025-06-19 08:04:46] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:50] Nick: Bind param :username => nickyboy (type 2)
-[2025-06-19 08:04:50] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:50] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 17,
-   'Voornaam' => 'nick',
-   'Tussenvoegsel' => 'nick',
-   'Achternaam' => 'nicky',
-   'Geboortedatum' => '2006-06-06',
-   'Gebruikersnaam' => 'nickyboy',
-   'Wachtwoord' => '$2y$10$9uvmjQOin.Ygp7x3ubmtSeKeIGqjUSvCw6vsupN/8Q8gDMLAbFln6',
-   'IsIngelogd' => 0,
-   'Ingelogd' => NULL,
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 10:04:46',
-   'DatumGewijzigd' => '2025-06-19 10:04:46',
-)
-[2025-06-19 08:04:50] Nick: Statement executed in single().
-[2025-06-19 08:04:50] Nick: Bind param :id => 17 (type 1)
-[2025-06-19 08:04:50] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:50] Nick: Bind param :userId => 17 (type 1)
-[2025-06-19 08:04:50] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:04:50] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-19 08:04:50] Nick: Statement executed in single().
-[2025-06-19 08:05:17] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:05:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:05:17] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 00:07:38',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 00:07:38',
-)
-[2025-06-19 08:05:17] Nick: Statement executed in single().
-[2025-06-19 08:05:17] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:05:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:05:17] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:05:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:05:17] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:05:17] Nick: Statement executed in single().
-[2025-06-19 08:20:05] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:20:05] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:20:05] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 10:05:17',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 10:05:17',
-)
-[2025-06-19 08:20:05] Nick: Statement executed in single().
-[2025-06-19 08:20:05] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:20:05] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:20:05] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:20:05] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:20:05] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:20:05] Nick: Statement executed in single().
-[2025-06-19 08:24:52] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:24:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:24:52] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 10:20:05',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 10:20:05',
-)
-[2025-06-19 08:24:52] Nick: Statement executed in single().
-[2025-06-19 08:24:52] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:24:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:24:52] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:24:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:24:52] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:24:52] Nick: Statement executed in single().
-[2025-06-19 08:27:30] Nick: Bind param :merk => Renault (type 2)
-[2025-06-19 08:27:30] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:27:30] Nick: Bind param :type => Captur (type 2)
-[2025-06-19 08:27:30] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:27:30] Nick: Bind param :kenteken => 56-X3-M9 (type 2)
-[2025-06-19 08:27:30] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:27:30] Nick: Bind param :brandstof => elektrisch (type 2)
-[2025-06-19 08:27:30] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:27:30] Nick: Bind param :opmerking => gangster (type 2)
-[2025-06-19 08:27:30] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:28:47] Nick: Bind param :merk => Zakaki (type 2)
-[2025-06-19 08:28:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:28:47] Nick: Bind param :type => zakaki (type 2)
-[2025-06-19 08:28:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:28:47] Nick: Bind param :kenteken => zakaki (type 2)
-[2025-06-19 08:28:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:28:47] Nick: Bind param :brandstof => elektrisch (type 2)
-[2025-06-19 08:28:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:28:47] Nick: Bind param :opmerking => zakaikik (type 2)
-[2025-06-19 08:28:47] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:29:09] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:29:09] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:29:09] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 10:24:52',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 10:24:52',
-)
-[2025-06-19 08:29:09] Nick: Statement executed in single().
-[2025-06-19 08:29:09] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:29:09] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:29:09] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:29:09] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:29:09] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:29:09] Nick: Statement executed in single().
-[2025-06-19 08:31:52] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:31:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:31:52] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 10:29:09',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 10:29:09',
-)
-[2025-06-19 08:31:52] Nick: Statement executed in single().
-[2025-06-19 08:31:52] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:31:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:31:52] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:31:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:31:52] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:31:52] Nick: Statement executed in single().
-[2025-06-19 08:33:22] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:33:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:22] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 10:31:52',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 10:31:52',
-)
-[2025-06-19 08:33:22] Nick: Statement executed in single().
-[2025-06-19 08:33:22] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:33:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:22] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:33:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:22] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:33:22] Nick: Statement executed in single().
-[2025-06-19 08:33:44] Nick: Bind param :merk => djaantje (type 2)
-[2025-06-19 08:33:44] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:44] Nick: Bind param :type => djaantje (type 2)
-[2025-06-19 08:33:44] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:44] Nick: Bind param :kenteken => djaantje (type 2)
-[2025-06-19 08:33:44] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:44] Nick: Bind param :brandstof => benzine (type 2)
-[2025-06-19 08:33:44] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:33:44] Nick: Bind param :opmerking => djaantje (type 2)
-[2025-06-19 08:33:44] Nick: BindValue uitgevoerd in bind().
-<<<<<<< HEAD
-[2025-06-19 08:40:58] Nick: Bind param :gebruikersnaam => testje (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 08:40:58] Nick: Statement executed in single().
-[2025-06-19 08:40:58] Nick: Bind param :voornaam => test (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: Bind param :tussenvoegsel =>  (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: Bind param :achternaam => nieuwe (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: Bind param :gebruikersnaam => testje (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: Bind param :wachtwoord => $2y$10$cRYswJ2t7sh0rEpGMR7aAOjOzdZrwVkUjohgUvhnrGa7o23eiQRw. (type 2)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:40:58] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 18,
-)
-[2025-06-19 08:40:58] Nick: Statement executed in single().
-[2025-06-19 08:40:58] Nick: Bind param :gebruikerid => 18 (type 1)
-[2025-06-19 08:40:58] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: Bind param :gebruikersnaam => test444 (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 08:45:00] Nick: Statement executed in single().
-[2025-06-19 08:45:00] Nick: Bind param :voornaam => asdd (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: Bind param :tussenvoegsel => asd (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: Bind param :achternaam => asd (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: Bind param :gebruikersnaam => test444 (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: Bind param :wachtwoord => $2y$10$AgKbFO60QXAkD5z5ruFTFueC4KeuMwlC950Ozvp0oW15RXvF5KNoe (type 2)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:45:00] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 19,
-)
-[2025-06-19 08:45:00] Nick: Statement executed in single().
-[2025-06-19 08:45:00] Nick: Bind param :gebruikerid => 19 (type 1)
-[2025-06-19 08:45:00] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:47:27] Nick: Bind param :gebruikersnaam => djaantje (type 2)
-[2025-06-19 08:47:27] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:47:27] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 11,
-)
-[2025-06-19 08:47:27] Nick: Statement executed in single().
-[2025-06-19 08:56:37] Nick: Bind param :username => test123 (type 2)
-[2025-06-19 08:56:37] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:56:37] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 08:56:37] Nick: Statement executed in single().
-[2025-06-19 08:56:48] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 08:56:48] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:56:48] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 10:33:22',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 10:33:22',
-)
-[2025-06-19 08:56:48] Nick: Statement executed in single().
-[2025-06-19 08:56:48] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 08:56:48] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:56:48] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 08:56:48] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 08:56:48] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 08:56:48] Nick: Statement executed in single().
-[2025-06-19 09:20:07] Nick: Bind param :gebruikersnaam => bejan (type 2)
-[2025-06-19 09:20:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:07] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 09:20:07] Nick: Statement executed in single().
-[2025-06-19 09:20:08] Nick: Bind param :voornaam => bejan (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: Bind param :tussenvoegsel => bejan (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: Bind param :achternaam => bejan (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: Bind param :gebruikersnaam => bejan (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: Bind param :wachtwoord => $2y$10$1gfEEb2ue157nEWXuD6VleV8NK/bM2SbTrjaqQALv3sIhSITAx4TK (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: Bind param :email => bejan@bejan.com (type 2)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:08] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:35:22] Nick: Statement executed in single().
+[2025-06-19 10:35:36] Nick: Bind param :inschrijvingId => 5 (type 2)
+[2025-06-19 10:35:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:36] Nick: single() opgehaald. Resultaat: false
+[2025-06-19 10:35:36] Nick: Statement executed in single().
+[2025-06-19 10:35:36] Nick: single() opgehaald. Resultaat: (object) array(
+   'Factuurnummer' => 'F2024004',
+)
+[2025-06-19 10:35:36] Nick: Statement executed in single().
+[2025-06-19 10:35:36] Nick: Bind param :factuurnummer => F2025001 (type 2)
+[2025-06-19 10:35:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:36] Nick: Bind param :datum => 23023-02-19 (type 2)
+[2025-06-19 10:35:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:36] Nick: Bind param :bedrag => 123 (type 2)
+[2025-06-19 10:35:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:36] Nick: Bind param :status => Betaald (type 2)
+[2025-06-19 10:35:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:35:36] Nick: Bind param :inschrijvingId => 5 (type 2)
+[2025-06-19 10:35:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :gebruikersnaam => 0104 (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: single() opgehaald. Resultaat: false
+[2025-06-19 10:39:14] Nick: Statement executed in single().
+[2025-06-19 10:39:14] Nick: Bind param :voornaam => account (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :tussenvoegsel => sprint (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :achternaam => test (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :gebruikersnaam => 0104 (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :wachtwoord => $2y$10$F56ZmIUYDIM1fiwuESb/n./fHLQ3.npcBL6S.Q2ZMbYkY24xK5oDq (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: Bind param :email => 0104@gmail.com (type 2)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:14] Nick: single() opgehaald. Resultaat: (object) array(
    'id' => 7,
 )
-[2025-06-19 09:20:08] Nick: Statement executed in single().
-[2025-06-19 09:20:08] Nick: Bind param :gebruikerid => 7 (type 1)
-[2025-06-19 09:20:08] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:11] Nick: Bind param :username => bejan (type 2)
-[2025-06-19 09:20:11] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:11] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:39:14] Nick: Statement executed in single().
+[2025-06-19 10:39:14] Nick: Bind param :gebruikerid => 7 (type 1)
+[2025-06-19 10:39:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:19] Nick: Bind param :username => 0104 (type 2)
+[2025-06-19 10:39:19] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:19] Nick: single() opgehaald. Resultaat: (object) array(
    'Id' => 7,
-   'Voornaam' => 'bejan',
-   'Tussenvoegsel' => 'bejan',
-   'Achternaam' => 'bejan',
+   'Voornaam' => 'account',
+   'Tussenvoegsel' => 'sprint',
+   'Achternaam' => 'test',
    'Geboortedatum' => '2006-04-01',
-   'Gebruikersnaam' => 'bejan',
-   'Wachtwoord' => '$2y$10$1gfEEb2ue157nEWXuD6VleV8NK/bM2SbTrjaqQALv3sIhSITAx4TK',
-   'Email' => 'bejan@bejan.com',
-=======
-[2025-06-19 09:25:17] Nick: Bind param :gebruikersnaam => Veyselcan (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 09:25:17] Nick: Statement executed in single().
-[2025-06-19 09:25:17] Nick: Bind param :voornaam => veysel (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: Bind param :tussenvoegsel =>  (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: Bind param :achternaam => Dagli (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: Bind param :geboortedatum => 2006-11-12 (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: Bind param :gebruikersnaam => Veyselcan (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: Bind param :wachtwoord => $2y$12$hPK.C8M1XKWLHhvKWQwwYeuPr4encOBEU4SwpxTc7NL/D6I0h5dIq (type 2)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:17] Nick: single() opgehaald. Resultaat: (object) array(
-   'id' => 7,
-)
-[2025-06-19 09:25:17] Nick: Statement executed in single().
-[2025-06-19 09:25:17] Nick: Bind param :gebruikerid => 7 (type 1)
-[2025-06-19 09:25:17] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:21] Nick: Bind param :username => Veyselcan (type 2)
-[2025-06-19 09:25:21] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:21] Nick: single() opgehaald. Resultaat: (object) array(
-   'Id' => 7,
-   'Voornaam' => 'veysel',
-   'Tussenvoegsel' => '',
-   'Achternaam' => 'Dagli',
-   'Geboortedatum' => '2006-11-12',
-   'Gebruikersnaam' => 'Veyselcan',
-   'Wachtwoord' => '$2y$12$hPK.C8M1XKWLHhvKWQwwYeuPr4encOBEU4SwpxTc7NL/D6I0h5dIq',
->>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
+   'Gebruikersnaam' => '0104',
+   'Wachtwoord' => '$2y$10$F56ZmIUYDIM1fiwuESb/n./fHLQ3.npcBL6S.Q2ZMbYkY24xK5oDq',
+   'Email' => '0104@gmail.com',
    'IsIngelogd' => 0,
    'Ingelogd' => NULL,
    'Uitgelogd' => NULL,
    'IsActief' => 1,
    'Opmerking' => NULL,
-<<<<<<< HEAD
-   'DatumAangemaakt' => '2025-06-19 11:20:08',
-   'DatumGewijzigd' => '2025-06-19 11:20:08',
+   'DatumAangemaakt' => '2025-06-19 12:39:14',
+   'DatumGewijzigd' => '2025-06-19 12:39:14',
 )
-[2025-06-19 09:20:11] Nick: Statement executed in single().
-[2025-06-19 09:20:12] Nick: Bind param :id => 7 (type 1)
-[2025-06-19 09:20:12] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:12] Nick: Bind param :userId => 7 (type 1)
-[2025-06-19 09:20:12] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:12] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:39:19] Nick: Statement executed in single().
+[2025-06-19 10:39:19] Nick: Bind param :id => 7 (type 1)
+[2025-06-19 10:39:19] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:19] Nick: Bind param :userId => 7 (type 1)
+[2025-06-19 10:39:19] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:19] Nick: single() opgehaald. Resultaat: (object) array(
    'Naam' => 'Leerling',
 )
-[2025-06-19 09:20:12] Nick: Statement executed in single().
-[2025-06-19 09:20:41] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 09:20:41] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:41] Nick: single() opgehaald. Resultaat: (object) array(
-=======
-   'DatumAangemaakt' => '2025-06-19 11:25:17',
-   'DatumGewijzigd' => '2025-06-19 11:25:17',
-)
-[2025-06-19 09:25:21] Nick: Statement executed in single().
-[2025-06-19 09:25:21] Nick: Bind param :id => 7 (type 1)
-[2025-06-19 09:25:21] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:21] Nick: Bind param :userId => 7 (type 1)
-[2025-06-19 09:25:21] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:21] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
-)
-[2025-06-19 09:25:21] Nick: Statement executed in single().
-[2025-06-19 09:32:31] Nick: Bind param :username => tonbakker (type 2)
-[2025-06-19 09:32:31] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:32:31] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 09:32:31] Nick: Statement executed in single().
-[2025-06-19 09:33:40] Nick: Bind param :username => tonbakker (type 2)
-[2025-06-19 09:33:40] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:33:40] Nick: single() opgehaald. Resultaat: false
-[2025-06-19 09:33:40] Nick: Statement executed in single().
-[2025-06-19 09:33:52] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 09:33:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:33:52] Nick: single() opgehaald. Resultaat: (object) array(
->>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
+[2025-06-19 10:39:19] Nick: Statement executed in single().
+[2025-06-19 10:39:27] Nick: Bind param :username => tombakker (type 2)
+[2025-06-19 10:39:27] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:27] Nick: single() opgehaald. Resultaat: (object) array(
    'Id' => 3,
    'Voornaam' => 'Tom',
    'Tussenvoegsel' => NULL,
@@ -1569,10 +184,7 @@
    'Geboortedatum' => '1985-07-10',
    'Gebruikersnaam' => 'tombakker',
    'Wachtwoord' => 'test789',
-<<<<<<< HEAD
    'Email' => 'tom@email.com',
-=======
->>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
    'IsIngelogd' => 0,
    'Ingelogd' => NULL,
    'Uitgelogd' => NULL,
@@ -1581,159 +193,30 @@
    'DatumAangemaakt' => '2025-05-16 10:15:47',
    'DatumGewijzigd' => '2025-05-16 10:15:47',
 )
-<<<<<<< HEAD
-[2025-06-19 09:20:41] Nick: Statement executed in single().
-[2025-06-19 09:20:41] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 09:20:41] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:41] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 09:20:41] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:20:41] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:39:27] Nick: Statement executed in single().
+[2025-06-19 10:39:27] Nick: Bind param :id => 3 (type 1)
+[2025-06-19 10:39:27] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:27] Nick: Bind param :userId => 3 (type 1)
+[2025-06-19 10:39:27] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:39:27] Nick: single() opgehaald. Resultaat: (object) array(
    'Naam' => 'Beheerder',
 )
-[2025-06-19 09:20:41] Nick: Statement executed in single().
-[2025-06-19 09:23:22] Nick: Bind param :merk => Peugeot (type 2)
-[2025-06-19 09:23:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:23:22] Nick: Bind param :type => 206 (type 2)
-[2025-06-19 09:23:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:23:22] Nick: Bind param :kenteken => 501501501 (type 2)
-[2025-06-19 09:23:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:23:22] Nick: Bind param :brandstof => benzine (type 2)
-[2025-06-19 09:23:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:23:22] Nick: Bind param :opmerking =>  (type 2)
-[2025-06-19 09:23:22] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:20] Nick: Bind param :merk => Ford (type 2)
-[2025-06-19 09:25:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:20] Nick: Bind param :type => focus (type 2)
-[2025-06-19 09:25:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:20] Nick: Bind param :kenteken => 12-32x-30 (type 2)
-[2025-06-19 09:25:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:20] Nick: Bind param :brandstof => benzine (type 2)
-[2025-06-19 09:25:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:25:20] Nick: Bind param :opmerking => dsa (type 2)
-[2025-06-19 09:25:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:36:56] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 09:36:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:36:56] Nick: single() opgehaald. Resultaat: (object) array(
-=======
-[2025-06-19 09:33:52] Nick: Statement executed in single().
-[2025-06-19 09:33:52] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 09:33:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:33:52] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 09:33:52] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:33:52] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 09:33:52] Nick: Statement executed in single().
-[2025-06-19 09:42:07] Nick: Bind param :username => Veyselcan (type 2)
-[2025-06-19 09:42:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:07] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:39:27] Nick: Statement executed in single().
+[2025-06-19 10:40:02] Nick: Bind param :gebruikersnaam => 0104 (type 2)
+[2025-06-19 10:40:02] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:40:02] Nick: single() opgehaald. Resultaat: (object) array(
    'Id' => 7,
-   'Voornaam' => 'veysel',
-   'Tussenvoegsel' => '',
-   'Achternaam' => 'Dagli',
-   'Geboortedatum' => '2006-11-12',
-   'Gebruikersnaam' => 'Veyselcan',
-   'Wachtwoord' => '$2y$12$hPK.C8M1XKWLHhvKWQwwYeuPr4encOBEU4SwpxTc7NL/D6I0h5dIq',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 11:25:21',
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-06-19 11:25:17',
-   'DatumGewijzigd' => '2025-06-19 11:25:21',
 )
-[2025-06-19 09:42:07] Nick: Statement executed in single().
-[2025-06-19 09:42:07] Nick: Bind param :id => 7 (type 1)
-[2025-06-19 09:42:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:07] Nick: Bind param :userId => 7 (type 1)
-[2025-06-19 09:42:07] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:07] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Leerling',
+[2025-06-19 10:40:02] Nick: Statement executed in single().
+[2025-06-19 10:43:21] Nick: Bind param :gebruikersnaam => 0104 (type 2)
+[2025-06-19 10:43:21] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:21] Nick: single() opgehaald. Resultaat: (object) array(
+   'Id' => 7,
 )
-[2025-06-19 09:42:07] Nick: Statement executed in single().
-[2025-06-19 09:42:20] Nick: Bind param :datum => 2025-11-12 (type 2)
-[2025-06-19 09:42:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:20] Nick: Bind param :tijd => 11:42 (type 2)
-[2025-06-19 09:42:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:20] Nick: Bind param :instructeurId => 2 (type 2)
-[2025-06-19 09:42:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:20] Nick: single() opgehaald. Resultaat: (object) array(
-   'cnt' => 0,
-)
-[2025-06-19 09:42:20] Nick: Statement executed in single().
-[2025-06-19 09:42:20] Nick: Bind param :datum => 2025-11-12 (type 2)
-[2025-06-19 09:42:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:20] Nick: Bind param :tijd => 11:42 (type 2)
-[2025-06-19 09:42:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:20] Nick: Bind param :instructeurId => 2 (type 2)
-[2025-06-19 09:42:20] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:36] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 09:42:36] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:36] Nick: single() opgehaald. Resultaat: (object) array(
->>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
-   'Id' => 3,
-   'Voornaam' => 'Tom',
-   'Tussenvoegsel' => NULL,
-   'Achternaam' => 'Bakker',
-   'Geboortedatum' => '1985-07-10',
-   'Gebruikersnaam' => 'tombakker',
-   'Wachtwoord' => 'test789',
-<<<<<<< HEAD
-   'Email' => 'tom@email.com',
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 11:20:41',
-=======
-   'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 11:33:52',
->>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
-   'Uitgelogd' => NULL,
-   'IsActief' => 1,
-   'Opmerking' => NULL,
-   'DatumAangemaakt' => '2025-05-16 10:15:47',
-<<<<<<< HEAD
-   'DatumGewijzigd' => '2025-06-19 11:20:41',
-)
-[2025-06-19 09:36:56] Nick: Statement executed in single().
-[2025-06-19 09:36:56] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 09:36:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:36:56] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 09:36:56] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:36:56] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 09:36:56] Nick: Statement executed in single().
-=======
-   'DatumGewijzigd' => '2025-06-19 11:33:52',
-)
-[2025-06-19 09:42:36] Nick: Statement executed in single().
-[2025-06-19 09:42:36] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 09:42:36] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:36] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 09:42:36] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:42:36] Nick: single() opgehaald. Resultaat: (object) array(
-   'Naam' => 'Beheerder',
-)
-[2025-06-19 09:42:36] Nick: Statement executed in single().
->>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
-[2025-06-19 09:50:28] Nick: Bind param :datum => 2025-06-19 (type 2)
-[2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:50:28] Nick: Bind param :tijd => 19:30 (type 2)
-[2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:50:28] Nick: Bind param :instructeurId => 1 (type 2)
-[2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:50:28] Nick: single() opgehaald. Resultaat: (object) array(
-   'cnt' => 0,
-)
-[2025-06-19 09:50:28] Nick: Statement executed in single().
-[2025-06-19 09:50:28] Nick: Bind param :datum => 2025-06-19 (type 2)
-[2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:50:28] Nick: Bind param :tijd => 19:30 (type 2)
-[2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 09:50:28] Nick: Bind param :instructeurId => 1 (type 2)
-[2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 10:05:13] Nick: Bind param :username => tombakker (type 2)
-[2025-06-19 10:05:13] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 10:05:14] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:43:21] Nick: Statement executed in single().
+[2025-06-19 10:43:27] Nick: Bind param :username => tombakker (type 2)
+[2025-06-19 10:43:27] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:27] Nick: single() opgehaald. Resultaat: (object) array(
    'Id' => 3,
    'Voornaam' => 'Tom',
    'Tussenvoegsel' => NULL,
@@ -1743,19 +226,75 @@
    'Wachtwoord' => 'test789',
    'Email' => 'tom@email.com',
    'IsIngelogd' => 1,
-   'Ingelogd' => '2025-06-19 11:36:56',
+   'Ingelogd' => '2025-06-19 12:39:27',
    'Uitgelogd' => NULL,
    'IsActief' => 1,
    'Opmerking' => NULL,
    'DatumAangemaakt' => '2025-05-16 10:15:47',
-   'DatumGewijzigd' => '2025-06-19 11:36:56',
+   'DatumGewijzigd' => '2025-06-19 12:39:27',
 )
-[2025-06-19 10:05:14] Nick: Statement executed in single().
-[2025-06-19 10:05:14] Nick: Bind param :id => 3 (type 1)
-[2025-06-19 10:05:14] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 10:05:14] Nick: Bind param :userId => 3 (type 1)
-[2025-06-19 10:05:14] Nick: BindValue uitgevoerd in bind().
-[2025-06-19 10:05:14] Nick: single() opgehaald. Resultaat: (object) array(
+[2025-06-19 10:43:27] Nick: Statement executed in single().
+[2025-06-19 10:43:27] Nick: Bind param :id => 3 (type 1)
+[2025-06-19 10:43:27] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:27] Nick: Bind param :userId => 3 (type 1)
+[2025-06-19 10:43:27] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:27] Nick: single() opgehaald. Resultaat: (object) array(
    'Naam' => 'Beheerder',
 )
-[2025-06-19 10:05:14] Nick: Statement executed in single().
+[2025-06-19 10:43:27] Nick: Statement executed in single().
+[2025-06-19 10:43:46] Nick: Bind param :email => nick@gmail.com (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: single() opgehaald. Resultaat: (object) array(
+   'count' => 0,
+)
+[2025-06-19 10:43:46] Nick: Statement executed in single().
+[2025-06-19 10:43:46] Nick: Bind param :voornaam => nick (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :tussenvoegsel => van (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :achternaam => beusivhm (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :gebruikerId => 8 (type 1)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :nummer => IN004 (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :gebruikerId => 8 (type 1)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:43:46] Nick: Bind param :email => nick@gmail.com (type 2)
+[2025-06-19 10:43:46] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:16] Nick: Bind param :email => nick@gmail.com (type 2)
+[2025-06-19 10:45:16] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:16] Nick: single() opgehaald. Resultaat: (object) array(
+   'count' => 1,
+)
+[2025-06-19 10:45:16] Nick: Statement executed in single().
+[2025-06-19 10:45:36] Nick: Bind param :email => zaka@gmail.com (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: single() opgehaald. Resultaat: (object) array(
+   'count' => 0,
+)
+[2025-06-19 10:45:36] Nick: Statement executed in single().
+[2025-06-19 10:45:36] Nick: Bind param :voornaam => zaka (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :tussenvoegsel => zaka (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :achternaam => zaka (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :geboortedatum => 2006-04-01 (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :gebruikerId => 9 (type 1)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :relatienummer => RL004 (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :gebruikerId => 9 (type 1)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:36] Nick: Bind param :email => zaka@gmail.com (type 2)
+[2025-06-19 10:45:36] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:49] Nick: Bind param :email => zaka@gmail.com (type 2)
+[2025-06-19 10:45:49] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:45:49] Nick: single() opgehaald. Resultaat: (object) array(
+   'count' => 1,
+)
+[2025-06-19 10:45:49] Nick: Statement executed in single().

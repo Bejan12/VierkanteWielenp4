@@ -66,6 +66,7 @@ CREATE TABLE IF NOT EXISTS `betaling` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `FactuurId` int DEFAULT NULL,
   `Datum` date DEFAULT NULL,
+  `Bedrag` decimal(10,2) DEFAULT NULL,
   `Status` varchar(50) DEFAULT NULL,
   `IsActief` tinyint(1) DEFAULT '1',
   `Opmerking` text,

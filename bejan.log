@@ -1,0 +1,317 @@
+[2025-06-19 10:22:07] Bejan: Query voorbereid: SELECT Id, Merk, Type, Kenteken, Brandstof FROM auto WHERE IsActief = 1
+[2025-06-19 10:22:07] Bejan: Statement object aangemaakt.
+[2025-06-19 10:23:27] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:23:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:23:27] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:23:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:23:59] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:23:59] Bejan: Statement object aangemaakt.
+[2025-06-19 10:23:59] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:23:59] Bejan: Statement object aangemaakt.
+[2025-06-19 10:24:00] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:24:00] Bejan: Statement object aangemaakt.
+[2025-06-19 10:24:00] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:24:00] Bejan: Statement object aangemaakt.
+[2025-06-19 10:24:16] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:24:16] Bejan: Statement object aangemaakt.
+[2025-06-19 10:24:16] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:24:16] Bejan: Statement object aangemaakt.
+[2025-06-19 10:24:48] Bejan: Query voorbereid: SELECT Id AS id, Bericht AS beschrijving, Datum AS datum, IsActief AS actief FROM melding
+[2025-06-19 10:24:48] Bejan: Statement object aangemaakt.
+[2025-06-19 10:25:04] Bejan: Query voorbereid: SELECT Id AS id, Bericht AS beschrijving, Datum AS datum, IsActief AS actief FROM melding
+[2025-06-19 10:25:04] Bejan: Statement object aangemaakt.
+[2025-06-19 10:25:21] Bejan: Query voorbereid: SELECT Id FROM melding WHERE Bericht = :beschrijving AND Datum = :datum
+[2025-06-19 10:25:21] Bejan: Statement object aangemaakt.
+[2025-06-19 10:25:21] Bejan: Query voorbereid: INSERT INTO melding (Bericht, Datum, IsActief) VALUES (:beschrijving, :datum, :actief)
+[2025-06-19 10:25:21] Bejan: Statement object aangemaakt.
+[2025-06-19 10:25:21] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:25:21] Bejan: Statement executed in execute().
+[2025-06-19 10:25:21] Bejan: Query voorbereid: SELECT Id AS id, Bericht AS beschrijving, Datum AS datum, IsActief AS actief FROM melding
+[2025-06-19 10:25:21] Bejan: Statement object aangemaakt.
+[2025-06-19 10:25:31] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:25:31] Bejan: Statement object aangemaakt.
+[2025-06-19 10:25:31] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:25:31] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:25] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:26:25] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:25] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:26:25] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:26] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:26:26] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:26] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:26:26] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:48] Bejan: Query voorbereid: SELECT Id AS id, Bericht AS beschrijving, Datum AS datum, IsActief AS actief FROM melding
+[2025-06-19 10:26:48] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:52] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:26:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:26:52] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:26:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:12] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:27:12] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:12] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:27:12] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:16] Bejan: Query voorbereid: SELECT Id AS id, Bericht AS beschrijving, Datum AS datum, IsActief AS actief FROM melding
+[2025-06-19 10:27:16] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:19] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:27:19] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:19] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:27:19] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:52] Bejan: Query voorbereid: SELECT Id FROM factuur WHERE InschrijvingId = :inschrijvingId
+[2025-06-19 10:27:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:52] Bejan: Query voorbereid: SELECT Factuurnummer FROM factuur ORDER BY Id DESC LIMIT 1
+[2025-06-19 10:27:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:52] Bejan: Query voorbereid: INSERT INTO factuur (Factuurnummer, Factuurdatum, BedragIncBtw, Factuurstatus, InschrijvingId) VALUES (:factuurnummer, :datum, :bedrag, :status, :inschrijvingId)
+[2025-06-19 10:27:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:52] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:27:52] Bejan: Statement executed in execute().
+[2025-06-19 10:27:52] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:27:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:52] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:27:52] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:56] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:27:56] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:56] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:27:56] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:58] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:27:58] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:58] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:27:58] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:58] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:27:58] Bejan: Statement object aangemaakt.
+[2025-06-19 10:27:58] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:27:58] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:04] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, factuur.Factuurdatum AS datum, factuur.BedragIncBtw AS totaal, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id WHERE factuur.Id = :id
+[2025-06-19 10:28:04] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:07] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:28:07] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:07] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:28:07] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:09] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:28:09] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:13] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:28:13] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:13] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:28:13] Bejan: Statement object aangemaakt.
+[2025-06-19 10:28:13] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:28:13] Bejan: Statement object aangemaakt.
+[2025-06-19 10:29:18] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:29:18] Bejan: Statement object aangemaakt.
+[2025-06-19 10:29:29] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:29:29] Bejan: Statement object aangemaakt.
+[2025-06-19 10:29:29] Bejan: Query fout: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Bedrag' in 'field list'
+[2025-06-19 10:29:29] Bejan: Query die faalde: INSERT INTO betaling (FactuurId, Datum, Bedrag, Status, IsActief) VALUES (:factuurId, :datum, :bedrag, :status, :actief)
+[2025-06-19 10:30:11] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:30:11] Bejan: Statement object aangemaakt.
+[2025-06-19 10:30:11] Bejan: Query fout: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Bedrag' in 'field list'
+[2025-06-19 10:30:11] Bejan: Query die faalde: INSERT INTO betaling (FactuurId, Datum, Bedrag, Status, IsActief) VALUES (:factuurId, :datum, :bedrag, :status, :actief)
+[2025-06-19 10:34:41] Bejan: Query voorbereid: SELECT COUNT(*) as aantal FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:34:41] Bejan: Statement object aangemaakt.
+[2025-06-19 10:34:41] Bejan: Query voorbereid: INSERT INTO betaling (FactuurId, Datum, Bedrag, Status, IsActief) VALUES (:factuurId, :datum, :bedrag, :status, :actief)
+[2025-06-19 10:34:41] Bejan: Statement object aangemaakt.
+[2025-06-19 10:34:41] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:34:41] Bejan: Statement executed in execute().
+[2025-06-19 10:34:41] Bejan: Query voorbereid: SELECT Id AS id, FactuurId AS factuur_id, Datum AS datum, Bedrag AS bedrag, Status AS status, IsActief AS actief FROM betaling WHERE FactuurId = :factuurId
+[2025-06-19 10:34:41] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:09] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:35:09] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:09] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:35:09] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:22] Bejan: Query voorbereid: SELECT Id FROM factuur WHERE InschrijvingId = :inschrijvingId
+[2025-06-19 10:35:22] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:22] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:35:22] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:22] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:35:22] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:36] Bejan: Query voorbereid: SELECT Id FROM factuur WHERE InschrijvingId = :inschrijvingId
+[2025-06-19 10:35:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:36] Bejan: Query voorbereid: SELECT Factuurnummer FROM factuur ORDER BY Id DESC LIMIT 1
+[2025-06-19 10:35:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:36] Bejan: Query voorbereid: INSERT INTO factuur (Factuurnummer, Factuurdatum, BedragIncBtw, Factuurstatus, InschrijvingId) VALUES (:factuurnummer, :datum, :bedrag, :status, :inschrijvingId)
+[2025-06-19 10:35:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:36] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:35:36] Bejan: Statement executed in execute().
+[2025-06-19 10:35:36] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:35:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:36] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:35:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:44] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:35:44] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:44] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:35:44] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:44] Bejan: Query voorbereid: SELECT Id, CONCAT(Voornaam, ' ', Achternaam) AS naam FROM gebruiker ORDER BY Voornaam
+[2025-06-19 10:35:44] Bejan: Statement object aangemaakt.
+[2025-06-19 10:35:44] Bejan: Query voorbereid: SELECT factuur.Id AS id, factuur.Factuurnummer AS nummer, Factuurdatum AS datum, BedragIncBtw AS totaal, Factuurstatus AS status, CONCAT(gebruiker.Voornaam, ' ', gebruiker.Achternaam) AS klant_naam FROM factuur INNER JOIN gebruiker ON factuur.InschrijvingId = gebruiker.Id ORDER BY factuur.Id DESC
+[2025-06-19 10:35:44] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:14] Bejan: Query voorbereid: SELECT Id FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam
+[2025-06-19 10:39:14] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:14] Bejan: Query voorbereid: INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, Gebruikersnaam, Wachtwoord, Email, IsActief) VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, :gebruikersnaam, :wachtwoord, :email, 1)
+[2025-06-19 10:39:14] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:14] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:39:14] Bejan: Statement executed in execute().
+[2025-06-19 10:39:14] Bejan: Query voorbereid: SELECT LAST_INSERT_ID() AS id
+[2025-06-19 10:39:14] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:14] Bejan: Query voorbereid: INSERT INTO rol (GebruikerId, Naam, IsActief) VALUES (:gebruikerid, 'Leerling', 1)
+[2025-06-19 10:39:14] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:14] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:39:14] Bejan: Statement executed in execute().
+[2025-06-19 10:39:19] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 10:39:19] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:19] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 10:39:19] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:19] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:39:19] Bejan: Statement executed in execute().
+[2025-06-19 10:39:19] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 10:39:19] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:27] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 10:39:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:27] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 10:39:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:27] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:39:27] Bejan: Statement executed in execute().
+[2025-06-19 10:39:27] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 10:39:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:29] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email, r.Naam AS Rol
+                FROM gebruiker g
+                LEFT JOIN rol r ON g.Id = r.GebruikerId AND r.IsActief = 1
+                WHERE g.IsActief = 1
+[2025-06-19 10:39:29] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:32] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email, r.Naam AS Rol
+                FROM gebruiker g
+                LEFT JOIN rol r ON g.Id = r.GebruikerId AND r.IsActief = 1
+                WHERE g.IsActief = 1
+[2025-06-19 10:39:32] Bejan: Statement object aangemaakt.
+[2025-06-19 10:39:34] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email, r.Naam AS Rol
+                FROM gebruiker g
+                LEFT JOIN rol r ON g.Id = r.GebruikerId AND r.IsActief = 1
+                WHERE g.IsActief = 1
+[2025-06-19 10:39:34] Bejan: Statement object aangemaakt.
+[2025-06-19 10:40:02] Bejan: Query voorbereid: SELECT Id FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam
+[2025-06-19 10:40:02] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:21] Bejan: Query voorbereid: SELECT Id FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam
+[2025-06-19 10:43:21] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:27] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 10:43:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:27] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 10:43:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:27] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:43:27] Bejan: Statement executed in execute().
+[2025-06-19 10:43:27] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 10:43:27] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:29] Bejan: Query voorbereid: SELECT  i.Id, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        i.Nummer AS Instructeursnummer, 
+                        c.Email 
+                FROM instructeur i
+                JOIN gebruiker g ON i.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:43:29] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:46] Bejan: Query voorbereid: SELECT COUNT(*) AS count FROM contact WHERE Email = :email
+[2025-06-19 10:43:46] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:46] Bejan: Query voorbereid: INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, IsActief, DatumAangemaakt, DatumGewijzigd) 
+                VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, 1, NOW(), NOW())
+[2025-06-19 10:43:46] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:46] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:43:46] Bejan: Statement executed in execute().
+[2025-06-19 10:43:46] Bejan: Query voorbereid: INSERT INTO instructeur (GebruikerId, Nummer, IsActief, DatumAangemaakt, DatumGewijzigd) 
+                    VALUES (:gebruikerId, :nummer, 1, NOW(), NOW())
+[2025-06-19 10:43:46] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:46] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:43:46] Bejan: Statement executed in execute().
+[2025-06-19 10:43:46] Bejan: Query voorbereid: INSERT INTO contact (GebruikerId, Email, IsActief, DatumAangemaakt, DatumGewijzigd) 
+                        VALUES (:gebruikerId, :email, 1, NOW(), NOW())
+[2025-06-19 10:43:46] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:46] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:43:46] Bejan: Statement executed in execute().
+[2025-06-19 10:43:46] Bejan: Query voorbereid: SELECT  i.Id, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        i.Nummer AS Instructeursnummer, 
+                        c.Email 
+                FROM instructeur i
+                JOIN gebruiker g ON i.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:43:46] Bejan: Statement object aangemaakt.
+[2025-06-19 10:43:54] Bejan: Query voorbereid: SELECT  i.Id, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        i.Nummer AS Instructeursnummer, 
+                        c.Email 
+                FROM instructeur i
+                JOIN gebruiker g ON i.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:43:54] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:06] Bejan: Query voorbereid: SELECT  i.Id, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        i.Nummer AS Instructeursnummer, 
+                        c.Email 
+                FROM instructeur i
+                JOIN gebruiker g ON i.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:45:06] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:16] Bejan: Query voorbereid: SELECT COUNT(*) AS count FROM contact WHERE Email = :email
+[2025-06-19 10:45:16] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:20] Bejan: Query voorbereid: SELECT  i.Id, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        i.Nummer AS Instructeursnummer, 
+                        c.Email 
+                FROM instructeur i
+                JOIN gebruiker g ON i.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:45:20] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:22] Bejan: Query voorbereid: SELECT  i.Id, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        i.Nummer AS Instructeursnummer, 
+                        c.Email 
+                FROM instructeur i
+                JOIN gebruiker g ON i.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:45:22] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:25] Bejan: Query voorbereid: SELECT  l.Id, 
+                        l.Relatienummer AS Klas, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        c.Email 
+                FROM leerling l
+                JOIN gebruiker g ON l.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:45:25] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:36] Bejan: Query voorbereid: SELECT COUNT(*) AS count FROM contact WHERE Email = :email
+[2025-06-19 10:45:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:36] Bejan: Query voorbereid: INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, IsActief, DatumAangemaakt, DatumGewijzigd) 
+                VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, 1, NOW(), NOW())
+[2025-06-19 10:45:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:36] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:45:36] Bejan: Statement executed in execute().
+[2025-06-19 10:45:36] Bejan: Query voorbereid: INSERT INTO leerling (GebruikerId, Relatienummer, IsActief, DatumAangemaakt, DatumGewijzigd) 
+                    VALUES (:gebruikerId, :relatienummer, 1, NOW(), NOW())
+[2025-06-19 10:45:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:36] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:45:36] Bejan: Statement executed in execute().
+[2025-06-19 10:45:36] Bejan: Query voorbereid: INSERT INTO contact (GebruikerId, Email, IsActief, DatumAangemaakt, DatumGewijzigd) 
+                        VALUES (:gebruikerId, :email, 1, NOW(), NOW())
+[2025-06-19 10:45:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:36] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 10:45:36] Bejan: Statement executed in execute().
+[2025-06-19 10:45:36] Bejan: Query voorbereid: SELECT  l.Id, 
+                        l.Relatienummer AS Klas, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        c.Email 
+                FROM leerling l
+                JOIN gebruiker g ON l.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 10:45:36] Bejan: Statement object aangemaakt.
+[2025-06-19 10:45:49] Bejan: Query voorbereid: SELECT COUNT(*) AS count FROM contact WHERE Email = :email
+[2025-06-19 10:45:49] Bejan: Statement object aangemaakt.

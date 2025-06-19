@@ -20,6 +20,9 @@ class BaseController
     {
         if (file_exists('../app/views/' . $view . '.php'))
         {
+            if (!empty($data)) {
+                extract($data);
+            }
             require_once('../app/views/' . $view . '.php');
         } else {
             echo 'View bestaat niet';

@@ -162,3 +162,7 @@ class Database
         }
     }
 }
+
+// No changes needed in this file for the reported error.
+// The error is caused by a mismatch between the SQL query and the actual database schema.
+// Please check the spelling and case of the column names in your database and in your SQL queries.

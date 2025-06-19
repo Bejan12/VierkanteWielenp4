@@ -1,5 +1,12 @@
 <?php require_once APPROOT . '/views/layout.php'; ?>
 
+<?php if (!empty($_SESSION['melding_success'])): ?>
+    <div class="alert alert-success"><?= $_SESSION['melding_success']; unset($_SESSION['melding_success']); ?></div>
+<?php endif; ?>
+<?php if (!empty($_SESSION['melding_error'])): ?>
+    <div class="alert alert-error"><?= $_SESSION['melding_error']; unset($_SESSION['melding_error']); ?></div>
+<?php endif; ?>
+
 <h2>Meldingen Overzicht</h2>
 
 <form method="GET" action="" class="filter-form">
@@ -33,6 +40,10 @@
     <a href="<?= URLROOT ?>/dashboard/index">Terug naar dashboard</a>
     <a href="<?= URLROOT ?>/factuur/overzicht">Facturen overzicht</a>
     <a href="<?= URLROOT ?>/melding/overzicht">Meldingen overzicht</a>
+</div>
+
+<div class="actions-bar">
+    <a href="<?= URLROOT ?>/melding/create" class="btn btn-green">Nieuwe melding opstellen</a>
 </div>
 
 <style>
@@ -150,5 +161,41 @@
 
     .navigation-links a:hover {
         background-color: #0071c2;
+    }
+
+    .actions-bar {
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .btn-green {
+        background-color: #4caf50;
+    }
+
+    .btn-green:hover {
+        background-color: #45a049;
+    }
+
+    .alert-success {
+        background: #27ae60;
+        color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(39,174,96,0.15);
+    }
+    .alert-error {
+        background: #e74c3c;
+        color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(231,76,60,0.15);
     }
 </style>

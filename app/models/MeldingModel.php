@@ -20,4 +20,21 @@ class MeldingModel
         $this->db->bind(':datum', $datum);
         return $this->db->resultSet();
     }
+
+    public function createMelding($beschrijving, $datum, $actief)
+    {
+        $this->db->query("INSERT INTO melding (Bericht, Datum, IsActief) VALUES (:beschrijving, :datum, :actief)");
+        $this->db->bind(':beschrijving', $beschrijving);
+        $this->db->bind(':datum', $datum);
+        $this->db->bind(':actief', $actief);
+        return $this->db->execute();
+    }
+
+    public function meldingBestaat($beschrijving, $datum)
+    {
+        $this->db->query("SELECT Id FROM melding WHERE Bericht = :beschrijving AND Datum = :datum");
+        $this->db->bind(':beschrijving', $beschrijving);
+        $this->db->bind(':datum', $datum);
+        return $this->db->single() ? true : false;
+    }
 }
