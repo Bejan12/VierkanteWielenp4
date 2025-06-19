@@ -934,6 +934,7 @@
 [2025-06-19 08:33:51] Bejan: Statement object aangemaakt.
 [2025-06-19 08:36:00] Bejan: Query voorbereid: SELECT Id, Merk, Type, Kenteken, Brandstof FROM auto WHERE IsActief = 1
 [2025-06-19 08:36:00] Bejan: Statement object aangemaakt.
+<<<<<<< HEAD
 [2025-06-19 08:40:58] Bejan: Query voorbereid: SELECT Id FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam
 [2025-06-19 08:40:58] Bejan: Statement object aangemaakt.
 [2025-06-19 08:40:58] Bejan: Query voorbereid: INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, Gebruikersnaam, Wachtwoord, IsActief) VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, :gebruikersnaam, :wachtwoord, 1)
@@ -1131,3 +1132,256 @@
 [2025-06-19 09:36:56] Bejan: Statement object aangemaakt.
 [2025-06-19 09:37:23] Bejan: Query voorbereid: SELECT Id, Merk, Type, Kenteken, Brandstof FROM auto WHERE IsActief = 1
 [2025-06-19 09:37:23] Bejan: Statement object aangemaakt.
+=======
+[2025-06-19 09:25:17] Bejan: Query voorbereid: SELECT Id FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam
+[2025-06-19 09:25:17] Bejan: Statement object aangemaakt.
+[2025-06-19 09:25:17] Bejan: Query voorbereid: INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, Gebruikersnaam, Wachtwoord, IsActief) VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, :gebruikersnaam, :wachtwoord, 1)
+[2025-06-19 09:25:17] Bejan: Statement object aangemaakt.
+[2025-06-19 09:25:17] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:25:17] Bejan: Statement executed in execute().
+[2025-06-19 09:25:17] Bejan: Query voorbereid: SELECT LAST_INSERT_ID() AS id
+[2025-06-19 09:25:17] Bejan: Statement object aangemaakt.
+[2025-06-19 09:25:17] Bejan: Query voorbereid: INSERT INTO rol (GebruikerId, Naam, IsActief) VALUES (:gebruikerid, 'Leerling', 1)
+[2025-06-19 09:25:17] Bejan: Statement object aangemaakt.
+[2025-06-19 09:25:17] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:25:17] Bejan: Statement executed in execute().
+[2025-06-19 09:25:21] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:25:21] Bejan: Statement object aangemaakt.
+[2025-06-19 09:25:21] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 09:25:21] Bejan: Statement object aangemaakt.
+[2025-06-19 09:25:21] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:25:21] Bejan: Statement executed in execute().
+[2025-06-19 09:25:21] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 09:25:21] Bejan: Statement object aangemaakt.
+[2025-06-19 09:28:06] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:28:06] Bejan: Statement object aangemaakt.
+[2025-06-19 09:28:13] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:28:13] Bejan: Statement object aangemaakt.
+[2025-06-19 09:28:39] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:28:39] Bejan: Statement object aangemaakt.
+[2025-06-19 09:29:39] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:29:39] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:11] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:11] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:12] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:12] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:12] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:12] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:12] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:12] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:12] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:12] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:12] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:12] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:12] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:12] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:13] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:13] Bejan: Statement object aangemaakt.
+[2025-06-19 09:30:13] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:30:13] Bejan: Statement object aangemaakt.
+[2025-06-19 09:31:22] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:31:22] Bejan: Statement object aangemaakt.
+[2025-06-19 09:31:48] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:31:48] Bejan: Statement object aangemaakt.
+[2025-06-19 09:32:04] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:32:04] Bejan: Statement object aangemaakt.
+[2025-06-19 09:32:31] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:32:31] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:40] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:33:40] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:52] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:33:52] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:52] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 09:33:52] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:52] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:33:52] Bejan: Statement executed in execute().
+[2025-06-19 09:33:52] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 09:33:52] Bejan: Statement object aangemaakt.
+[2025-06-19 09:34:00] Bejan: Query voorbereid: SELECT  l.Id, 
+                        l.Relatienummer AS Klas, 
+                        CONCAT(g.Voornaam, " ", IFNULL(g.Tussenvoegsel, ""), " ", g.Achternaam) AS Naam, 
+                        g.Geboortedatum AS Leeftijd, 
+                        c.Email 
+                FROM leerling l
+                JOIN gebruiker g ON l.GebruikerId = g.Id
+                LEFT JOIN contact c ON g.Id = c.GebruikerId
+                ORDER BY g.Voornaam ASC
+[2025-06-19 09:34:00] Bejan: Statement object aangemaakt.
+[2025-06-19 09:36:45] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC
+[2025-06-19 09:36:45] Bejan: Statement object aangemaakt.
+[2025-06-19 09:37:05] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, c.Email 
+                FROM gebruiker g
+                LEFT JOIN contact c ON c.GebruikerId = g.Id
+                WHERE g.IsActief = 1
+[2025-06-19 09:37:05] Bejan: Statement object aangemaakt.
+[2025-06-19 09:39:34] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC
+[2025-06-19 09:39:34] Bejan: Statement object aangemaakt.
+[2025-06-19 09:40:37] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC
+[2025-06-19 09:40:37] Bejan: Statement object aangemaakt.
+[2025-06-19 09:40:42] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, c.Email 
+                FROM gebruiker g
+                LEFT JOIN contact c ON c.GebruikerId = g.Id
+                WHERE g.IsActief = 1
+[2025-06-19 09:40:42] Bejan: Statement object aangemaakt.
+[2025-06-19 09:40:45] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC
+[2025-06-19 09:40:45] Bejan: Statement object aangemaakt.
+[2025-06-19 09:40:46] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:40:46] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:56] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:56] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:57] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:57] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:57] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:57] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:57] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:57] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:57] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:57] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:57] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:57] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:57] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:57] Bejan: Statement object aangemaakt.
+[2025-06-19 09:41:58] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:41:58] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:07] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:42:07] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:07] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 09:42:07] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:07] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:42:07] Bejan: Statement executed in execute().
+[2025-06-19 09:42:07] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 09:42:07] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:09] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:42:09] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:20] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:42:20] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:20] Bejan: Query voorbereid: SELECT COUNT(*) as cnt
+                 FROM rijles R
+                 INNER JOIN instructeur I ON R.InstructeurId = I.Id
+                 WHERE R.Begindatum = :datum AND R.Begintijd = :tijd AND R.InstructeurId = :instructeurId
+[2025-06-19 09:42:20] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:20] Bejan: Query voorbereid: INSERT INTO rijles (Begindatum, Begintijd, InstructeurId)
+                 VALUES (:datum, :tijd, :instructeurId)
+[2025-06-19 09:42:20] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:20] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:42:20] Bejan: Statement executed in execute().
+[2025-06-19 09:42:36] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:42:36] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:36] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 09:42:36] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:36] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:42:36] Bejan: Statement executed in execute().
+[2025-06-19 09:42:36] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 09:42:36] Bejan: Statement object aangemaakt.
+[2025-06-19 09:42:39] Bejan: Query voorbereid: SELECT r.Id, r.Begindatum, r.Begintijd, i.Id as InstructeurId, g.Voornaam, g.Achternaam
+                 FROM rijles r
+                 INNER JOIN instructeur i ON r.InstructeurId = i.Id
+                 INNER JOIN gebruiker g ON i.GebruikerId = g.Id
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC
+[2025-06-19 09:42:39] Bejan: Statement object aangemaakt.
+>>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
