@@ -75,6 +75,14 @@
               </span>
             </li>
             <li><hr class="dropdown-divider"></li>
+            <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'Beheerder'): ?>
+              <li>
+                <a class="dropdown-item" href="<?= URLROOT; ?>/dashboard/index">
+                  <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                </a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+            <?php endif; ?>
             <li>
               <a class="dropdown-item text-danger" href="<?= URLROOT; ?>/accounts/logout">
                 <i class="bi bi-box-arrow-right me-2"></i>Uitloggen

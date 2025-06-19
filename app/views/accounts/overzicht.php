@@ -12,14 +12,14 @@
 
     <!-- Toggle switch -->
     <form method="get" id="toggleForm" style="text-align: center; margin-bottom: 20px;">
+        <input type="hidden" name="toggleData" value="off">
         <label for="toggleData" class="toggle-label">
-            <input type="checkbox" id="toggleData" name="toggleData" value="on" <?= isset($data['toggle']) && $data['toggle'] ? 'checked' : '' ?> onchange="document.getElementById('toggleForm').submit()">
+            <input type="checkbox" id="toggleData" name="toggleData" value="on" <?= (!isset($data['toggle']) || $data['toggle']) ? 'checked' : '' ?> onchange="document.getElementById('toggleForm').submit()">
             <span>Gegevens tonen</span>
         </label>
     </form>
 
-    <!-- Voeg deze knop bovenaan of op een logische plek in het overzicht toe -->
-    <a href="<?= URLROOT; ?>/auto/toevoegen" class="btn-green">Auto toevoegen</a>
+
 
     <?php if (!empty($data['users'])): ?>
         <table class="custom-table" role="table" aria-label="Gebruikersoverzicht">
@@ -36,7 +36,12 @@
                     <tr>
                         <td><?= htmlspecialchars($user->Email ?? ''); ?></td>
                         <td><?= htmlspecialchars($user->Gebruikersnaam); ?></td>
-                        <td><?= str_repeat('*', strlen($user->Wachtwoord)); ?></td>
+                        <td>
+                            <?php
+                                $wachtwoord = $user->Wachtwoord ?? '';
+                                echo str_repeat('*', strlen((string)$wachtwoord));
+                            ?>
+                        </td>
                         <td class="centered-cell">
                             <div class="icon-wrapper">
                                 <i class="bi bi-pencil-square action-icon edit-icon" title="Wijzig"></i>

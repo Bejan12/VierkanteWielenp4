@@ -92,8 +92,9 @@ public function addcar()
                 $data['opmerking']
             );
             if ($result) {
-                $data['success'] = 'Auto succesvol toegevoegd!';
-                $data['merk'] = $data['type'] = $data['kenteken'] = $data['brandstof'] = $data['opmerking'] = '';
+                $_SESSION['auto_success'] = 'Auto succesvol toegevoegd!';
+                header('Location: ' . URLROOT . '/auto/overzicht');
+                exit;
             } else {
                 $data['error'] = 'Fout bij toevoegen auto. Mogelijk bestaat het kenteken al.';
             }

@@ -29,6 +29,70 @@
     </label>
 </form>
 
+<?php if (!empty($_SESSION['auto_success'])): ?>
+    <style>
+        .custom-alert-success {
+            position: fixed;
+            top: 30px;
+            left: 37%;
+            transform: translateX(-50%) translateY(-20px);
+            background-color: white;
+            color: #0182E2;
+            padding: 25px 50px 20px 50px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            font-size: 22px;
+            z-index: 9999;
+            opacity: 0;
+            animation: fadeInAlert 0.5s ease-out forwards;
+            overflow: hidden;
+            min-width: 400px;
+            max-width: 90vw;
+            text-align: center;
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #0182E2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: progressShrink 3s linear forwards;
+        }
+        @keyframes fadeInAlert {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeOutAlert {
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        @keyframes progressShrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+    </style>
+    <div id="autoSuccess" class="custom-alert-success">
+        <?= $_SESSION['auto_success']; unset($_SESSION['auto_success']); ?>
+        <div class="progress-bar"></div>
+    </div>
+    <script>
+        setTimeout(function () {
+            const el = document.getElementById('autoSuccess');
+            if (el) {
+                el.style.animation = 'fadeOutAlert 0.5s ease-in forwards';
+                setTimeout(() => el.remove(), 500);
+            }
+        }, 3000);
+    </script>
+<?php endif; ?>
 
     <?php if (!empty($data['autos'])): ?>
         <table class="custom-table" role="table" aria-label="Auto's overzicht">

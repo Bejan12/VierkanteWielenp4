@@ -10,9 +10,7 @@
     <?php if (!empty($data['error'])): ?>
         <div class="alert alert-danger"><?= htmlspecialchars($data['error']); ?></div>
     <?php endif; ?>
-    <?php if (!empty($data['success'])): ?>
-        <div class="alert alert-success"><?= htmlspecialchars($data['success']); ?></div>
-    <?php endif; ?>
+    <?php /* Success-melding wordt nu via sessie en redirect getoond in overzicht */ ?>
 
     <form method="post" class="addcar-form">
         <div class="form-group">
