@@ -10,21 +10,18 @@ class Factuur extends BaseController
 
     public function overzicht()
     {
-<<<<<<< HEAD
-        $data = [
-            'facturen' => $this->factuurModel->getFacturen()
-=======
         $success = isset($_GET['success']) ? $_GET['success'] : '';
         $error = isset($_GET['error']) ? $_GET['error'] : '';
-        // Haal inschrijvingen/gebruikers op voor het formulier
+
         $inschrijvingen = $this->factuurModel->getInschrijvingen();
+
         $data = [
             'facturen' => $this->factuurModel->getFacturen(),
             'success' => $success,
             'error' => $error,
             'inschrijvingen' => $inschrijvingen
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         ];
+
         $this->view('factuur/overzicht', $data);
     }
 
@@ -47,10 +44,13 @@ class Factuur extends BaseController
     public function downloadPdf($id)
     {
         require_once APPROOT . '/../public/fpdf/fpdf.php';
+
         $factuur = $this->factuurModel->getFactuurById($id);
+
         if (!$factuur) {
             die('Factuur niet gevonden');
         }
+
         $pdf = new \FPDF();
         $pdf->AddPage();
         $pdf->SetFont('Arial', 'B', 16);
@@ -64,16 +64,16 @@ class Factuur extends BaseController
         $pdf->Output('D', 'factuur_' . $factuur->id . '.pdf');
         exit;
     }
-<<<<<<< HEAD
-=======
 
     public function verwijder($id)
     {
         $this->factuurModel->deleteFactuur($id);
+
         $data = [
             'facturen' => $this->factuurModel->getFacturen(),
             'feedback' => 'Factuur succesvol verwijderd!'
         ];
+
         $this->view('factuur/overzicht', $data);
     }
 
@@ -85,7 +85,6 @@ class Factuur extends BaseController
             $status = $_POST['status'];
             $inschrijvingId = $_POST['inschrijvingId'];
 
-            // Unhappy path: check of klant al een factuur heeft
             if ($this->factuurModel->factuurBestaatVoorInschrijving($inschrijvingId)) {
                 header('Location: ' . URLROOT . '/factuur/overzicht?error=Klant+al+gebruikt');
                 exit;
@@ -99,6 +98,7 @@ class Factuur extends BaseController
             }
             exit;
         }
+
         $this->view('factuur/create');
     }
 
@@ -107,14 +107,14 @@ class Factuur extends BaseController
         $betalingGeregistreerd = $this->factuurModel->isBetalingGeregistreerd($factuurId);
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // Verwerk betaling via BetalingModel
             $bedrag = $_POST['bedrag'];
             $datum = $_POST['datum'];
             $status = 'Betaald';
             $actief = 1;
+
             $betalingModel = $this->model('BetalingModel');
             $betalingModel->createBetaling($factuurId, $datum, $bedrag, $status, $actief);
-            // Stuur door naar betalingsoverzicht van deze factuur
+
             header('Location: ' . URLROOT . '/betaling/overzicht/' . $factuurId . '?success=Betaling+succesvol+toegevoegd!');
             exit;
         }
@@ -124,5 +124,4 @@ class Factuur extends BaseController
             'betalingGeregistreerd' => $betalingGeregistreerd
         ]);
     }
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 }

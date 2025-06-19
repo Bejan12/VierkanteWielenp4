@@ -36,15 +36,13 @@ class AccountsModel
 
     public function getAllUsersWithEmail()
     {
-        $sql = "SELECT g.Gebruikersnaam, g.Wachtwoord, c.Email 
+        $sql = "SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email, r.Naam AS Rol
                 FROM gebruiker g
-                LEFT JOIN contact c ON c.GebruikerId = g.Id
+                LEFT JOIN rol r ON g.Id = r.GebruikerId AND r.IsActief = 1
                 WHERE g.IsActief = 1";
         $this->db->query($sql);
         return $this->db->resultSet();
     }
-<<<<<<< HEAD
-=======
 
     public function gebruikersnaamBestaat($gebruikersnaam)
     {
@@ -53,24 +51,23 @@ class AccountsModel
         return $this->db->single() ? true : false;
     }
 
-    public function registreerGebruiker($voornaam, $tussenvoegsel, $achternaam, $geboortedatum, $gebruikersnaam, $wachtwoord)
+    public function registreerGebruiker($voornaam, $tussenvoegsel, $achternaam, $geboortedatum, $gebruikersnaam, $wachtwoord, $email)
     {
-        $this->db->query("INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, Gebruikersnaam, Wachtwoord, IsActief) VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, :gebruikersnaam, :wachtwoord, 1)");
+        $this->db->query("INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, Gebruikersnaam, Wachtwoord, Email, IsActief) VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, :gebruikersnaam, :wachtwoord, :email, 1)");
         $this->db->bind(':voornaam', $voornaam);
         $this->db->bind(':tussenvoegsel', $tussenvoegsel);
         $this->db->bind(':achternaam', $achternaam);
         $this->db->bind(':geboortedatum', $geboortedatum);
         $this->db->bind(':gebruikersnaam', $gebruikersnaam);
         $this->db->bind(':wachtwoord', $wachtwoord);
+        $this->db->bind(':email', $email);
         $result = $this->db->execute();
 
         if ($result) {
-            // Haal het laatst ingevoegde gebruiker ID op via een query
             $this->db->query("SELECT LAST_INSERT_ID() AS id");
             $row = $this->db->single();
             $userId = $row ? $row->id : null;
             if ($userId) {
-                // Voeg rol 'Leerling' toe
                 $this->db->query("INSERT INTO rol (GebruikerId, Naam, IsActief) VALUES (:gebruikerid, 'Leerling', 1)");
                 $this->db->bind(':gebruikerid', $userId);
                 $this->db->execute();
@@ -79,5 +76,4 @@ class AccountsModel
 
         return $result;
     }
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 }

@@ -1,8 +1,9 @@
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
-<<<<<<< HEAD
-=======
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
+
+
+
+
 
 <?php
 // Verzamel meldingen zonder direct te unsetten
@@ -108,9 +109,6 @@ unset($_SESSION['login_success'], $_SESSION['error_message']);
     </script>
 <?php endif; ?>
 
-<<<<<<< HEAD
-<!-- Je bestaande content -->
-=======
 <!-- ✅ HERO BANNER -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Ultra&display=swap');
@@ -215,6 +213,7 @@ unset($_SESSION['login_success'], $_SESSION['error_message']);
             <div class="icon-text">Goedkoop lessen</div>
         </div>
     </div>
+
 </div>
 <br><br><br>
 <section class="info-section">
@@ -423,6 +422,5 @@ unset($_SESSION['login_success'], $_SESSION['error_message']);
 
 
 </style>
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 
 <?php require_once APPROOT . '/views/includes/footer.php'; ?>

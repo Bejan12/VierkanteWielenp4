@@ -202,6 +202,7 @@ INSERT INTO `factuur` (`Id`, `InschrijvingId`, `Factuurnummer`, `Factuurdatum`, 
 -- Tabelstructuur voor tabel `gebruiker`
 --
 
+
 DROP TABLE IF EXISTS `gebruiker`;
 CREATE TABLE IF NOT EXISTS `gebruiker` (
   `Id` int NOT NULL AUTO_INCREMENT,
@@ -211,6 +212,7 @@ CREATE TABLE IF NOT EXISTS `gebruiker` (
   `Geboortedatum` date DEFAULT NULL,
   `Gebruikersnaam` varchar(50) DEFAULT NULL,
   `Wachtwoord` varchar(255) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL, -- <-- NIEUWE KOLOM TOEGEVOEGD
   `IsIngelogd` tinyint(1) DEFAULT '0',
   `Ingelogd` datetime DEFAULT NULL,
   `Uitgelogd` datetime DEFAULT NULL,
@@ -223,16 +225,16 @@ CREATE TABLE IF NOT EXISTS `gebruiker` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Gegevens worden geëxporteerd voor tabel `gebruiker`
+-- Gegevens voor tabel `gebruiker` (aangevuld met Email)
 --
 
-INSERT INTO `gebruiker` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Geboortedatum`, `Gebruikersnaam`, `Wachtwoord`, `IsIngelogd`, `Ingelogd`, `Uitgelogd`, `IsActief`, `Opmerking`, `DatumAangemaakt`, `DatumGewijzigd`) VALUES
-(1, 'Jan', NULL, 'Jansen', '2000-01-15', 'janjansen', 'test123', 0, NULL, NULL, 1, NULL, '2025-05-16 10:15:47', '2025-05-16 10:15:47'),
-(2, 'Sara', 'de', 'Vries', '1998-03-22', 'saravries', 'test456', 0, NULL, NULL, 1, NULL, '2025-05-16 10:15:47', '2025-05-16 10:15:47'),
-(3, 'Tom', NULL, 'Bakker', '1985-07-10', 'tombakker', 'test789', 0, NULL, NULL, 1, NULL, '2025-05-16 10:15:47', '2025-05-16 10:15:47'),
-(4, 'Lisa', NULL, 'Peters', '2002-08-12', 'lisapeters', 'test111', 0, NULL, NULL, 1, NULL, '2025-05-16 10:17:57', '2025-05-16 10:17:57'),
-(5, 'Kevin', NULL, 'Smit', '1995-09-20', 'kevinsmit', 'test222', 0, NULL, NULL, 1, NULL, '2025-05-16 10:17:57', '2025-05-16 10:17:57'),
-(6, 'Emma', 'van', 'Dijk', '2003-05-03', 'emmavdijk', 'test333', 0, NULL, NULL, 1, NULL, '2025-05-16 10:17:57', '2025-05-16 10:17:57');
+INSERT INTO `gebruiker` (`Id`, `Voornaam`, `Tussenvoegsel`, `Achternaam`, `Geboortedatum`, `Gebruikersnaam`, `Wachtwoord`, `Email`, `IsIngelogd`, `Ingelogd`, `Uitgelogd`, `IsActief`, `Opmerking`, `DatumAangemaakt`, `DatumGewijzigd`) VALUES
+(1, 'Jan', NULL, 'Jansen', '2000-01-15', 'janjansen', 'test123', 'jan@email.com', 0, NULL, NULL, 1, NULL, '2025-05-16 10:15:47', '2025-05-16 10:15:47'),
+(2, 'Sara', 'de', 'Vries', '1998-03-22', 'saravries', 'test456', 'sara@email.com', 0, NULL, NULL, 1, NULL, '2025-05-16 10:15:47', '2025-05-16 10:15:47'),
+(3, 'Tom', NULL, 'Bakker', '1985-07-10', 'tombakker', 'test789', 'tom@email.com', 0, NULL, NULL, 1, NULL, '2025-05-16 10:15:47', '2025-05-16 10:15:47'),
+(4, 'Lisa', NULL, 'Peters', '2002-08-12', 'lisapeters', 'test111', 'lisa@email.com', 0, NULL, NULL, 1, NULL, '2025-05-16 10:17:57', '2025-05-16 10:17:57'),
+(5, 'Kevin', NULL, 'Smit', '1995-09-20', 'kevinsmit', 'test222', 'kevin@email.com', 0, NULL, NULL, 1, NULL, '2025-05-16 10:17:57', '2025-05-16 10:17:57'),
+(6, 'Emma', 'van', 'Dijk', '2003-05-03', 'emmavdijk', 'test333', 'emma@email.com', 0, NULL, NULL, 1, NULL, '2025-05-16 10:17:57', '2025-05-16 10:17:57');
 
 -- --------------------------------------------------------
 

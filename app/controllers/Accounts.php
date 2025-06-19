@@ -26,10 +26,6 @@ class Accounts extends BaseController
             $password = $_POST['password'] ?? '';
 
             $user = $this->accountsModel->getUserByUsername($username);
-<<<<<<< HEAD
-
-            if ($user && $user->Wachtwoord === $password) {
-=======
             $isValid = false;
             if ($user && !empty($user->Wachtwoord)) {
                 if (strpos($user->Wachtwoord, '$2y$') === 0) {
@@ -41,7 +37,6 @@ class Accounts extends BaseController
                 }
             }
             if ($isValid) {
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
                 $this->accountsModel->setUserLoggedIn($user->Id);
 
                 $_SESSION['user_logged_in'] = true;
@@ -100,15 +95,13 @@ class Accounts extends BaseController
             exit;
         }
 
-<<<<<<< HEAD
-        $users = $this->accountsModel->getAllUsersWithEmail();
-
-        $data = [
-            'users' => $users
-=======
-        // Check toggle (aan of uit)
-        $toggle = isset($_GET['toggleData']) && $_GET['toggleData'] === 'on';
-
+        // Toggle standaard aan, maar respecteer expliciet uitzetten
+        if (array_key_exists('toggleData', $_GET)) {
+            $toggle = $_GET['toggleData'] === 'on';
+        } else {
+            $toggle = true;
+        }
+        
         if ($toggle) {
             // Haal alle gebruikers op als toggle aan staat
             $users = $this->accountsModel->getAllUsersWithEmail();
@@ -120,13 +113,10 @@ class Accounts extends BaseController
         $data = [
             'users' => $users,
             'toggle' => $toggle,
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         ];
 
         $this->view('accounts/overzicht', $data);
     }
-<<<<<<< HEAD
-=======
 
     public function register()
     {
@@ -136,6 +126,7 @@ class Accounts extends BaseController
             'achternaam' => '',
             'geboortedatum' => '',
             'gebruikersnaam' => '',
+            'email' => '',
             'error' => '',
             'success' => ''
         ];
@@ -146,11 +137,11 @@ class Accounts extends BaseController
             $data['achternaam'] = trim($_POST['achternaam']);
             $data['geboortedatum'] = trim($_POST['geboortedatum']);
             $data['gebruikersnaam'] = trim($_POST['gebruikersnaam']);
+            $data['email'] = trim($_POST['email']);
             $wachtwoord = $_POST['wachtwoord'];
             $wachtwoord2 = $_POST['wachtwoord2'];
 
             // Validatie
-            // Bereken max toegestane geboortedatum (16,5 jaar geleden)
             $maxGeboortedatum = (new DateTime())->sub(new DateInterval('P16Y6M'))->format('Y-m-d');
 
             if (
@@ -158,10 +149,13 @@ class Accounts extends BaseController
                 empty($data['achternaam']) ||
                 empty($data['geboortedatum']) ||
                 empty($data['gebruikersnaam']) ||
+                empty($data['email']) ||
                 empty($wachtwoord) ||
                 empty($wachtwoord2)
             ) {
                 $data['error'] = 'Vul alle verplichte velden in.';
+            } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+                $data['error'] = 'Vul een geldig e-mailadres in.';
             } elseif ($data['geboortedatum'] > $maxGeboortedatum) {
                 $data['error'] = 'Je moet minimaal 16,5 jaar oud zijn om een account te maken.';
             } elseif ($wachtwoord !== $wachtwoord2) {
@@ -179,11 +173,11 @@ class Accounts extends BaseController
                     $data['achternaam'],
                     $data['geboortedatum'],
                     $data['gebruikersnaam'],
-                    $hashed
+                    $hashed,
+                    $data['email']
                 );
                 if ($result) {
                     $_SESSION['register_success'] = 'Registratie gelukt! Je kunt nu inloggen.';
-                    // Velden leegmaken zijn niet meer nodig, want redirect volgt
                     header('Location: ' . URLROOT . '/accounts/login');
                     exit;
                 } else {
@@ -195,5 +189,4 @@ class Accounts extends BaseController
         $this->view('accounts/register', $data);
     }
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 }

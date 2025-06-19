@@ -105,6 +105,7 @@
     <a class="btn btn-default" href="<?= URLROOT; ?>/melding/overzicht">Overzicht Meldingen</a>
     <a class="btn btn-default" href="<?= URLROOT; ?>/factuur/overzicht">Overzicht Facturen</a>
     <a class="btn btn-default" href="<?= URLROOT; ?>/betaling/overzicht">Overzicht Betalingen</a>
+    <a class="btn btn-default" href="<?= URLROOT; ?>/rijles/index">Overzicht Rijlessen</a>
   </div>
 
   <script>

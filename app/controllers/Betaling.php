@@ -10,26 +10,20 @@ class Betaling extends BaseController
 
     public function overzicht($factuurId = null)
     {
-<<<<<<< HEAD
-=======
         // Haal altijd het factuurId op uit GET of parameter
         if (!$factuurId && isset($_GET['factuurId'])) {
             $factuurId = $_GET['factuurId'];
         }
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
+
         $betalingen = $factuurId ? $this->betalingModel->getBetalingenByFactuurId($factuurId) : [];
+
         $data = [
             'betalingen' => $betalingen,
             'status' => empty($betalingen) ? 'Open' : 'Betaald',
-<<<<<<< HEAD
-            'melding' => empty($betalingen) ? '⚠️ Nog geen betaling geregistreerd voor deze factuur' : null
-        ];
-        $this->view('betaling/overzicht', $data);
-    }
-=======
             'melding' => empty($betalingen) ? '' : null,
-            'factuurId' => $factuurId // voeg toe voor overzicht view
+            'factuurId' => $factuurId
         ];
+
         $this->view('betaling/overzicht', $data);
     }
 
@@ -44,15 +38,17 @@ class Betaling extends BaseController
             $bedrag = $_POST['bedrag'];
             $status = $_POST['status'];
             $actief = isset($_POST['actief']) ? 1 : 0;
+
             $result = $this->betalingModel->createBetaling($factuurId, $datum, $bedrag, $status, $actief);
+
             if ($result) {
-                // Redirect naar overzicht met juiste factuurId
                 header('Location: ' . URLROOT . '/betaling/overzicht/' . $factuurId . '?success=Betaling succesvol toegevoegd!');
             } else {
                 header('Location: ' . URLROOT . '/betaling/overzicht/' . $factuurId . '?error=Betaling toevoegen mislukt.');
             }
             exit;
         }
+
         $this->view('betaling/create', [
             'factuurId' => $factuurId,
             'factuurnummer' => $factuur ? $factuur->nummer : '',
@@ -62,5 +58,4 @@ class Betaling extends BaseController
             'actief' => isset($_POST['actief']) ? $_POST['actief'] : 1
         ]);
     }
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 }

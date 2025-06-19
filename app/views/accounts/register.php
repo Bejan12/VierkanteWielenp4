@@ -47,7 +47,8 @@ $maxGeboortedatum = (new DateTime())->sub(new DateInterval('P16Y6M'))->format('Y
     }
     input[type="text"],
     input[type="password"],
-    input[type="date"] {
+    input[type="date"],
+    input[type="email"] {
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
@@ -57,7 +58,8 @@ $maxGeboortedatum = (new DateTime())->sub(new DateInterval('P16Y6M'))->format('Y
     }
     input[type="text"]:focus,
     input[type="password"]:focus,
-    input[type="date"]:focus {
+    input[type="date"]:focus,
+    input[type="email"]:focus {
         border-color: #0182E2;
         box-shadow: 0 0 5px rgba(1, 130, 226, 0.5);
         outline: none;
@@ -228,6 +230,10 @@ $maxGeboortedatum = (new DateTime())->sub(new DateInterval('P16Y6M'))->format('Y
         </div>
     </div>
     <div>
+        <label>E-mailadres:</label>
+        <input type="email" name="email" required value="<?= isset($data['email']) ? htmlspecialchars($data['email']) : '' ?>">
+    </div>
+    <div>
         <label>Gebruikersnaam:</label>
         <input type="text" name="gebruikersnaam" required value="<?= isset($data['gebruikersnaam']) ? htmlspecialchars($data['gebruikersnaam']) : '' ?>">
     </div>
@@ -239,6 +245,7 @@ $maxGeboortedatum = (new DateTime())->sub(new DateInterval('P16Y6M'))->format('Y
         <label>Herhaal wachtwoord:</label>
         <input type="password" name="wachtwoord2" required>
     </div>
+    
     <button type="submit">Registreren</button>
     <a href="<?= URLROOT; ?>/accounts/login" class="login-link-btn">Heb je al een account?</a>
 </form>

@@ -1,32 +1,101 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 <!-- Terug-pijl linksboven -->
-<<<<<<< HEAD
-<a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow">
-=======
 <a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow" title="Terug naar dashboard">
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     <i class="bi bi-arrow-left"></i>
 </a>
 
 <div class="user-overview-page">
     <h2>Auto's overzicht</h2>
 
-<<<<<<< HEAD
-    <?php if (!empty($data['autos'])): ?>
-        <table class="custom-table">
-=======
+    <!-- Toevoegen knop -->
+    <div style="width: 100%; display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <a href="<?= URLROOT; ?>/auto/addcar" class="add-car-btn">
+            <i class="bi bi-plus-circle"></i> Auto toevoegen
+        </a>
+    </div>
+
     <!-- Toggle switch -->
     <form method="get" id="toggleForm" style="text-align: center; margin-bottom: 20px;">
-        <label for="toggleData" class="toggle-label">
-            <input type="checkbox" id="toggleData" name="toggleData" value="on" <?= isset($data['toggle']) && $data['toggle'] ? 'checked' : '' ?> onchange="document.getElementById('toggleForm').submit()">
-            <span>Gegevens tonen</span>
-        </label>
-    </form>
+    <!-- Altijd verstuurd -->
+    <input type="hidden" name="toggleData" value="off">
+    
+    <!-- Alleen verstuurd als aangevinkt (en overschrijft dan 'off') -->
+    <label for="toggleData" class="toggle-label">
+        <input type="checkbox" id="toggleData" name="toggleData" value="on"
+            <?= (!isset($data['toggle']) || $data['toggle']) ? 'checked' : '' ?>
+            onchange="document.getElementById('toggleForm').submit()">
+        <span>Gegevens tonen</span>
+    </label>
+</form>
+
+<?php if (!empty($_SESSION['auto_success'])): ?>
+    <style>
+        .custom-alert-success {
+            position: fixed;
+            top: 30px;
+            left: 37%;
+            transform: translateX(-50%) translateY(-20px);
+            background-color: white;
+            color: #0182E2;
+            padding: 25px 50px 20px 50px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            font-size: 22px;
+            z-index: 9999;
+            opacity: 0;
+            animation: fadeInAlert 0.5s ease-out forwards;
+            overflow: hidden;
+            min-width: 400px;
+            max-width: 90vw;
+            text-align: center;
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #0182E2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: progressShrink 3s linear forwards;
+        }
+        @keyframes fadeInAlert {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeOutAlert {
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        @keyframes progressShrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+    </style>
+    <div id="autoSuccess" class="custom-alert-success">
+        <?= $_SESSION['auto_success']; unset($_SESSION['auto_success']); ?>
+        <div class="progress-bar"></div>
+    </div>
+    <script>
+        setTimeout(function () {
+            const el = document.getElementById('autoSuccess');
+            if (el) {
+                el.style.animation = 'fadeOutAlert 0.5s ease-in forwards';
+                setTimeout(() => el.remove(), 500);
+            }
+        }, 3000);
+    </script>
+<?php endif; ?>
 
     <?php if (!empty($data['autos'])): ?>
         <table class="custom-table" role="table" aria-label="Auto's overzicht">
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
             <thead>
                 <tr>
                     <th>Merk</th>
@@ -53,17 +122,6 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-<<<<<<< HEAD
-        <a href="<?= URLROOT; ?>/dashboard/index" class="btn btn-secondary" style="margin-top: 24px;">Terug naar dashboard</a>
-    <?php else: ?>
-        <div class="no-users-message">
-            <p>Er zijn nog geen auto's beschikbaar.</p>
-            
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-        </div>
-=======
     <?php else: ?>
         <div class="no-users-message" role="alert" aria-live="polite">
             <p>Er zijn nog geen auto's beschikbaar.</p>
@@ -73,7 +131,6 @@
             </div>
         </div>
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         <script>
             setTimeout(function() {
                 window.location.href = "<?= URLROOT; ?>/dashboard/index";
@@ -99,11 +156,7 @@
 </div>
 
 <style>
-<<<<<<< HEAD
-    /* Styling terug-pijl */
-=======
     /* Terug-pijl styling */
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .back-arrow {
         position: fixed;
         top: 20px;
@@ -136,12 +189,8 @@
         align-items: center;
         justify-content: flex-start;
     }
-<<<<<<< HEAD
-    .user-overview-page h2 {
-=======
 
     h2 {
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         font-size: 2rem;
         margin-bottom: 30px;
         text-align: center;
@@ -149,8 +198,6 @@
         text-shadow: 1px 1px 3px #000;
         width: 100%;
     }
-<<<<<<< HEAD
-=======
 
     /* Toggle label */
     .toggle-label {
@@ -169,7 +216,6 @@
         cursor: pointer;
     }
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table {
         width: 100%;
         border-collapse: collapse;
@@ -177,31 +223,17 @@
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table th,
     .custom-table td {
         padding: 16px 20px;
         text-align: left;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table thead {
         background: linear-gradient(145deg, #0182E2, #005fa3);
         color: #fff;
     }
-<<<<<<< HEAD
-    .custom-table tbody tr {
-        border-bottom: 1px solid #444;
-    }
-    .custom-table tbody tr:hover {
-        background-color: #3a3a5c;
-    }
-=======
 
     .custom-table tbody tr {
         border-bottom: 1px solid #444;
@@ -211,19 +243,10 @@
         background-color: #3a3a5c;
     }
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table td {
         color: #e0e0e0;
         font-size: 1rem;
     }
-<<<<<<< HEAD
-    .centered-header {
-        text-align: center;
-    }
-    .centered-cell {
-        text-align: center;
-    }
-=======
 
     .centered-header {
         text-align: center;
@@ -233,36 +256,18 @@
         text-align: center;
     }
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .icon-wrapper {
         display: inline-flex;
         justify-content: flex-start;
         gap: 12px;
         width: 100%;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .action-icon {
         font-size: 1.2rem;
         cursor: pointer;
         transition: color 0.2s ease;
     }
-<<<<<<< HEAD
-    .edit-icon {
-        color: #4da6ff;
-    }
-    .edit-icon:hover {
-        color: #80cfff;
-    }
-    .delete-icon {
-        color: #ff4d4d;
-    }
-    .delete-icon:hover {
-        color: #ff7f7f;
-    }
-=======
 
     .edit-icon {
         color: #4da6ff;
@@ -280,7 +285,6 @@
         color: #ff7f7f;
     }
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .no-users-message {
         margin-top: 100px;
         background: #2b2b3d;
@@ -292,17 +296,11 @@
         text-align: center;
         max-width: 600px;
     }
-<<<<<<< HEAD
-    .no-users-message p {
-        margin: 12px 0;
-    }
-=======
 
     .no-users-message p {
         margin: 12px 0;
     }
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .progress-bar {
         width: 100%;
         height: 8px;
@@ -314,19 +312,32 @@
         margin-left: auto;
         margin-right: auto;
     }
-<<<<<<< HEAD
-    .progress-fill {
-        height: 100%;
-        background: linear-gradient(90deg, #0182E2, #005fa3);
-        width: 100%;
-=======
 
     .progress-fill {
         height: 100%;
         background: linear-gradient(90deg, #0182E2, #005fa3);
         width: 0;
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         border-radius: 8px 0 0 8px;
         transition: width 0.1s linear;
+    }
+
+    .add-car-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #28a745;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 8px rgba(40,167,69,0.15);
+        transition: background 0.2s, color 0.2s;
+    }
+    .add-car-btn:hover {
+        background-color: #218838;
+        color: #fff;
+        text-decoration: none;
     }
 </style>

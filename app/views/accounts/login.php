@@ -170,8 +170,6 @@
     </script>
 <?php endif; ?>
 
-<<<<<<< HEAD
-=======
 <?php if (!empty($_SESSION['register_success'])): ?>
     <style>
         .custom-alert-success {
@@ -237,7 +235,6 @@
     </script>
 <?php endif; ?>
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 <!-- Optioneel watermerk logo -->
 <img src="<?= URLROOT; ?>/img/logovierkantewielen.png" alt="Logo Watermerk" class="bg-logo">
 
@@ -255,10 +252,7 @@
         <input type="password" name="password" required>
     </div>
     <button type="submit">Inloggen</button>
-<<<<<<< HEAD
-=======
     <a href="<?= URLROOT; ?>/accounts/register" class="register-link-btn">Nog geen account?</a>
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 </form>
 
 <script>
@@ -270,8 +264,6 @@
     });
 </script>
 
-<<<<<<< HEAD
-=======
 <style>
     .register-link-btn {
         display: block;
@@ -292,5 +284,4 @@
     }
 </style>
 
->>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 <?php require_once APPROOT . '/views/includes/footer.php'; ?>
