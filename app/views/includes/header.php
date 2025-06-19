@@ -57,6 +57,9 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= URLROOT; ?>/horloges/index">Over ons</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= URLROOT; ?>/rijles/create">Nieuwe rijles maken</a>
+        </li>
       </ul>
 
       <!-- Rechts (user icoon) -->

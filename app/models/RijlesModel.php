@@ -70,7 +70,7 @@ class RijlesModel
                  FROM rijles r
                  INNER JOIN instructeur i ON r.InstructeurId = i.Id
                  INNER JOIN gebruiker g ON i.GebruikerId = g.Id
-                 ORDER BY r.Begindatum DESC, r.Begintijd DESC"
+                 ORDER BY r.Begindatum DESC, r.Begintijd DESC, r.Id DESC"
             );
             return $this->db->resultSet();
         } catch (Exception $e) {

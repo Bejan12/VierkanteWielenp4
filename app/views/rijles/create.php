@@ -4,7 +4,6 @@
     <div class="row mb-3">
         <div class="col-3"></div>
         <div class="col-6">
-            <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-primary mb-3">Naar homepage</a>
             <h3><?= $data['title']; ?></h3>
             <?php if (!empty($data['success'])): ?>
                 <div class="alert alert-success"><?= $data['success']; ?></div>
