@@ -3,11 +3,48 @@
 <h2>Betalingen</h2>
 <p><strong>Status:</strong> <?= $data['status'] ?></p>
 
+<<<<<<< HEAD
 <?php if ($data['melding']): ?>
     <p class="error">⚠️ <?= $data['melding'] ?></p>
 <?php endif; ?>
 
 <a href="<?= URLROOT ?>/factuur/overzicht" class="btn">Terug naar facturen</a>
+=======
+<?php
+// Popup melding bepalen
+$popupMessage = '';
+$popupType = '';
+if (!empty($data['melding'])) {
+    $popupMessage = $data['melding'];
+    $popupType = 'error';
+} elseif (isset($_GET['success'])) {
+    $popupMessage = htmlspecialchars($_GET['success']);
+    $popupType = 'success';
+} elseif (isset($_GET['error'])) {
+    $popupMessage = htmlspecialchars($_GET['error']);
+    $popupType = 'error';
+}
+?>
+
+<?php if ($popupMessage): ?>
+    <div id="betalingPopup" class="betaling-popup <?= $popupType ?>">
+        <?= $popupMessage ?>
+        <div class="progress-bar"></div>
+    </div>
+    <script>
+        setTimeout(function () {
+            const el = document.getElementById('betalingPopup');
+            if (el) {
+                   el.style.animation = 'fadeOutAlert 0.5s ease-in forwards';
+                setTimeout(() => el.remove(), 500);
+            }
+        }, 3000);
+    </script>
+<?php endif; ?>
+
+<a href="<?= URLROOT ?>/factuur/overzicht" class="btn">Terug naar facturen</a>
+<a href="<?= URLROOT ?>/betaling/create/<?= htmlspecialchars($data['factuurId'] ?? $_GET['factuurId'] ?? $data['betalingen'][0]->factuur_id ?? '') ?>" class="btn btn-green">Nieuwe betaling toevoegen</a>
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 
 <ul>
     <?php if (empty($data['betalingen'])): ?>
@@ -15,7 +52,10 @@
     <?php else: ?>
         <?php foreach ($data['betalingen'] as $betaling): ?>
             <li>
+<<<<<<< HEAD
                 <strong>Betaling ID:</strong> <?= htmlspecialchars($betaling->id ?? 'Onbekend') ?> |
+=======
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
                 <strong>Datum:</strong> <?= htmlspecialchars($betaling->datum ?? 'Onbekend') ?> |
                 <strong>Bedrag:</strong> €<?= htmlspecialchars($betaling->bedrag ?? '0.00') ?> |
                 <strong>Status:</strong> <?= htmlspecialchars($betaling->status ?? 'Onbekend') ?>
@@ -81,6 +121,17 @@
         background-color: #006bb3;
     }
 
+<<<<<<< HEAD
+=======
+    .btn-green {
+        background-color: #4caf50;
+    }
+
+    .btn-green:hover {
+        background-color: #45a049;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     ul {
         list-style: none;
         padding: 0;
@@ -138,4 +189,64 @@
     .navigation-links a:hover {
         background-color: #0071c2;
     }
+<<<<<<< HEAD
+=======
+
+    /* Popup styling */
+    .betaling-popup {
+        position: fixed;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-20px);
+        min-width: 350px;
+        max-width: 90vw;
+        z-index: 9999;
+        padding: 22px 40px 18px 40px;
+        border-radius: 14px;
+        font-size: 1.15rem;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        opacity: 0;
+        animation: fadeInAlert 0.5s ease-out forwards;
+        overflow: hidden;
+    }
+    .betaling-popup.success {
+        background: #27ae60;
+        color: #fff;
+    }
+    .betaling-popup.error {
+        background: #e74c3c;
+        color: #fff;
+    }
+    .betaling-popup .progress-bar {
+        height: 5px;
+        background-color: rgba(255,255,255,0.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: progressShrink 3s linear forwards;
+        width: 100%;
+    }
+    @keyframes fadeInAlert {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes fadeOutAlert {
+        to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+    @keyframes progressShrink {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 0%;
+        }
+    }
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 </style>

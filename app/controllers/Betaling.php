@@ -10,12 +10,57 @@ class Betaling extends BaseController
 
     public function overzicht($factuurId = null)
     {
+<<<<<<< HEAD
+=======
+        // Haal altijd het factuurId op uit GET of parameter
+        if (!$factuurId && isset($_GET['factuurId'])) {
+            $factuurId = $_GET['factuurId'];
+        }
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         $betalingen = $factuurId ? $this->betalingModel->getBetalingenByFactuurId($factuurId) : [];
         $data = [
             'betalingen' => $betalingen,
             'status' => empty($betalingen) ? 'Open' : 'Betaald',
+<<<<<<< HEAD
             'melding' => empty($betalingen) ? '⚠️ Nog geen betaling geregistreerd voor deze factuur' : null
         ];
         $this->view('betaling/overzicht', $data);
     }
+=======
+            'melding' => empty($betalingen) ? '' : null,
+            'factuurId' => $factuurId // voeg toe voor overzicht view
+        ];
+        $this->view('betaling/overzicht', $data);
+    }
+
+    public function create($factuurId = null)
+    {
+        $factuurModel = $this->model('FactuurModel');
+        $factuur = $factuurModel->getFactuurById($factuurId);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $factuurId = $_POST['factuurId'];
+            $datum = $_POST['datum'];
+            $bedrag = $_POST['bedrag'];
+            $status = $_POST['status'];
+            $actief = isset($_POST['actief']) ? 1 : 0;
+            $result = $this->betalingModel->createBetaling($factuurId, $datum, $bedrag, $status, $actief);
+            if ($result) {
+                // Redirect naar overzicht met juiste factuurId
+                header('Location: ' . URLROOT . '/betaling/overzicht/' . $factuurId . '?success=Betaling succesvol toegevoegd!');
+            } else {
+                header('Location: ' . URLROOT . '/betaling/overzicht/' . $factuurId . '?error=Betaling toevoegen mislukt.');
+            }
+            exit;
+        }
+        $this->view('betaling/create', [
+            'factuurId' => $factuurId,
+            'factuurnummer' => $factuur ? $factuur->nummer : '',
+            'bedrag' => isset($_POST['bedrag']) ? $_POST['bedrag'] : '0.00',
+            'datum' => isset($_POST['datum']) ? $_POST['datum'] : date('Y-m-d'),
+            'status' => isset($_POST['status']) ? $_POST['status'] : 'In behandeling',
+            'actief' => isset($_POST['actief']) ? $_POST['actief'] : 1
+        ]);
+    }
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 }

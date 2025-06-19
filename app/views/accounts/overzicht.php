@@ -1,17 +1,39 @@
+<<<<<<< HEAD
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 <!-- Toegevoegd: terug-pijl linksboven -->
 <a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow">
 
     <!-- Gebruik een Bootstrap icoon pijltje -->
+=======
+<?php require_once APPROOT . '/views/layout.php'; ?>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- Terug-pijl linksboven -->
+<a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow" title="Terug naar dashboard">
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     <i class="bi bi-arrow-left"></i>
 </a>
 
 <div class="user-overview-page">
     <h2>Gebruikersoverzicht</h2>
 
+<<<<<<< HEAD
     <?php if (!empty($data['users'])): ?>
         <table class="custom-table">
+=======
+    <!-- Toggle switch -->
+    <form method="get" id="toggleForm" style="text-align: center; margin-bottom: 20px;">
+        <label for="toggleData" class="toggle-label">
+            <input type="checkbox" id="toggleData" name="toggleData" value="on" <?= isset($data['toggle']) && $data['toggle'] ? 'checked' : '' ?> onchange="document.getElementById('toggleForm').submit()">
+            <span>Gegevens tonen</span>
+        </label>
+    </form>
+
+    <?php if (!empty($data['users'])): ?>
+        <table class="custom-table" role="table" aria-label="Gebruikersoverzicht">
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
             <thead>
                 <tr>
                     <th>E-mail</th>
@@ -36,6 +58,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+<<<<<<< HEAD
         
     <?php else: ?>
         <div class="no-users-message">
@@ -45,6 +68,16 @@
                 <div class="progress-fill"></div>
             </div>
         </div>
+=======
+    <?php else: ?>
+        <div class="no-users-message" role="alert" aria-live="polite">
+            <p>Er zijn nog geen accounts beschikbaar.</p>
+            <div class="progress-bar" aria-hidden="true">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         <script>
             setTimeout(function() {
                 window.location.href = "<?= URLROOT; ?>/dashboard/index";
@@ -70,19 +103,31 @@
 </div>
 
 <style>
+<<<<<<< HEAD
     /* Toegevoegd: styling voor het pijltje */
+=======
+    /* Back arrow styling */
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .back-arrow {
         position: fixed;
         top: 20px;
         left: 20px;
         font-size: 48px;
+<<<<<<< HEAD
         color: #ccc; /* lichtgrijs */
+=======
+        color: #ccc;
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         text-decoration: none;
         z-index: 1100;
         transition: color 0.3s ease;
     }
     .back-arrow:hover {
+<<<<<<< HEAD
         color: #fff; /* wit bij hover */
+=======
+        color: #fff;
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     }
 
     body {
@@ -97,14 +142,22 @@
         padding: 60px 40px;
         max-width: 1200px;
         margin: 0 auto;
+<<<<<<< HEAD
         min-height: 300px; /* Zorgt dat de pagina niet te klein wordt */
+=======
+        min-height: 300px;
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
     }
 
+<<<<<<< HEAD
     .user-overview-page h2 {
+=======
+    h2 {
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         font-size: 2rem;
         margin-bottom: 30px;
         text-align: center;
@@ -113,11 +166,34 @@
         width: 100%;
     }
 
+<<<<<<< HEAD
+=======
+    /* Toggle label */
+    .toggle-label {
+        cursor: pointer;
+        font-size: 1.1rem;
+        user-select: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #ccc;
+    }
+
+    .toggle-label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table {
         width: 100%;
         border-collapse: collapse;
         background-color: #2b2b3d;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
@@ -214,7 +290,11 @@
     .progress-fill {
         height: 100%;
         background: linear-gradient(90deg, #0182E2, #005fa3);
+<<<<<<< HEAD
         width: 100%;
+=======
+        width: 0;
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         border-radius: 8px 0 0 8px;
         transition: width 0.1s linear;
     }

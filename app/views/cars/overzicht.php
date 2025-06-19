@@ -1,15 +1,32 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 <!-- Terug-pijl linksboven -->
+<<<<<<< HEAD
 <a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow">
+=======
+<a href="<?= URLROOT; ?>/dashboard/index" class="back-arrow" title="Terug naar dashboard">
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     <i class="bi bi-arrow-left"></i>
 </a>
 
 <div class="user-overview-page">
     <h2>Auto's overzicht</h2>
 
+<<<<<<< HEAD
     <?php if (!empty($data['autos'])): ?>
         <table class="custom-table">
+=======
+    <!-- Toggle switch -->
+    <form method="get" id="toggleForm" style="text-align: center; margin-bottom: 20px;">
+        <label for="toggleData" class="toggle-label">
+            <input type="checkbox" id="toggleData" name="toggleData" value="on" <?= isset($data['toggle']) && $data['toggle'] ? 'checked' : '' ?> onchange="document.getElementById('toggleForm').submit()">
+            <span>Gegevens tonen</span>
+        </label>
+    </form>
+
+    <?php if (!empty($data['autos'])): ?>
+        <table class="custom-table" role="table" aria-label="Auto's overzicht">
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
             <thead>
                 <tr>
                     <th>Merk</th>
@@ -36,6 +53,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+<<<<<<< HEAD
         <a href="<?= URLROOT; ?>/dashboard/index" class="btn btn-secondary" style="margin-top: 24px;">Terug naar dashboard</a>
     <?php else: ?>
         <div class="no-users-message">
@@ -45,6 +63,17 @@
                 <div class="progress-fill"></div>
             </div>
         </div>
+=======
+    <?php else: ?>
+        <div class="no-users-message" role="alert" aria-live="polite">
+            <p>Er zijn nog geen auto's beschikbaar.</p>
+
+            <div class="progress-bar" aria-hidden="true">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         <script>
             setTimeout(function() {
                 window.location.href = "<?= URLROOT; ?>/dashboard/index";
@@ -70,7 +99,11 @@
 </div>
 
 <style>
+<<<<<<< HEAD
     /* Styling terug-pijl */
+=======
+    /* Terug-pijl styling */
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .back-arrow {
         position: fixed;
         top: 20px;
@@ -103,7 +136,12 @@
         align-items: center;
         justify-content: flex-start;
     }
+<<<<<<< HEAD
     .user-overview-page h2 {
+=======
+
+    h2 {
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         font-size: 2rem;
         margin-bottom: 30px;
         text-align: center;
@@ -111,6 +149,27 @@
         text-shadow: 1px 1px 3px #000;
         width: 100%;
     }
+<<<<<<< HEAD
+=======
+
+    /* Toggle label */
+    .toggle-label {
+        cursor: pointer;
+        font-size: 1.1rem;
+        user-select: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #ccc;
+    }
+
+    .toggle-label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table {
         width: 100%;
         border-collapse: collapse;
@@ -118,42 +177,79 @@
         overflow: hidden;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table th,
     .custom-table td {
         padding: 16px 20px;
         text-align: left;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table thead {
         background: linear-gradient(145deg, #0182E2, #005fa3);
         color: #fff;
     }
+<<<<<<< HEAD
     .custom-table tbody tr {
         border-bottom: 1px solid #444;
     }
     .custom-table tbody tr:hover {
         background-color: #3a3a5c;
     }
+=======
+
+    .custom-table tbody tr {
+        border-bottom: 1px solid #444;
+    }
+
+    .custom-table tbody tr:hover {
+        background-color: #3a3a5c;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .custom-table td {
         color: #e0e0e0;
         font-size: 1rem;
     }
+<<<<<<< HEAD
     .centered-header {
         text-align: center;
     }
     .centered-cell {
         text-align: center;
     }
+=======
+
+    .centered-header {
+        text-align: center;
+    }
+
+    .centered-cell {
+        text-align: center;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .icon-wrapper {
         display: inline-flex;
         justify-content: flex-start;
         gap: 12px;
         width: 100%;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .action-icon {
         font-size: 1.2rem;
         cursor: pointer;
         transition: color 0.2s ease;
     }
+<<<<<<< HEAD
     .edit-icon {
         color: #4da6ff;
     }
@@ -166,6 +262,25 @@
     .delete-icon:hover {
         color: #ff7f7f;
     }
+=======
+
+    .edit-icon {
+        color: #4da6ff;
+    }
+
+    .edit-icon:hover {
+        color: #80cfff;
+    }
+
+    .delete-icon {
+        color: #ff4d4d;
+    }
+
+    .delete-icon:hover {
+        color: #ff7f7f;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .no-users-message {
         margin-top: 100px;
         background: #2b2b3d;
@@ -177,9 +292,17 @@
         text-align: center;
         max-width: 600px;
     }
+<<<<<<< HEAD
     .no-users-message p {
         margin: 12px 0;
     }
+=======
+
+    .no-users-message p {
+        margin: 12px 0;
+    }
+
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     .progress-bar {
         width: 100%;
         height: 8px;
@@ -191,10 +314,18 @@
         margin-left: auto;
         margin-right: auto;
     }
+<<<<<<< HEAD
     .progress-fill {
         height: 100%;
         background: linear-gradient(90deg, #0182E2, #005fa3);
         width: 100%;
+=======
+
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #0182E2, #005fa3);
+        width: 0;
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         border-radius: 8px 0 0 8px;
         transition: width 0.1s linear;
     }

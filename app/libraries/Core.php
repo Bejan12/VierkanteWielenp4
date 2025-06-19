@@ -73,7 +73,16 @@ class Core
         /**
          * Roep de method met alle parameters aan van de class 
          */
+<<<<<<< HEAD
         call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+=======
+        if (method_exists($this->currentController, $this->currentMethod)) {
+            call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+        } else {
+            // Optioneel: Toon een nette foutmelding of 404
+            die("Methode '{$this->currentMethod}' bestaat niet in controller " . get_class($this->currentController));
+        }
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
     }
 
 
