@@ -90,6 +90,12 @@ class Database
      */
     public function bind($parameter, $value, $type = null)
     {
+
+        if ($type === null) {
+            $this->statement->bindValue($parameter, $value);
+        } else {
+            $this->statement->bindValue($parameter, $value, $type);
+
         // TRY-CATCH: Bind value
         try {
             if ($type === null) {
@@ -110,6 +116,7 @@ class Database
             file_put_contents(__DIR__ . '/../../nick.log', "[" . date('Y-m-d H:i:s') . "] Nick: Bind fout: " . $e->getMessage() . "\n", FILE_APPEND);
             file_put_contents(__DIR__ . '/../../nick.log', "[" . date('Y-m-d H:i:s') . "] Nick: BindValue failed in bind().\n", FILE_APPEND);
             throw $e;
+
         }
     }
 
