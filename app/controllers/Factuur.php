@@ -10,9 +10,18 @@ class Factuur extends BaseController
 
     public function overzicht()
     {
+        $success = isset($_GET['success']) ? $_GET['success'] : '';
+        $error = isset($_GET['error']) ? $_GET['error'] : '';
+
+        $inschrijvingen = $this->factuurModel->getInschrijvingen();
+
         $data = [
-            'facturen' => $this->factuurModel->getFacturen()
+            'facturen' => $this->factuurModel->getFacturen(),
+            'success' => $success,
+            'error' => $error,
+            'inschrijvingen' => $inschrijvingen
         ];
+
         $this->view('factuur/overzicht', $data);
     }
 
@@ -35,10 +44,13 @@ class Factuur extends BaseController
     public function downloadPdf($id)
     {
         require_once APPROOT . '/../public/fpdf/fpdf.php';
+
         $factuur = $this->factuurModel->getFactuurById($id);
+
         if (!$factuur) {
             die('Factuur niet gevonden');
         }
+
         $pdf = new \FPDF();
         $pdf->AddPage();
         $pdf->SetFont('Arial', 'B', 16);
@@ -56,10 +68,60 @@ class Factuur extends BaseController
     public function verwijder($id)
     {
         $this->factuurModel->deleteFactuur($id);
+
         $data = [
             'facturen' => $this->factuurModel->getFacturen(),
             'feedback' => 'Factuur succesvol verwijderd!'
         ];
+
         $this->view('factuur/overzicht', $data);
+    }
+
+    public function create()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $datum = $_POST['datum'];
+            $bedrag = $_POST['bedrag'];
+            $status = $_POST['status'];
+            $inschrijvingId = $_POST['inschrijvingId'];
+
+            if ($this->factuurModel->factuurBestaatVoorInschrijving($inschrijvingId)) {
+                header('Location: ' . URLROOT . '/factuur/overzicht?error=Klant+al+gebruikt');
+                exit;
+            }
+
+            $result = $this->factuurModel->createFactuur($datum, $bedrag, $status, $inschrijvingId);
+            if ($result) {
+                header('Location: ' . URLROOT . '/factuur/overzicht?success=Factuur+is+aangemaakt');
+            } else {
+                header('Location: ' . URLROOT . '/factuur/overzicht?error=Factuur+kon+niet+worden+aangemaakt');
+            }
+            exit;
+        }
+
+        $this->view('factuur/create');
+    }
+
+    public function betalingToevoegen($factuurId)
+    {
+        $betalingGeregistreerd = $this->factuurModel->isBetalingGeregistreerd($factuurId);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $bedrag = $_POST['bedrag'];
+            $datum = $_POST['datum'];
+            $status = 'Betaald';
+            $actief = 1;
+
+            $betalingModel = $this->model('BetalingModel');
+            $betalingModel->createBetaling($factuurId, $datum, $bedrag, $status, $actief);
+
+            header('Location: ' . URLROOT . '/betaling/overzicht/' . $factuurId . '?success=Betaling+succesvol+toegevoegd!');
+            exit;
+        }
+
+        $this->view('factuur/betaling_toevoegen', [
+            'factuurId' => $factuurId,
+            'betalingGeregistreerd' => $betalingGeregistreerd
+        ]);
     }
 }

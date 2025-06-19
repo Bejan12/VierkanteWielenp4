@@ -3,43 +3,81 @@
 <h2>Mijn Facturen</h2>
 <p>Hier kunt u een overzicht vinden van al uw facturen. Klik op een factuur om de details te bekijken of betalingen te beheren.</p>
 
+<!-- Popup trigger -->
+<div class="actions-bar">
+    <button id="openFactuurPopup" class="btn btn-green">Factuur aanmaken</button>
+</div>
+
+<!-- Popup overlay -->
+<div id="factuurPopupOverlay" class="popup-overlay" style="display:none;">
+    <div class="popup-content">
+        <span class="close-popup" id="closeFactuurPopup">&times;</span>
+        <h3>Nieuwe Factuur Aanmaken</h3>
+        <form method="post" action="<?= URLROOT ?>/factuur/create" class="factuur-aanmaak-form">
+            <label for="datum">Datum:</label>
+            <input type="date" name="datum" required>
+            <label for="bedrag">Bedrag (incl. btw):</label>
+            <input type="number" name="bedrag" step="0.01" required>
+            <label for="status">Status:</label>
+            <select name="status" required>
+                <option value="Open">Open</option>
+                <option value="Betaald">Betaald</option>
+            </select>
+            <label for="inschrijvingId">Klant:</label>
+            <select name="inschrijvingId" required>
+                <option value="">Selecteer klant</option>
+                <?php foreach ($data['inschrijvingen'] as $inschrijving): ?>
+                    <option value="<?= htmlspecialchars($inschrijving->Id) ?>">
+                        <?= htmlspecialchars($inschrijving->naam) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <button type="submit" class="btn btn-green">Aanmaken</button>
+            <button type="button" id="annuleerFactuurPopup" class="btn btn-blue">Annuleren</button>
+        </form>
+    </div>
+</div>
+
+<?php if (!empty($data['success'])): ?>
+    <div class="alert alert-success">
+        <?= htmlspecialchars($data['success']) ?>
+    </div>
+<?php endif; ?>
 <?php if (!empty($data['error'])): ?>
-    <p class="error">⚠️ <?= htmlspecialchars($data['error']) ?></p>
-    <div class="center">
-        <a href="<?= URLROOT ?>/factuur/overzicht" class="btn">Terug naar overzicht</a>
+    <div class="alert alert-error">
+        <?= htmlspecialchars($data['error']) ?>
     </div>
 <?php endif; ?>
 
-<ul>
-    <!-- Voorbeeldfactuur hardcoded -->
-    <li>
-        <span><strong>Factuurnummer:</strong> 5</span>
-        <span><strong>Datum:</strong> 2024-05-10</span>
-        <span><strong>Status:</strong> Open</span>
-        <div class="button-group">
-            <a href="<?= URLROOT ?>/factuur/detail/5" class="btn">Bekijk</a>
-            <a href="<?= URLROOT ?>/betaling/overzicht/5" class="btn">Bekijk betalingen</a>
-        </div>
-    </li>
+<table class="custom-table" role="table" aria-label="Facturen overzicht">
+    <thead>
+        <tr>
+            <th>Factuurnummer</th>
+            <th>Datum</th>
+            <th>Status</th>
+            <th>Acties</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if (!empty($data['facturen'])): ?>
+            <?php foreach ($data['facturen'] as $factuur): ?>
+                <tr>
+                    <td><?= isset($factuur->nummer) ? htmlspecialchars($factuur->nummer) : '' ?></td>
+                    <td><?= isset($factuur->datum) ? htmlspecialchars($factuur->datum) : '' ?></td>
+                    <td><?= isset($factuur->status) ? htmlspecialchars($factuur->status) : '' ?></td>
+                    <td>
+                        <a href="<?= URLROOT ?>/factuur/detail/<?= htmlspecialchars($factuur->id) ?>" class="btn btn-blue">Bekijk</a>
+                        <a href="<?= URLROOT ?>/betaling/overzicht/<?= htmlspecialchars($factuur->id) ?>" class="btn btn-blue">Bekijk betalingen</a>
+                        <a href="<?= URLROOT ?>/factuur/betalingToevoegen/<?= htmlspecialchars($factuur->id) ?>" class="btn btn-green">Betaling toevoegen</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr><td colspan="4" class="empty-message">Er zijn momenteel geen facturen beschikbaar.</td></tr>
+        <?php endif; ?>
+    </tbody>
+</table>
 
-    <?php if (!empty($data['facturen'])): ?>
-        <?php foreach ($data['facturen'] as $factuur): ?>
-            <li>
-                <span><strong>Factuurnummer:</strong> <?= htmlspecialchars($factuur->id) ?></span>
-                <span><strong>Datum:</strong> <?= htmlspecialchars($factuur->datum) ?></span>
-                <span><strong>Status:</strong> <?= htmlspecialchars($factuur->status) ?></span>
-                <div class="button-group">
-                    <a href="<?= URLROOT ?>/factuur/detail/<?= htmlspecialchars($factuur->id) ?>" class="btn">Bekijk</a>
-                    <a href="<?= URLROOT ?>/betaling/overzicht/<?= htmlspecialchars($factuur->id) ?>" class="btn">Bekijk betalingen</a>
-                </div>
-            </li>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <li class="empty-message">Er zijn momenteel geen facturen beschikbaar.</li>
-    <?php endif; ?>
-</ul>
-
-<!-- Terugkoppeling melding -->
 <?php if (!empty($data['feedback'])): ?>
     <div class="feedback-message" id="feedbackMessage">
         <?= htmlspecialchars($data['feedback']) ?>
@@ -52,7 +90,6 @@
             window.location.href = "<?= URLROOT; ?>/factuur/overzicht";
         }, 4000);
 
-        // Progress bar animatie
         const progressFill = document.querySelector('.feedback-message .progress-fill');
         if (progressFill) {
             progressFill.style.width = '100%';
@@ -60,7 +97,7 @@
             function animate(timestamp) {
                 if (!start) start = timestamp;
                 let progress = timestamp - start;
-                let percentage = Math.max(100 - progress / 40, 0); // 4000ms = 100%
+                let percentage = Math.max(100 - progress / 40, 0);
                 progressFill.style.width = percentage + '%';
                 if (progress < 4000) {
                     requestAnimationFrame(animate);
@@ -77,179 +114,17 @@
     <a href="<?= URLROOT ?>/melding/overzicht">Meldingen overzicht</a>
 </div>
 
-<style>
-    body {
-        background-color: #1e1e2f;
-        color: #f0f0f0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    h2 {
-        font-size: 2.2rem;
-        margin: 40px 0 16px;
-        text-align: center;
-        color: #ffffff;
-        text-shadow: 1px 1px 3px #000;
-    }
-    p {
-        text-align: center;
-        font-size: 1rem;
-        color: #ccc;
-        margin-bottom: 24px;
-        padding: 0 16px;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        max-width: 1000px;
-        margin: 0 auto 32px;
-    }
-    li {
-        background-color: #2b2b3d;
-        margin-bottom: 16px;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-        font-size: 1rem;
-        line-height: 1.6;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        word-wrap: break-word;
-        color: #f0f0f0;
-    }
-    li span {
-        display: block;
-        font-weight: normal;
-    }
-    li strong {
-        color: #ffffff;
-        font-weight: 700;
-    }
-    li.empty-message {
-        text-align: center;
-        font-style: italic;
-        color: #888;
-        font-weight: 500;
-    }
-    .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 12px;
-    }
-    .btn {
-        background-color: #0182E2;
-        color: white;
-        padding: 10px 18px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-        text-align: center;
-        min-width: 120px;
-        user-select: none;
-    }
-    .btn:hover {
-        background-color: #006bb3;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-    .btn:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    .error {
-        color: #ff4c4c;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 16px;
-        text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-    }
-    .center {
-        text-align: center;
-        margin-bottom: 24px;
-    }
-    .navigation-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-        margin: 40px 0;
-    }
-    .navigation-links a {
-        background-color: #005fa3;
-        padding: 10px 22px;
-        border-radius: 8px;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        user-select: none;
-    }
-    .navigation-links a:hover {
-        background-color: #0071c2;
-        transform: scale(1.05);
-    }
-    /* Feedback melding styling */
-    .feedback-message {
-        margin: 40px auto 0;
-        background: #2b2b3d;
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 10px;
-        padding: 32px 24px 24px 24px;
-        max-width: 500px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        position: relative;
-    }
-    .progress-bar {
-        width: 100%;
-        height: 6px;
-        background: #444;
-        border-radius: 4px;
-        margin-top: 18px;
-        overflow: hidden;
-    }
-    .progress-fill {
-        height: 100%;
-        background: linear-gradient(90deg, #0182E2, #005fa3);
-        width: 100%;
-        transition: width 0.2s linear;
-    }
-    @media (max-width: 768px) {
-        li {
-            padding: 16px;
-            font-size: 0.95rem;
-        }
-        .button-group {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .btn {
-            width: 100%;
-            min-width: auto;
-            text-align: center;
-        }
-        .navigation-links {
-            flex-direction: column;
-            gap: 12px;
-        }
-        h2 {
-            font-size: 1.8rem;
-        }
-        p {
-            font-size: 0.95rem;
-        }
-        .feedback-message {
-            font-size: 1rem;
-            padding: 24px 10px 16px 10px;
-        }
-    }
-</style>
+<!-- Popup logica -->
+<script>
+    document.getElementById('openFactuurPopup').onclick = () => {
+        document.getElementById('factuurPopupOverlay').style.display = 'flex';
+    };
+    document.getElementById('closeFactuurPopup').onclick =
+    document.getElementById('annuleerFactuurPopup').onclick =
+    () => {
+        document.getElementById('factuurPopupOverlay').style.display = 'none';
+    };
+    document.getElementById('factuurPopupOverlay').onclick = (e) => {
+        if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
+    };
+</script>

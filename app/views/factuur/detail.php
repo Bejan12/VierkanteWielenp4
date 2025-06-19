@@ -9,7 +9,11 @@
     <h2>Factuur Details</h2>
 
     <div class="factuur-detail-container">
+<<<<<<< HEAD
         <p><strong>Factuurnummer:</strong> <?= isset($data['factuur']->id) ? htmlspecialchars($data['factuur']->id) : 'Onbekend' ?></p>
+=======
+        <p><strong>Factuurnummer:</strong> <?= isset($data['factuur']->nummer) ? htmlspecialchars($data['factuur']->nummer) : 'Onbekend' ?></p>
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
         <p><strong>Datum:</strong> <?= isset($data['factuur']->datum) ? htmlspecialchars($data['factuur']->datum) : 'Onbekend' ?></p>
         <p><strong>Klant:</strong> <?= isset($data['factuur']->klant_naam) ? htmlspecialchars($data['factuur']->klant_naam) : 'Onbekend' ?></p>
         <p><strong>Totaalbedrag:</strong> €<?= isset($data['factuur']->totaal) ? htmlspecialchars($data['factuur']->totaal) : '0.00' ?></p>

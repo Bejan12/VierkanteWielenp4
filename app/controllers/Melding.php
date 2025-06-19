@@ -24,4 +24,31 @@ class Melding extends BaseController
         }
         $this->view('melding/overzicht', $data);
     }
+<<<<<<< HEAD
+=======
+
+    public function create()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $beschrijving = $_POST['beschrijving'];
+            $datum = $_POST['datum'];
+            $actief = isset($_POST['actief']) ? 1 : 0;
+
+            // Check of melding al bestaat
+            if ($this->meldingModel->meldingBestaat($beschrijving, $datum)) {
+                $_SESSION['melding_error'] = "Er bestaat al een melding met deze beschrijving en datum.";
+            } else {
+                $result = $this->meldingModel->createMelding($beschrijving, $datum, $actief);
+                if ($result) {
+                    $_SESSION['melding_success'] = "Melding succesvol aangemaakt!";
+                } else {
+                    $_SESSION['melding_error'] = "Er is iets misgegaan bij het aanmaken van de melding.";
+                }
+            }
+            header('Location: ' . URLROOT . '/melding/overzicht');
+            exit;
+        }
+        $this->view('melding/create');
+    }
+>>>>>>> b429e29 (Mijn wijzigingen toegevoegd aan main branch)
 }
