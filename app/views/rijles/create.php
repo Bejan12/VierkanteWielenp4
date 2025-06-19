@@ -4,11 +4,13 @@
     <div class="row mb-3">
         <div class="col-3"></div>
         <div class="col-6">
+            <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-primary mb-3">Naar homepage</a>
             <h3><?= $data['title']; ?></h3>
+            <?php if (!empty($data['success'])): ?>
+                <div class="alert alert-success"><?= $data['success']; ?></div>
+            <?php endif; ?>
             <?php if (!empty($data['error'])): ?>
                 <div class="alert alert-danger"><?= $data['error']; ?></div>
-            <?php elseif (!empty($data['success'])): ?>
-                <div class="alert alert-success"><?= $data['success']; ?></div>
             <?php endif; ?>
             <form method="post">
                 <div class="mb-3">

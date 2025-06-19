@@ -3,7 +3,10 @@
 <div class="container mt-3">
     <div class="row mb-3">
         <div class="col-12">
-            <h3><?= $data['title']; ?></h3>
+            <a href="<?= URLROOT; ?>/homepages/index" class="btn btn-primary mb-3">Naar homepage</a>
+            <?php if (!empty($data['success'])): ?>
+                <div class="alert alert-success"><?= $data['success']; ?></div>
+            <?php endif; ?>
             <a href="<?= URLROOT; ?>/rijles/create" class="btn btn-success mb-3">Nieuwe rijles maken</a>
             <table class="table table-striped">
                 <thead>

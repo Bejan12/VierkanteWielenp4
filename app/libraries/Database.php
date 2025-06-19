@@ -67,15 +67,11 @@ class Database
      */
     public function bind($parameter, $value, $type = null)
     {
-<<<<<<< HEAD
         if ($type === null) {
             $this->statement->bindValue($parameter, $value);
         } else {
             $this->statement->bindValue($parameter, $value, $type);
         }
-=======
-        $this->statement->bindValue($parameter, $value, $type);
->>>>>>> 6822d2f3f5c4a53dc94754cb472eaef47753fdf9
     }
 
     /**
