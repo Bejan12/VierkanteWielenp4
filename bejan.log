@@ -1094,3 +1094,40 @@
 [2025-06-19 09:25:20] Bejan: Statement object aangemaakt.
 [2025-06-19 09:26:01] Bejan: Query voorbereid: SELECT Id, Merk, Type, Kenteken, Brandstof FROM auto WHERE IsActief = 1
 [2025-06-19 09:26:01] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:01] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email
+                FROM gebruiker g
+                WHERE g.IsActief = 1
+[2025-06-19 09:33:01] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:03] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email
+                FROM gebruiker g
+                WHERE g.IsActief = 1
+[2025-06-19 09:33:03] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:05] Bejan: Query voorbereid: SELECT Id, Merk, Type, Kenteken, Brandstof FROM auto WHERE IsActief = 1
+[2025-06-19 09:33:05] Bejan: Statement object aangemaakt.
+[2025-06-19 09:33:07] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email
+                FROM gebruiker g
+                WHERE g.IsActief = 1
+[2025-06-19 09:33:07] Bejan: Statement object aangemaakt.
+[2025-06-19 09:35:04] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email
+                FROM gebruiker g
+                WHERE g.IsActief = 1
+[2025-06-19 09:35:04] Bejan: Statement object aangemaakt.
+[2025-06-19 09:35:07] Bejan: Query voorbereid: SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email
+                FROM gebruiker g
+                WHERE g.IsActief = 1
+[2025-06-19 09:35:07] Bejan: Statement object aangemaakt.
+[2025-06-19 09:35:45] Bejan: Query voorbereid: SELECT I.Id, G.Voornaam, G.Achternaam
+                 FROM instructeur I
+                 INNER JOIN gebruiker G ON I.GebruikerId = G.Id
+                 WHERE I.IsActief = 1
+[2025-06-19 09:35:45] Bejan: Statement object aangemaakt.
+[2025-06-19 09:36:56] Bejan: Query voorbereid: SELECT * FROM gebruiker WHERE Gebruikersnaam = :username AND IsActief = 1
+[2025-06-19 09:36:56] Bejan: Statement object aangemaakt.
+[2025-06-19 09:36:56] Bejan: Query voorbereid: UPDATE gebruiker SET IsIngelogd = 1, Ingelogd = NOW() WHERE Id = :id
+[2025-06-19 09:36:56] Bejan: Statement object aangemaakt.
+[2025-06-19 09:36:56] Bejan: Query uitgevoerd. Resultaat: true
+[2025-06-19 09:36:56] Bejan: Statement executed in execute().
+[2025-06-19 09:36:56] Bejan: Query voorbereid: SELECT Naam FROM rol WHERE GebruikerId = :userId AND IsActief = 1 LIMIT 1
+[2025-06-19 09:36:56] Bejan: Statement object aangemaakt.
+[2025-06-19 09:37:23] Bejan: Query voorbereid: SELECT Id, Merk, Type, Kenteken, Brandstof FROM auto WHERE IsActief = 1
+[2025-06-19 09:37:23] Bejan: Statement object aangemaakt.
