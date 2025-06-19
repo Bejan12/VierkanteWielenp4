@@ -18,6 +18,9 @@
         </label>
     </form>
 
+    <!-- Voeg deze knop bovenaan of op een logische plek in het overzicht toe -->
+    <a href="<?= URLROOT; ?>/auto/toevoegen" class="btn-green">Auto toevoegen</a>
+
     <?php if (!empty($data['users'])): ?>
         <table class="custom-table" role="table" aria-label="Gebruikersoverzicht">
             <thead>
@@ -240,5 +243,24 @@
         width: 0;
         border-radius: 8px 0 0 8px;
         transition: width 0.1s linear;
+    }
+
+    .btn-green {
+        display: inline-block;
+        background-color: #27ae60;
+        color: #fff;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: background 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 8px rgba(39, 174, 96, 0.08);
+        cursor: pointer;
+    }
+    .btn-green:hover {
+        background-color: #219150;
+        color: #fff;
     }
 </style>

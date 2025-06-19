@@ -95,8 +95,12 @@ class Accounts extends BaseController
             exit;
         }
 
-        // Check toggle (aan of uit)
-        $toggle = isset($_GET['toggleData']) && $_GET['toggleData'] === 'on';
+        // Toggle standaard aan
+        if (isset($_GET['toggleData'])) {
+            $toggle = $_GET['toggleData'] === 'on';
+        } else {
+            $toggle = true;
+        }
 
         if ($toggle) {
             // Haal alle gebruikers op als toggle aan staat

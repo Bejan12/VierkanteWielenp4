@@ -8,13 +8,27 @@
 <div class="user-overview-page">
     <h2>Auto's overzicht</h2>
 
+    <!-- Toevoegen knop -->
+    <div style="width: 100%; display: flex; justify-content: flex-end; margin-bottom: 20px;">
+        <a href="<?= URLROOT; ?>/auto/addcar" class="add-car-btn">
+            <i class="bi bi-plus-circle"></i> Auto toevoegen
+        </a>
+    </div>
+
     <!-- Toggle switch -->
     <form method="get" id="toggleForm" style="text-align: center; margin-bottom: 20px;">
-        <label for="toggleData" class="toggle-label">
-            <input type="checkbox" id="toggleData" name="toggleData" value="on" <?= isset($data['toggle']) && $data['toggle'] ? 'checked' : '' ?> onchange="document.getElementById('toggleForm').submit()">
-            <span>Gegevens tonen</span>
-        </label>
-    </form>
+    <!-- Altijd verstuurd -->
+    <input type="hidden" name="toggleData" value="off">
+    
+    <!-- Alleen verstuurd als aangevinkt (en overschrijft dan 'off') -->
+    <label for="toggleData" class="toggle-label">
+        <input type="checkbox" id="toggleData" name="toggleData" value="on"
+            <?= (!isset($data['toggle']) || $data['toggle']) ? 'checked' : '' ?>
+            onchange="document.getElementById('toggleForm').submit()">
+        <span>Gegevens tonen</span>
+    </label>
+</form>
+
 
     <?php if (!empty($data['autos'])): ?>
         <table class="custom-table" role="table" aria-label="Auto's overzicht">
@@ -241,5 +255,25 @@
         width: 0;
         border-radius: 8px 0 0 8px;
         transition: width 0.1s linear;
+    }
+
+    .add-car-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #28a745;
+        color: #fff;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 8px rgba(40,167,69,0.15);
+        transition: background 0.2s, color 0.2s;
+    }
+    .add-car-btn:hover {
+        background-color: #218838;
+        color: #fff;
+        text-decoration: none;
     }
 </style>
