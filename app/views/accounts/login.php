@@ -170,6 +170,71 @@
     </script>
 <?php endif; ?>
 
+<?php if (!empty($_SESSION['register_success'])): ?>
+    <style>
+        .custom-alert-success {
+            position: fixed;
+            top: 30px;
+            left: 37%;
+            transform: translateX(-50%) translateY(-20px);
+            background-color: white;
+            color: #0182E2;
+            padding: 25px 50px 20px 50px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            font-size: 22px;
+            z-index: 9999;
+            opacity: 0;
+            animation: fadeInAlert 0.5s ease-out forwards;
+            overflow: hidden;
+            min-width: 400px;
+            max-width: 90vw;
+            text-align: center;
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #0182E2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: progressShrink 3s linear forwards;
+        }
+        @keyframes fadeInAlert {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeOutAlert {
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        @keyframes progressShrink {
+            from {
+                width: 100%;
+            }
+            to {
+                width: 0%;
+            }
+        }
+    </style>
+    <div id="registerSuccess" class="custom-alert-success">
+        <?= $_SESSION['register_success']; unset($_SESSION['register_success']); ?>
+        <div class="progress-bar"></div>
+    </div>
+    <script>
+        setTimeout(function () {
+            const el = document.getElementById('registerSuccess');
+            if (el) {
+                el.style.animation = 'fadeOutAlert 0.5s ease-in forwards';
+                setTimeout(() => el.remove(), 500);
+            }
+        }, 3000);
+    </script>
+<?php endif; ?>
+
 <!-- Optioneel watermerk logo -->
 <img src="<?= URLROOT; ?>/img/logovierkantewielen.png" alt="Logo Watermerk" class="bg-logo">
 
@@ -187,6 +252,7 @@
         <input type="password" name="password" required>
     </div>
     <button type="submit">Inloggen</button>
+    <a href="<?= URLROOT; ?>/accounts/register" class="register-link-btn">Nog geen account?</a>
 </form>
 
 <script>
@@ -197,5 +263,25 @@
         btn.style.backgroundColor = '#aaa';
     });
 </script>
+
+<style>
+    .register-link-btn {
+        display: block;
+        margin-top: 18px;
+        background: #fff;
+        color: #0182E2;
+        border: 1px solid #0182E2;
+        border-radius: 8px;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background 0.3s, color 0.3s, border 0.3s;
+    }
+    .register-link-btn:hover {
+        background: #0182E2;
+        color: #fff;
+        border: 1px solid #0166b3;
+    }
+</style>
 
 <?php require_once APPROOT . '/views/includes/footer.php'; ?>

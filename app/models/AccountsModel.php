@@ -43,4 +43,38 @@ class AccountsModel
         $this->db->query($sql);
         return $this->db->resultSet();
     }
+
+    public function gebruikersnaamBestaat($gebruikersnaam)
+    {
+        $this->db->query("SELECT Id FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam");
+        $this->db->bind(':gebruikersnaam', $gebruikersnaam);
+        return $this->db->single() ? true : false;
+    }
+
+    public function registreerGebruiker($voornaam, $tussenvoegsel, $achternaam, $geboortedatum, $gebruikersnaam, $wachtwoord)
+    {
+        $this->db->query("INSERT INTO gebruiker (Voornaam, Tussenvoegsel, Achternaam, Geboortedatum, Gebruikersnaam, Wachtwoord, IsActief) VALUES (:voornaam, :tussenvoegsel, :achternaam, :geboortedatum, :gebruikersnaam, :wachtwoord, 1)");
+        $this->db->bind(':voornaam', $voornaam);
+        $this->db->bind(':tussenvoegsel', $tussenvoegsel);
+        $this->db->bind(':achternaam', $achternaam);
+        $this->db->bind(':geboortedatum', $geboortedatum);
+        $this->db->bind(':gebruikersnaam', $gebruikersnaam);
+        $this->db->bind(':wachtwoord', $wachtwoord);
+        $result = $this->db->execute();
+
+        if ($result) {
+            // Haal het laatst ingevoegde gebruiker ID op via een query
+            $this->db->query("SELECT LAST_INSERT_ID() AS id");
+            $row = $this->db->single();
+            $userId = $row ? $row->id : null;
+            if ($userId) {
+                // Voeg rol 'Leerling' toe
+                $this->db->query("INSERT INTO rol (GebruikerId, Naam, IsActief) VALUES (:gebruikerid, 'Leerling', 1)");
+                $this->db->bind(':gebruikerid', $userId);
+                $this->db->execute();
+            }
+        }
+
+        return $result;
+    }
 }

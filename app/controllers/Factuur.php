@@ -52,4 +52,14 @@ class Factuur extends BaseController
         $pdf->Output('D', 'factuur_' . $factuur->id . '.pdf');
         exit;
     }
+
+    public function verwijder($id)
+    {
+        $this->factuurModel->deleteFactuur($id);
+        $data = [
+            'facturen' => $this->factuurModel->getFacturen(),
+            'feedback' => 'Factuur succesvol verwijderd!'
+        ];
+        $this->view('factuur/overzicht', $data);
+    }
 }

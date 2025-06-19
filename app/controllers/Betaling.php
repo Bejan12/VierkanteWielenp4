@@ -14,7 +14,7 @@ class Betaling extends BaseController
         $data = [
             'betalingen' => $betalingen,
             'status' => empty($betalingen) ? 'Open' : 'Betaald',
-            'melding' => empty($betalingen) ? '⚠️ Nog geen betaling geregistreerd voor deze factuur' : null
+            'melding' => empty($betalingen) ? '' : null
         ];
         $this->view('betaling/overzicht', $data);
     }

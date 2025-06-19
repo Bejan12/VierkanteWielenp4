@@ -39,6 +39,38 @@
     <?php endif; ?>
 </ul>
 
+<!-- Terugkoppeling melding -->
+<?php if (!empty($data['feedback'])): ?>
+    <div class="feedback-message" id="feedbackMessage">
+        <?= htmlspecialchars($data['feedback']) ?>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = "<?= URLROOT; ?>/factuur/overzicht";
+        }, 4000);
+
+        // Progress bar animatie
+        const progressFill = document.querySelector('.feedback-message .progress-fill');
+        if (progressFill) {
+            progressFill.style.width = '100%';
+            let start = null;
+            function animate(timestamp) {
+                if (!start) start = timestamp;
+                let progress = timestamp - start;
+                let percentage = Math.max(100 - progress / 40, 0); // 4000ms = 100%
+                progressFill.style.width = percentage + '%';
+                if (progress < 4000) {
+                    requestAnimationFrame(animate);
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+    </script>
+<?php endif; ?>
+
 <div class="navigation-links">
     <a href="<?= URLROOT ?>/dashboard/index">Terug naar dashboard</a>
     <a href="<?= URLROOT ?>/factuur/overzicht">Facturen overzicht</a>
@@ -46,7 +78,6 @@
 </div>
 
 <style>
-    /* Algemene body styling */
     body {
         background-color: #1e1e2f;
         color: #f0f0f0;
@@ -54,8 +85,6 @@
         margin: 0;
         padding: 0;
     }
-
-    /* Titel */
     h2 {
         font-size: 2.2rem;
         margin: 40px 0 16px;
@@ -63,8 +92,6 @@
         color: #ffffff;
         text-shadow: 1px 1px 3px #000;
     }
-
-    /* Introductie tekst */
     p {
         text-align: center;
         font-size: 1rem;
@@ -72,16 +99,12 @@
         margin-bottom: 24px;
         padding: 0 16px;
     }
-
-    /* Facturen lijst */
     ul {
         list-style: none;
         padding: 0;
         max-width: 1000px;
         margin: 0 auto 32px;
     }
-
-    /* Elk factuur item */
     li {
         background-color: #2b2b3d;
         margin-bottom: 16px;
@@ -96,36 +119,26 @@
         word-wrap: break-word;
         color: #f0f0f0;
     }
-
-    /* Specifiek factuur details */
     li span {
         display: block;
         font-weight: normal;
     }
-
-    /* Labels */
     li strong {
         color: #ffffff;
         font-weight: 700;
     }
-
-    /* Lege lijst melding */
     li.empty-message {
         text-align: center;
         font-style: italic;
         color: #888;
         font-weight: 500;
     }
-
-    /* Knop groep */
     .button-group {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
         margin-top: 12px;
     }
-
-    /* Buttons */
     .btn {
         background-color: #0182E2;
         color: white;
@@ -141,21 +154,15 @@
         min-width: 120px;
         user-select: none;
     }
-
-    /* Hover effecten */
     .btn:hover {
         background-color: #006bb3;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-
-    /* Focus zichtbaarheid */
     .btn:focus {
         outline: 2px solid #fff;
         outline-offset: 2px;
     }
-
-    /* Foutmelding */
     .error {
         color: #ff4c4c;
         font-weight: bold;
@@ -163,14 +170,10 @@
         margin-bottom: 16px;
         text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
     }
-
-    /* Centreringshulpmiddel */
     .center {
         text-align: center;
         margin-bottom: 24px;
     }
-
-    /* Navigatie links */
     .navigation-links {
         display: flex;
         flex-wrap: wrap;
@@ -178,7 +181,6 @@
         gap: 16px;
         margin: 40px 0;
     }
-
     .navigation-links a {
         background-color: #005fa3;
         padding: 10px 22px;
@@ -189,41 +191,65 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
         user-select: none;
     }
-
     .navigation-links a:hover {
         background-color: #0071c2;
         transform: scale(1.05);
     }
-
-    /* Responsive styling */
+    /* Feedback melding styling */
+    .feedback-message {
+        margin: 40px auto 0;
+        background: #2b2b3d;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 10px;
+        padding: 32px 24px 24px 24px;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        position: relative;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 6px;
+        background: #444;
+        border-radius: 4px;
+        margin-top: 18px;
+        overflow: hidden;
+    }
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #0182E2, #005fa3);
+        width: 100%;
+        transition: width 0.2s linear;
+    }
     @media (max-width: 768px) {
         li {
             padding: 16px;
             font-size: 0.95rem;
         }
-
         .button-group {
             flex-direction: column;
             align-items: stretch;
         }
-
         .btn {
             width: 100%;
             min-width: auto;
             text-align: center;
         }
-
         .navigation-links {
             flex-direction: column;
             gap: 12px;
         }
-
         h2 {
             font-size: 1.8rem;
         }
-
         p {
             font-size: 0.95rem;
+        }
+        .feedback-message {
+            font-size: 1rem;
+            padding: 24px 10px 16px 10px;
         }
     }
 </style>

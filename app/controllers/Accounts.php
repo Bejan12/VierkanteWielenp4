@@ -26,8 +26,17 @@ class Accounts extends BaseController
             $password = $_POST['password'] ?? '';
 
             $user = $this->accountsModel->getUserByUsername($username);
-
-            if ($user && $user->Wachtwoord === $password) {
+            $isValid = false;
+            if ($user && !empty($user->Wachtwoord)) {
+                if (strpos($user->Wachtwoord, '$2y$') === 0) {
+                    // Nieuw account: wachtwoord is een hash
+                    $isValid = password_verify($password, $user->Wachtwoord);
+                } else {
+                    // Oud account: wachtwoord is plain text
+                    $isValid = $password === $user->Wachtwoord;
+                }
+            }
+            if ($isValid) {
                 $this->accountsModel->setUserLoggedIn($user->Id);
 
                 $_SESSION['user_logged_in'] = true;
@@ -86,12 +95,90 @@ class Accounts extends BaseController
             exit;
         }
 
-        $users = $this->accountsModel->getAllUsersWithEmail();
+        // Check toggle (aan of uit)
+        $toggle = isset($_GET['toggleData']) && $_GET['toggleData'] === 'on';
+
+        if ($toggle) {
+            // Haal alle gebruikers op als toggle aan staat
+            $users = $this->accountsModel->getAllUsersWithEmail();
+        } else {
+            // Geen data ophalen als toggle uit staat
+            $users = [];
+        }
 
         $data = [
-            'users' => $users
+            'users' => $users,
+            'toggle' => $toggle,
         ];
 
         $this->view('accounts/overzicht', $data);
     }
+
+    public function register()
+    {
+        $data = [
+            'voornaam' => '',
+            'tussenvoegsel' => '',
+            'achternaam' => '',
+            'geboortedatum' => '',
+            'gebruikersnaam' => '',
+            'error' => '',
+            'success' => ''
+        ];
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data['voornaam'] = trim($_POST['voornaam']);
+            $data['tussenvoegsel'] = trim($_POST['tussenvoegsel']);
+            $data['achternaam'] = trim($_POST['achternaam']);
+            $data['geboortedatum'] = trim($_POST['geboortedatum']);
+            $data['gebruikersnaam'] = trim($_POST['gebruikersnaam']);
+            $wachtwoord = $_POST['wachtwoord'];
+            $wachtwoord2 = $_POST['wachtwoord2'];
+
+            // Validatie
+            // Bereken max toegestane geboortedatum (16,5 jaar geleden)
+            $maxGeboortedatum = (new DateTime())->sub(new DateInterval('P16Y6M'))->format('Y-m-d');
+
+            if (
+                empty($data['voornaam']) ||
+                empty($data['achternaam']) ||
+                empty($data['geboortedatum']) ||
+                empty($data['gebruikersnaam']) ||
+                empty($wachtwoord) ||
+                empty($wachtwoord2)
+            ) {
+                $data['error'] = 'Vul alle verplichte velden in.';
+            } elseif ($data['geboortedatum'] > $maxGeboortedatum) {
+                $data['error'] = 'Je moet minimaal 16,5 jaar oud zijn om een account te maken.';
+            } elseif ($wachtwoord !== $wachtwoord2) {
+                $data['error'] = 'Wachtwoorden komen niet overeen.';
+            } elseif (strlen($wachtwoord) < 6) {
+                $data['error'] = 'Wachtwoord moet minimaal 6 tekens zijn.';
+            } elseif ($this->accountsModel->gebruikersnaamBestaat($data['gebruikersnaam'])) {
+                $data['error'] = 'Gebruikersnaam bestaat al.';
+            } else {
+                // Opslaan
+                $hashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
+                $result = $this->accountsModel->registreerGebruiker(
+                    $data['voornaam'],
+                    $data['tussenvoegsel'],
+                    $data['achternaam'],
+                    $data['geboortedatum'],
+                    $data['gebruikersnaam'],
+                    $hashed
+                );
+                if ($result) {
+                    $_SESSION['register_success'] = 'Registratie gelukt! Je kunt nu inloggen.';
+                    // Velden leegmaken zijn niet meer nodig, want redirect volgt
+                    header('Location: ' . URLROOT . '/accounts/login');
+                    exit;
+                } else {
+                    $data['error'] = 'Er is iets misgegaan, probeer het opnieuw.';
+                }
+            }
+        }
+
+        $this->view('accounts/register', $data);
+    }
+
 }
