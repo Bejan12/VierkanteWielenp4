@@ -1731,3 +1731,31 @@
 [2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
 [2025-06-19 09:50:28] Nick: Bind param :instructeurId => 1 (type 2)
 [2025-06-19 09:50:28] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:05:13] Nick: Bind param :username => tombakker (type 2)
+[2025-06-19 10:05:13] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:05:14] Nick: single() opgehaald. Resultaat: (object) array(
+   'Id' => 3,
+   'Voornaam' => 'Tom',
+   'Tussenvoegsel' => NULL,
+   'Achternaam' => 'Bakker',
+   'Geboortedatum' => '1985-07-10',
+   'Gebruikersnaam' => 'tombakker',
+   'Wachtwoord' => 'test789',
+   'Email' => 'tom@email.com',
+   'IsIngelogd' => 1,
+   'Ingelogd' => '2025-06-19 11:36:56',
+   'Uitgelogd' => NULL,
+   'IsActief' => 1,
+   'Opmerking' => NULL,
+   'DatumAangemaakt' => '2025-05-16 10:15:47',
+   'DatumGewijzigd' => '2025-06-19 11:36:56',
+)
+[2025-06-19 10:05:14] Nick: Statement executed in single().
+[2025-06-19 10:05:14] Nick: Bind param :id => 3 (type 1)
+[2025-06-19 10:05:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:05:14] Nick: Bind param :userId => 3 (type 1)
+[2025-06-19 10:05:14] Nick: BindValue uitgevoerd in bind().
+[2025-06-19 10:05:14] Nick: single() opgehaald. Resultaat: (object) array(
+   'Naam' => 'Beheerder',
+)
+[2025-06-19 10:05:14] Nick: Statement executed in single().

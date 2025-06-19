@@ -36,8 +36,9 @@ class AccountsModel
 
     public function getAllUsersWithEmail()
     {
-        $sql = "SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email
+        $sql = "SELECT g.Gebruikersnaam, g.Wachtwoord, g.Email, r.Naam AS Rol
                 FROM gebruiker g
+                LEFT JOIN rol r ON g.Id = r.GebruikerId AND r.IsActief = 1
                 WHERE g.IsActief = 1";
         $this->db->query($sql);
         return $this->db->resultSet();
