@@ -1544,3 +1544,31 @@
 [2025-06-19 09:42:39] Zakka: resultSet opgehaald. Aantal records: 17
 [2025-06-19 09:42:39] Zakka: Statement executed in resultSet().
 >>>>>>> 190c4325c1e2371944d3dea49c6430c251537abf
+[2025-06-19 09:48:51] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:48:51] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:48:51] Zakka: resultSet opgehaald. Aantal records: 7
+[2025-06-19 09:48:51] Zakka: Statement executed in resultSet().
+[2025-06-19 09:48:57] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:48:57] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:48:57] Zakka: resultSet opgehaald. Aantal records: 4
+[2025-06-19 09:48:57] Zakka: Statement executed in resultSet().
+[2025-06-19 09:49:00] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:49:00] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:49:00] Zakka: resultSet opgehaald. Aantal records: 3
+[2025-06-19 09:49:00] Zakka: Statement executed in resultSet().
+[2025-06-19 09:50:21] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:50:21] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:50:21] Zakka: resultSet opgehaald. Aantal records: 3
+[2025-06-19 09:50:21] Zakka: Statement executed in resultSet().
+[2025-06-19 09:50:28] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:50:28] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:50:28] Zakka: resultSet opgehaald. Aantal records: 3
+[2025-06-19 09:50:28] Zakka: Statement executed in resultSet().
+[2025-06-19 09:50:36] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:50:36] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:50:36] Zakka: resultSet opgehaald. Aantal records: 3
+[2025-06-19 09:50:36] Zakka: Statement executed in resultSet().
+[2025-06-19 09:50:40] Zakka: Database connectie succesvol. Host: localhost, DB: rijschool
+[2025-06-19 09:50:40] Zakka: Verbinding gemaakt met gebruiker: root
+[2025-06-19 09:50:40] Zakka: resultSet opgehaald. Aantal records: 3
+[2025-06-19 09:50:40] Zakka: Statement executed in resultSet().
